@@ -4,7 +4,6 @@ import {palette, typeSize} from '../brand';
 import {popStyle, useEnter} from './useEnter';
 import {CopyBlock, Stage} from './Stage';
 import {InboxThread} from '../parts/mockups/InboxThread';
-import {LogoPlate} from '../parts/LogoPlate';
 import type {SceneProps} from './types';
 
 /** Send a message, get the demo link. */
@@ -23,21 +22,12 @@ export const Cta: React.FC<SceneProps> = ({copy, durationInFrames, width, height
       style={style}
       gap={28}
       visual={
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: wide ? 'row' : 'column',
-            alignItems: 'center',
-            gap: 28,
-            justifyContent: 'center',
-          }}
-        >
-          <LogoPlate width={wide ? 210 : Math.min(width * 0.4, 260)} />
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <div style={pop}>
             <InboxThread
               question="ডেমো লিংক পেতে চাই"
               answer="লিংক পাঠানো হলো ✓"
-              width={wide ? 420 : Math.min(width - 160, 480)}
+              width={wide ? 520 : Math.min(width - 140, 560)}
             />
           </div>
         </div>

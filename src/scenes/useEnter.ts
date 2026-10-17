@@ -4,7 +4,7 @@ import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 export const useEnter = (durationInFrames: number) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
-  const enter = spring({frame, fps, config: {damping: 14, stiffness: 120}});
+  const enter = spring({frame, fps, config: {damping: 16, stiffness: 190}});
   const leave = interpolate(frame, [durationInFrames - 6, durationInFrames], [1, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -29,7 +29,7 @@ export const popStyle = (
   delay = 0,
   from = 0.82,
 ): {opacity: number; transform: string} => {
-  const s = spring({frame: frame - delay, fps, config: {damping: 13, stiffness: 170}});
+  const s = spring({frame: frame - delay, fps, config: {damping: 15, stiffness: 230}});
   return {
     opacity: Math.min(1, s * 1.6),
     transform: `scale(${interpolate(s, [0, 1], [from, 1])})`,

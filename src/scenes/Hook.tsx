@@ -1,7 +1,7 @@
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {palette, typeSize} from '../brand';
-import {useEnter} from './useEnter';
+import {popStyle, useEnter} from './useEnter';
 import {CopyBlock, Stage} from './Stage';
 import {Browser} from '../parts/mockups/Browser';
 import {NewsPage} from '../parts/mockups/NewsPage';
@@ -14,6 +14,7 @@ import type {SceneProps} from './types';
 export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const frame = useCurrentFrame();
   const {style} = useEnter(durationInFrames);
+  const pop = popStyle(frame, 30, 2, 0.88);
   const wide = width > height;
   const browserW = wide ? Math.min(width * 0.5, 720) : width - 144;
   const browserH = wide ? 330 : Math.min(height * 0.3, 420);
@@ -39,9 +40,11 @@ export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, heigh
       style={style}
       visual={
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30}}>
-          <Browser url="newsportal.com.bd" width={browserW} height={browserH}>
-            <NewsPage site="নিউজ পোর্টাল" />
-          </Browser>
+          <div style={pop}>
+            <Browser url="newsportal.com.bd" width={browserW} height={browserH}>
+              <NewsPage site="নিউজ পোর্টাল" />
+            </Browser>
+          </div>
           <div style={{display: 'flex', alignItems: 'center', gap: 28}}>
             <TimerRing seconds={3} size={wide ? 150 : 180} label="সেকেন্ড" />
             <div

@@ -1,8 +1,8 @@
 import React from 'react';
 import {palette, shadow} from '../../brand';
-import {Lines} from './Lines';
+import {Thumb} from './NewsPage';
 
-/** A news portal window. `smart` adds the modern look and check badges. */
+/** A news portal window with real headlines. `smart` adds the modern look. */
 export const PortalWindow: React.FC<{
   name: string;
   smart?: boolean;
@@ -28,7 +28,7 @@ export const PortalWindow: React.FC<{
     <div
       style={{
         height: 40,
-        background: smart ? palette.blue : '#DFE3EC',
+        background: smart ? palette.blue : '#9AA3B5',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -36,41 +36,59 @@ export const PortalWindow: React.FC<{
         flexShrink: 0,
       }}
     >
-      <div
-        style={{
-          fontSize: 15,
-          fontWeight: 700,
-          color: smart ? '#fff' : palette.muted,
-        }}
-      >
-        {name}
+      <div style={{fontSize: 15, fontWeight: 700, color: '#fff'}}>{name}</div>
+      <div style={{display: 'flex', gap: 6}}>
+        <div style={{width: 26, height: 8, borderRadius: 99, background: 'rgba(255,255,255,0.5)'}} />
+        <div style={{width: 16, height: 8, borderRadius: 99, background: 'rgba(255,255,255,0.35)'}} />
       </div>
-      {smart ? (
-        <div style={{display: 'flex', gap: 6}}>
-          <div style={{width: 26, height: 8, borderRadius: 99, background: 'rgba(255,255,255,0.5)'}} />
-          <div style={{width: 16, height: 8, borderRadius: 99, background: 'rgba(255,255,255,0.35)'}} />
-        </div>
-      ) : null}
     </div>
-    <div style={{flex: 1, padding: 14, display: 'flex', flexDirection: 'column', gap: 12}}>
-      <div style={{display: 'flex', gap: 10}}>
-        <div
-          style={{
-            flex: smart ? 1.6 : 1,
-            height: smart ? 74 : 54,
-            borderRadius: 10,
-            background: smart
-              ? `linear-gradient(120deg, ${palette.blueSoft}, #D9E6FB)`
-              : '#E7EAF1',
-          }}
+    <div style={{flex: 1, padding: 14, display: 'flex', flexDirection: 'column', gap: 11, overflow: 'hidden'}}>
+      <div style={{display: 'flex', gap: 12}}>
+        <Thumb
+          width={smart ? '52%' : '44%'}
+          height={smart ? 78 : 62}
+          hue={smart ? 210 : 218}
+          radius={10}
         />
-        <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 8}}>
-          <Lines widths={[100, 80, smart ? 90 : 60]} height={9} gap={7} />
+        <div style={{flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 7}}>
+          <div
+            style={{
+              fontSize: smart ? 14 : 13,
+              fontWeight: 700,
+              color: palette.ink,
+              lineHeight: 1.4,
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+            }}
+          >
+            {smart ? 'ক্ষমতার নতুন নেতৃত্ব নিয়ে আলোচনা' : 'সাধারণ শিরোনাম এখানে থাকে'}
+          </div>
+          <div style={{fontSize: 11, color: palette.faint}}>২ ঘণ্টা আগে</div>
         </div>
       </div>
-      <Lines widths={[96, 88, 92, 70]} height={8} gap={7} />
+      {['বাজারে ডিজিটাল পেমেন্টের রেকর্ড', 'খেলার মাঠে নতুন তারকা'].map((t, i) => (
+        <div key={t} style={{display: 'flex', gap: 10, alignItems: 'center'}}>
+          <Thumb width={44} height={32} hue={198 + i * 20} radius={6} />
+          <div
+            style={{
+              flex: 1,
+              minWidth: 0,
+              fontSize: smart ? 12 : 11,
+              color: smart ? palette.ink : palette.muted,
+              fontWeight: smart ? 600 : 400,
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {t}
+          </div>
+        </div>
+      ))}
       {smart ? (
-        <div style={{display: 'flex', gap: 10, marginTop: 'auto'}}>
+        <div style={{display: 'flex', gap: 8, marginTop: 'auto'}}>
           {['এআই সামারি', 'অডিও', 'অটোপোস্ট'].map((tag) => (
             <div
               key={tag}
@@ -88,9 +106,15 @@ export const PortalWindow: React.FC<{
           ))}
         </div>
       ) : (
-        <div style={{width: '46%', marginTop: 'auto'}}>
-          <Lines widths={[100, 64]} height={8} gap={6} color="#EDEFF4" />
-        </div>
+        <div
+          style={{
+            marginTop: 'auto',
+            height: 8,
+            width: '44%',
+            borderRadius: 99,
+            background: '#EDEFF4',
+          }}
+        />
       )}
     </div>
   </div>

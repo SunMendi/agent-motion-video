@@ -1,7 +1,8 @@
 import React from 'react';
 import {palette, shadow} from '../../brand';
+import {Thumb} from './NewsPage';
 
-/** A generated photo card: gradient image area plus a caption strip. */
+/** A photo card: photo-like image block plus a real caption strip. */
 export const PhotoCard: React.FC<{
   label: string;
   width?: number;
@@ -23,37 +24,46 @@ export const PhotoCard: React.FC<{
       ...style,
     }}
   >
-    <div
-      style={{
-        flex: 1,
-        background: `linear-gradient(135deg, hsl(${hue} 78% 62%), hsl(${hue + 24} 70% 44%))`,
-        position: 'relative',
-      }}
-    >
+    <Thumb
+      width={width - 2}
+      height={height - 52}
+      hue={hue}
+      radius={0}
+      style={{borderRadius: 0}}
+    />
+    <div style={{padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 10}}>
       <div
         style={{
-          position: 'absolute',
-          left: 16,
-          top: 16,
-          width: 44,
-          height: 44,
-          borderRadius: 12,
-          background: 'rgba(255,255,255,0.85)',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          right: 16,
-          bottom: 16,
+          width: 26,
+          height: 26,
+          borderRadius: 99,
+          background: palette.blue,
+          color: '#fff',
+          fontSize: 13,
+          fontWeight: 700,
           display: 'flex',
-          gap: 8,
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0,
         }}
       >
-        <div style={{width: 54, height: 10, borderRadius: 99, background: 'rgba(255,255,255,0.6)'}} />
-        <div style={{width: 30, height: 10, borderRadius: 99, background: 'rgba(255,255,255,0.4)'}} />
+        নি
+      </div>
+      <div style={{minWidth: 0}}>
+        <div
+          style={{
+            fontSize: 15,
+            fontWeight: 700,
+            color: palette.ink,
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {label}
+        </div>
+        <div style={{fontSize: 12, color: palette.faint, marginTop: 2}}>নিউজ পোর্টাল · এইমাত্র</div>
       </div>
     </div>
-    <div style={{padding: '12px 16px', fontSize: 17, fontWeight: 700, color: palette.ink}}>{label}</div>
   </div>
 );

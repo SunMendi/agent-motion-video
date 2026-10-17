@@ -17,6 +17,7 @@ export const Problem: React.FC<SceneProps> = ({copy, durationInFrames, width, he
   const browserW = wide ? Math.min(width * 0.5, 720) : width - 144;
   const browserH = wide ? 320 : Math.min(height * 0.3, 400);
   const stamp = popStyle(frame, 30, 22, 1.8);
+  const pop = popStyle(frame, 30, 2, 0.88);
   const stuck = interpolate(frame, [0, 30], [0, 0.2], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -30,9 +31,11 @@ export const Problem: React.FC<SceneProps> = ({copy, durationInFrames, width, he
       style={style}
       visual={
         <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
-          <Browser url="old-portal.com.bd" width={browserW} height={browserH}>
-            <NewsPage site="পুরনো সাইট" accent="#8A93A6" dense progress={stuck} />
-          </Browser>
+          <div style={{transform: pop.transform, opacity: pop.opacity}}>
+            <Browser url="old-portal.com.bd" width={browserW} height={browserH}>
+              <NewsPage site="পুরনো সাইট" accent="#8A93A6" dense progress={stuck} />
+            </Browser>
+          </div>
           <div
             style={{
               position: 'absolute',

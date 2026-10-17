@@ -6,7 +6,6 @@ import type {Brief, Timing} from './model';
 import {activeWordIndex, durationFrames, groupCaptions, sceneFrames, sceneSpans} from './timing';
 import {Background} from './parts/Background';
 import {CaptionBar} from './parts/CaptionBar';
-import {LogoPlate} from './parts/LogoPlate';
 import {ProgressBar} from './parts/ProgressBar';
 import {Sweep} from './parts/Sweep';
 import {SceneRouter} from './scenes/SceneRouter';
@@ -35,7 +34,6 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
   }
   const localIndex = chunk ? activeWordIndex(chunk.words, t) : -1;
   const activeIndex = localIndex;
-  const activeScene = scenes.find((s) => frame >= s.start && frame < s.end) ?? null;
 
   return (
     <AbsoluteFill style={{fontFamily: `"${FONT_FAMILY}", sans-serif`, backgroundColor: palette.bg}}>
@@ -65,17 +63,6 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
         ),
       )}
       <CaptionBar chunk={chunk} activeIndex={activeIndex} width={width} height={height} />
-      {brief.brand?.watermark && activeScene?.type !== 'cta' ? (
-        <div
-          style={{
-            position: 'absolute',
-            top: Math.round(height * 0.075),
-            left: (width - 208) / 2,
-          }}
-        >
-          <LogoPlate width={180} radius={18} padding={14} />
-        </div>
-      ) : null}
       <ProgressBar />
       <Audio src={staticFile(brief.audio)} />
     </AbsoluteFill>

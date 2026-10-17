@@ -1,12 +1,18 @@
 import React from 'react';
+import {useCurrentFrame, useVideoConfig} from 'remotion';
 import {palette, shadow} from '../../brand';
 import {toBangla} from '../../text/bn';
+import {popStyle} from '../../scenes/useEnter';
 
 /** A stack of trending news cards, each offset like a deck. */
-export const CardStack: React.FC<{titles: string[]; width?: number}> = ({titles, width = 520}) => (
-  <div style={{width, position: 'relative', height: titles.length * 66 + 40}}>
-    {titles.map((title, i) => {
-      const last = i === titles.length - 1;
+export const CardStack: React.FC<{titles: string[]; width?: number}> = ({titles, width = 520}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  return (
+    <div style={{width, position: 'relative', height: titles.length * 66 + 40}}>
+      {titles.map((title, i) => {
+        const last = i === titles.length - 1;
+        const pop = popStyle(frame, fps, 6 + i * 7, 0.7);
       return (
         <div
           key={title}
@@ -24,7 +30,8 @@ export const CardStack: React.FC<{titles: string[]; width?: number}> = ({titles,
             alignItems: 'center',
             gap: 14,
             padding: '0 18px',
-            transform: `rotate(${(i % 2 === 0 ? -1 : 1) * 0.6}deg)`,
+            transform: `${pop.transform} rotate(${(i % 2 === 0 ? -1 : 1) * 0.6}deg)`,
+            opacity: pop.opacity,
           }}
         >
           <div
@@ -65,4 +72,5 @@ export const CardStack: React.FC<{titles: string[]; width?: number}> = ({titles,
       );
     })}
   </div>
-);
+  );
+};

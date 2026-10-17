@@ -4,7 +4,6 @@ import {palette, typeSize} from '../brand';
 import {useEnter} from './useEnter';
 import {CopyBlock, Stage} from './Stage';
 import {Browser} from '../parts/mockups/Browser';
-import {Lines} from '../parts/mockups/Lines';
 import {Avatar} from '../parts/mockups/Avatar';
 import type {SceneProps} from './types';
 
@@ -40,21 +39,34 @@ export const LongRead: React.FC<SceneProps> = ({copy, durationInFrames, width, h
         <div style={{display: 'flex', alignItems: 'center', gap: 26, justifyContent: 'center'}}>
           <Browser url="old-portal.com.bd/long-article" width={browserW} height={browserH}>
             <div style={{position: 'absolute', inset: 0, padding: 20, overflow: 'hidden'}}>
-              <div style={{transform: `translateY(${scroll}px)`}}>
+              <div style={{transform: `translateY(${scroll}px)`, display: 'flex', flexDirection: 'column', gap: 12}}>
                 <div
                   style={{
                     height: 70,
                     borderRadius: 10,
-                    background: '#E7EAF1',
-                    marginBottom: 16,
+                    background: 'linear-gradient(120deg, #DDE3EE, #C9D2E4)',
+                    marginBottom: 6,
                   }}
                 />
-                <Lines
-                  widths={[100, 96, 92, 98, 88, 94, 90, 84, 96, 78, 92, 88, 96, 82]}
-                  height={10}
-                  gap={12}
-                  color="#E3E7F0"
-                />
+                {[
+                  'ক্ষমতার নতুন নেতৃত্ব নিয়ে আলোচনার নতুন অধ্যায় শুরু হয়েছে দেশজুড়ে',
+                  'নির্বাচনী ইশতেহার নিয়ে বিশ্লেষকদের মতামত একদম নতুন করে',
+                  'বাজারে ডিজিটাল পেমেন্টের নতুন রেকর্ড গড়েছে দেশের ব্যাংকগুলো',
+                  'খেলার মাঠে উঠলেন নতুন তারকা, দর্শকদে উত্তেজনা',
+                  'বিশ্ব বাজারে তেলের দাম নিয়ে নতুন সিদ্ধান্ত আজ বিকেলে',
+                  'শিক্ষা বোর্ডের পরীক্ষার ফল প্রকাশ আগামী সপ্তাহে',
+                  'রাজধানীর যানজট কমাতে নতুন পরিকল্পনা অনুমোদিত',
+                  'কৃষকদের জন্য নতুন ভর্তুকি ঘোষণা করল সরকার',
+                  'তরুণদের কর্মসংস্থানে নতুন প্রকল্প শুরু হচ্ছে চট্টগ্রামে',
+                  'স্বাস্থ্যসেবায় ডিজিটাল ব্যবস্থা চালু হলো সারা দেশে',
+                  'পর্যটন খাতে আগন্তুক সংখ্যায় বড় উঠছে রেকর্ড',
+                  'নতুন সেতুর কাজ শেষ হবে আগামী বছরের মধ্যে',
+                  'বিদ্যুৎ বিলের নতুন নিয়ম কার্যকর হবে পরের মাসে',
+                ].map((t, i) => (
+                  <div key={i} style={{fontSize: 13, color: palette.muted, lineHeight: 1.8}}>
+                    {t}
+                  </div>
+                ))}
               </div>
             </div>
           </Browser>
