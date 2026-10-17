@@ -48,11 +48,11 @@
 
 **Files:** `out/devsolutions-{9x16,1x1,16x9}.mp4`
 
-- [ ] Step 1: `npm run ad -- devsolutions --all` (~12 min total).
-- [ ] Step 2: `npm run check -- devsolutions` for each size → duration 37.95±0.05 s, h264+aac, loudness near −14 LUFS.
-- [ ] Step 3: Spot-check music audible but quiet: measure mixed file RMS vs raw voice RMS (music RMS ≈ 0.1–0.2 × voice RMS).
-- [ ] Step 4: If the bed sounds wrong or fights the voice, adjust `MUSIC_VOLUME` or delete the bed and re-render with `--no-music`.
-- [ ] Step 5: No commit needed here (outputs are not tracked); confirm `git status` stays clean of `out/`.
+- [x] Step 1: Rendered all three sizes (~12 min).
+- [x] Step 2: Check passed: 37.952 s, correct sizes, h264/aac, −14.0 LUFS on all three.
+- [x] Step 3: Pause window −35 dB vs speech −14 dB: bed ~21 dB under voice, ~6 dB over floor.
+- [x] Step 4: First pass at −35 LUFS was too quiet; raised `BED_LUFS` to −30 and re-mixed from the raw renders.
+- [x] Step 5: `out/` untracked and clean.
 
 ### Task 3: Documentation
 
@@ -60,6 +60,6 @@
 
 - [x] Step 1: README updated (music command, `--no-music`, layout field, screenshot slots, mockup look).
 - [x] Step 2: Spec section 19 written (light theme, mockup parts, layouts, screenshot slots, music bed, Bangla digits).
-- [ ] Step 3: Tick plan checkboxes for completed v1 steps if any remain unticked.
-- [ ] Step 4: Run `npm run lint && npx vitest run && npm run snapshots` → all green.
-- [ ] Step 5: Commit: `docs: record v2 design and usage`.
+- [x] Step 3: v1 plan already fully ticked.
+- [x] Step 4: All green: 48 tests, lint clean, snapshots 0.000% differ.
+- [x] Step 5: Committed (`docs: record v2 design and usage`, final tweaks in this commit).

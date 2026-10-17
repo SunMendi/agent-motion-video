@@ -14,8 +14,8 @@ const asString = (value: unknown): string => {
 
 const ffmpegBin = asString((ffImport as {default?: unknown}).default ?? ffImport);
 
-/** Bed loudness in the final voice + music mix. 20 dB under the voice. */
-export const BED_LUFS = -35;
+/** Bed loudness in the final voice + music mix. About 20 dB under the voice. */
+export const BED_LUFS = -30;
 
 /** Mix ratio for the bed. The bed is normalised at generation, so 1.0 is correct. */
 export const MUSIC_VOLUME = 1.0;

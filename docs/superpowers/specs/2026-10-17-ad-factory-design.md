@@ -411,7 +411,7 @@ contextual product visuals on a clean light background.
 4. **Screenshot slots.** Mockups carry the video now. Real product screenshots can replace
    them later from `public/screens/` without touching the scenes.
 5. **Music bed.** `npm run music -- <name>` synthesises a soft pad with ffmpeg lavfi
-   (detuned F chord, tremolo, lowpass, fades), normalised to -35 LUFS, exactly the voice
+   (detuned F chord, tremolo, lowpass, fades), normalised to -30 LUFS, exactly the voice
    duration. The render mixes it under the voice (video stream copied, duration unchanged)
    then applies the usual measured gain to -14 LUFS. `--no-music` skips the bed.
 6. **Bangla digits.** `src/text/bn.ts` converts ASCII digits to Bangla digits for all
