@@ -51,7 +51,7 @@ These inputs or conditions are not covered by a single happy path, and each is t
 **Interfaces:**
 - Produces: npm scripts `studio`, `align`, `ad`, `check`, `test`, `snapshots`, `snapshots:update`, `new-ad`, `lint`.
 
-- [ ] **Step 1: Move the scaffold to the project root**
+- [x] **Step 1: Move the scaffold to the project root**
 
 ```bash
 cd /home/mehedi/Documents/aivideo
@@ -64,7 +64,7 @@ ls -a
 
 Expected: `package.json`, `src`, `public`, `tsconfig.json`, `remotion.config.ts`, `.gitignore`, `.prettierrc`, `eslint.config.mjs`, `README.md`, plus `docs`, the WAV, and the logo.
 
-- [ ] **Step 2: Install the extra dependencies**
+- [x] **Step 2: Install the extra dependencies**
 
 ```bash
 npm i ffmpeg-static ffprobe-static
@@ -73,7 +73,7 @@ npm i -D tsx vitest pngjs @types/pngjs @types/node fontkit
 
 Expected: `node_modules` grows, `npm ls` reports no missing packages.
 
-- [ ] **Step 3: Replace the scripts block in `package.json`**
+- [x] **Step 3: Replace the scripts block in `package.json`**
 
 Set `name` to `aivideo` and use this `scripts` object, keeping the existing dependencies untouched:
 
@@ -94,7 +94,7 @@ Set `name` to `aivideo` and use this `scripts` object, keeping the existing depe
 }
 ```
 
-- [ ] **Step 4: Update `tsconfig.json`**
+- [x] **Step 4: Update `tsconfig.json`**
 
 Change `lib` to `["ES2021"]` and add `scripts` and `tests` to `exclude`:
 
@@ -117,7 +117,7 @@ Change `lib` to `["ES2021"]` and add `scripts` and `tests` to `exclude`:
 }
 ```
 
-- [ ] **Step 5: Create `tsconfig.scripts.json`**
+- [x] **Step 5: Create `tsconfig.scripts.json`**
 
 ```json
 {
@@ -130,7 +130,7 @@ Change `lib` to `["ES2021"]` and add `scripts` and `tests` to `exclude`:
 }
 ```
 
-- [ ] **Step 6: Create `vitest.config.ts`**
+- [x] **Step 6: Create `vitest.config.ts`**
 
 ```ts
 import {defineConfig} from 'vitest/config';
@@ -143,7 +143,7 @@ export default defineConfig({
 });
 ```
 
-- [ ] **Step 7: Verify the toolchain**
+- [x] **Step 7: Verify the toolchain**
 
 ```bash
 npx remotion versions
@@ -152,7 +152,7 @@ npx remotion compositions
 
 Expected: `remotion 4.0.536` and a list that contains `MyComp`.
 
-- [ ] **Step 8: Init git and commit**
+- [x] **Step 8: Init git and commit**
 
 ```bash
 git init
@@ -171,7 +171,7 @@ git commit -m "chore: settle Remotion scaffold and toolchain"
 **Interfaces:**
 - Produces: the raw timing shape `{audio_duration, words: [{word_bangla, start_time, end_time}]}` and the `Brief` shape consumed by Task 4 and Task 9.
 
-- [ ] **Step 1: Move the assets**
+- [x] **Step 1: Move the assets**
 
 ```bash
 mkdir -p public/audio public/brand briefs scripts/lib tests
@@ -179,7 +179,7 @@ mv cartesia_2026-10-17T09_10_53Z_SunMendi_sonic-3.6_bn.wav public/audio/devsolut
 mv devsolutionslogo.jpg public/brand/logo.jpg
 ```
 
-- [ ] **Step 2: Write `briefs/devsolutions.raw.json`**
+- [x] **Step 2: Write `briefs/devsolutions.raw.json`**
 
 Use the user's corrected word list, one object per word, in file order. All 95 words, from `মানুষ` at `0.00` to `দিন।` ending `37.92`, with `audio_duration` `37.92`.
 
@@ -196,7 +196,7 @@ Use the user's corrected word list, one object per word, in file order. All 95 w
 
 The block above shows the shape only. The real file carries all 95 words, copied verbatim from the corrected timing JSON the user supplied on 2026-10-17. Keep the order.
 
-- [ ] **Step 3: Write `briefs/devsolutions.json`**
+- [x] **Step 3: Write `briefs/devsolutions.json`**
 
 ```json
 {
@@ -221,7 +221,7 @@ The block above shows the shape only. The real file carries all 95 words, copied
 }
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add -A
@@ -239,7 +239,7 @@ git commit -m "feat: add audio, logo, raw timing, and brief"
 **Interfaces:**
 - Produces: `Brief`, `SceneCopy`, `SceneType`, `Word`, `Timing`, `SceneSpan` types; `validateBrief(b): string[]`; `validateTiming(t): string[]`; palette, sizes, `scaleF(w,h)`, `safeWidth(w)`, `typeSize(level,w,h)`.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // tests/model.test.ts
@@ -309,12 +309,12 @@ describe('brand', () => {
 });
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `npm test`
 Expected: FAIL, `Cannot find module '../src/model'`.
 
-- [ ] **Step 3: Write `src/model.ts`**
+- [x] **Step 3: Write `src/model.ts`**
 
 ```ts
 export const SCENE_TYPES = ['hook', 'problem', 'feature', 'question', 'stat', 'promise', 'cta'] as const;
@@ -377,7 +377,7 @@ export const validateTiming = (t: Timing): string[] => {
 };
 ```
 
-- [ ] **Step 4: Write `src/brand.ts`**
+- [x] **Step 4: Write `src/brand.ts`**
 
 ```ts
 export const FPS = 30;
@@ -421,12 +421,12 @@ export const typeSize = (level: TypeLevel, width: number, height: number): numbe
   Math.round(BASE[level] * scaleF(width, height));
 ```
 
-- [ ] **Step 5: Run tests to verify they pass**
+- [x] **Step 5: Run tests to verify they pass**
 
 Run: `npm test`
 Expected: PASS, all model and brand cases.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add -A
@@ -445,7 +445,7 @@ git commit -m "feat: add model types, validators, and brand constants"
 - Consumes: `Word`, `Timing`, `Brief`, `SceneSpan` from Task 3.
 - Produces: `durationFrames(timing, fps?)`, `toFrames(seconds, fps?)`, `sceneSpans(timing, brief)`, `sceneFrames(spans, total, fps?)`, `groupCaptions(words, {maxWords, gapMin})`, `activeWordIndex(words, t)`, `ruleType(index, count, span)`.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // tests/timing.test.ts
@@ -539,12 +539,12 @@ describe('activeWordIndex', () => {
 });
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `npm test`
 Expected: FAIL, `Cannot find module '../src/timing'`.
 
-- [ ] **Step 3: Write `src/timing.ts`**
+- [x] **Step 3: Write `src/timing.ts`**
 
 ```ts
 import type {Brief, SceneSpan, SceneType, Timing, Word} from './model';
@@ -643,12 +643,12 @@ export const activeWordIndex = (words: Word[], t: number): number =>
   words.findIndex((w) => t >= w.s && t < w.e);
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `npm test`
 Expected: PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add -A
@@ -666,7 +666,7 @@ git commit -m "feat: add timing engine for scenes, frames, and caption chunks"
 **Interfaces:**
 - Produces: `type Measure = (text: string) => number`, `wrapTokens<T>(tokens, text, maxWidth, measure): T[][]`, `wrapToWidth(text, maxWidth, measure): string[]`, `countGraphemes(s): number`, and `nodeMeasure(sizePx, weight?)` used by tests and scripts only.
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // tests/wrap.test.ts
@@ -738,12 +738,12 @@ describe('real copy fits', () => {
 });
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `npm test`
 Expected: FAIL, missing modules.
 
-- [ ] **Step 3: Write `src/fontkit.d.ts`**
+- [x] **Step 3: Write `src/fontkit.d.ts`**
 
 ```ts
 declare module 'fontkit' {
@@ -762,7 +762,7 @@ declare module 'fontkit' {
 }
 ```
 
-- [ ] **Step 4: Write `src/text/wrap.ts`**
+- [x] **Step 4: Write `src/text/wrap.ts`**
 
 ```ts
 export type Measure = (text: string) => number;
@@ -812,7 +812,7 @@ export const wrapToWidth = (text: string, maxWidth: number, measure: Measure): s
   ).map((line) => line.join(' '));
 ```
 
-- [ ] **Step 5: Write `scripts/lib/measure-node.ts`**
+- [x] **Step 5: Write `scripts/lib/measure-node.ts`**
 
 ```ts
 import {readFileSync} from 'node:fs';
@@ -842,7 +842,7 @@ export const nodeMeasure = (sizePx: number, weight: '400' | '700' = '400'): Meas
 export const readJson = <T,>(file: string): T => JSON.parse(readFileSync(file, 'utf8')) as T;
 ```
 
-- [ ] **Step 6: Copy the fonts into `public/fonts`**
+- [x] **Step 6: Copy the fonts into `public/fonts`**
 
 ```bash
 mkdir -p public/fonts
@@ -850,12 +850,12 @@ cp /usr/share/fonts/truetype/noto/NotoSansBengali-Regular.ttf public/fonts/
 cp /usr/share/fonts/truetype/noto/NotoSansBengali-Bold.ttf public/fonts/
 ```
 
-- [ ] **Step 7: Run tests to verify they pass**
+- [x] **Step 7: Run tests to verify they pass**
 
 Run: `npm test`
 Expected: PASS, including the plausible-width assertion.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add -A
@@ -874,7 +874,7 @@ git commit -m "feat: add Bangla text wrapping with a real font metric backend"
 - Consumes: `briefs/devsolutions.raw.json`, `public/audio/devsolutions.wav`.
 - Produces: `briefs/devsolutions.timing.json` with `{audio_duration, words: Word[], scenes: null, align: {matched, warnings}}`; exports `decodeRms(file): {duration, rms, threshold}` and `align(raw, audio)` for tests.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 ```ts
 // tests/align.test.ts
@@ -943,12 +943,12 @@ describe('alignHandlesStereoInput', () => {
 });
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `npm test`
 Expected: FAIL, `Cannot find module '../scripts/lib/align-core'`.
 
-- [ ] **Step 3: Write `scripts/lib/pcm.ts`**
+- [x] **Step 3: Write `scripts/lib/pcm.ts`**
 
 ```ts
 import {execFileSync} from 'node:child_process';
@@ -1006,7 +1006,7 @@ export const meanAt = (rms: number[], start: number, end: number): number => {
 };
 ```
 
-- [ ] **Step 4: Write `scripts/lib/align-core.ts`**
+- [x] **Step 4: Write `scripts/lib/align-core.ts`**
 
 ```ts
 import {meanAt} from './pcm';
@@ -1170,7 +1170,7 @@ export const align = (raw: Raw, audio: Envelope): Record<string, unknown> => {
 
 Note: `silences[j].mid` does not exist. Use `(silences[j].start + silences[j].end) / 2` in place of `silences[j].mid` in the three cost calculations, and store `mid` on each silence at detection time as `{start, end, mid}`.
 
-- [ ] **Step 5: Write `scripts/align.ts`**
+- [x] **Step 5: Write `scripts/align.ts`**
 
 ```ts
 #!/usr/bin/env tsx
@@ -1210,7 +1210,7 @@ console.log(`duration ${result.audio_duration}s, ${result.words.length} words, $
 for (const w of result.align.warnings) console.log('warning: ' + w);
 ```
 
-- [ ] **Step 6: Run the alignment and the test**
+- [x] **Step 6: Run the alignment and the test**
 
 ```bash
 npm run align -- devsolutions
@@ -1219,7 +1219,7 @@ npm test
 
 Expected: `briefs/devsolutions.timing.json` exists, warnings list the two large moves, and `tests/align.test.ts` passes.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add -A
@@ -1233,7 +1233,7 @@ git commit -m "feat: align word timings to silence detected in the voice file"
 **Files:**
 - Create: `src/fonts.ts`, `src/parts/Grain.tsx`, `src/parts/ProgressBar.tsx`, `src/parts/LogoPlate.tsx`, `src/parts/Sweep.tsx`, `src/text/measure.ts`, `src/scenes/useEnter.ts`
 
-- [ ] **Step 1: Write `src/fonts.ts`**
+- [x] **Step 1: Write `src/fonts.ts`**
 
 ```ts
 import {continueRender, delayRender, staticFile} from 'remotion';
@@ -1268,7 +1268,7 @@ export const ensureFonts = (): void => {
 };
 ```
 
-- [ ] **Step 2: Write `src/text/measure.ts`**
+- [x] **Step 2: Write `src/text/measure.ts`**
 
 ```ts
 import type {Measure} from './wrap';
@@ -1283,7 +1283,7 @@ export const browserMeasure = (sizePx: number, weight: '400' | '700'): Measure =
 };
 ```
 
-- [ ] **Step 3: Write `src/scenes/useEnter.ts`**
+- [x] **Step 3: Write `src/scenes/useEnter.ts`**
 
 ```ts
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
@@ -1309,7 +1309,7 @@ export const useEnter = (durationInFrames: number) => {
 };
 ```
 
-- [ ] **Step 4: Write `src/parts/Grain.tsx`**
+- [x] **Step 4: Write `src/parts/Grain.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1326,7 +1326,7 @@ export const Grain: React.FC = () => (
 );
 ```
 
-- [ ] **Step 5: Write `src/parts/ProgressBar.tsx`**
+- [x] **Step 5: Write `src/parts/ProgressBar.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1352,7 +1352,7 @@ export const ProgressBar: React.FC = () => {
 };
 ```
 
-- [ ] **Step 6: Write `src/parts/LogoPlate.tsx`**
+- [x] **Step 6: Write `src/parts/LogoPlate.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1381,7 +1381,7 @@ export const LogoPlate: React.FC<{width: number; radius?: number; padding?: numb
 );
 ```
 
-- [ ] **Step 7: Write `src/parts/Sweep.tsx`**
+- [x] **Step 7: Write `src/parts/Sweep.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1400,7 +1400,7 @@ export const Sweep: React.FC = () => {
 };
 ```
 
-- [ ] **Step 8: Verify types and commit**
+- [x] **Step 8: Verify types and commit**
 
 ```bash
 npm run lint
@@ -1428,7 +1428,7 @@ export type SceneProps = {
 };
 ```
 
-- [ ] **Step 1: Write `Hook.tsx`**
+- [x] **Step 1: Write `Hook.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1468,7 +1468,7 @@ export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, heigh
 };
 ```
 
-- [ ] **Step 2: Write `Problem.tsx`**
+- [x] **Step 2: Write `Problem.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1520,7 +1520,7 @@ export const Problem: React.FC<SceneProps> = ({copy, durationInFrames, width, he
 };
 ```
 
-- [ ] **Step 3: Write `Feature.tsx`**
+- [x] **Step 3: Write `Feature.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1581,7 +1581,7 @@ export const Feature: React.FC<SceneProps> = ({copy, durationInFrames, width, he
 };
 ```
 
-- [ ] **Step 4: Write `Question.tsx`**
+- [x] **Step 4: Write `Question.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1624,7 +1624,7 @@ export const Question: React.FC<SceneProps> = ({copy, durationInFrames, width, h
 };
 ```
 
-- [ ] **Step 5: Write `Stat.tsx` and `Promise.tsx`**
+- [x] **Step 5: Write `Stat.tsx` and `Promise.tsx`**
 
 ```tsx
 // src/scenes/Stat.tsx
@@ -1722,7 +1722,7 @@ export const Promise: React.FC<SceneProps> = ({copy, durationInFrames, width, he
 };
 ```
 
-- [ ] **Step 6: Write `Cta.tsx`**
+- [x] **Step 6: Write `Cta.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1776,7 +1776,7 @@ export const Cta: React.FC<SceneProps> = ({copy, durationInFrames, width, height
 
 For `Cta`, add `cta` and `contact` to the props object in `types.ts` as optional strings passed down from the brief.
 
-- [ ] **Step 7: Write `src/scenes/types.ts` and `SceneRouter.tsx`**
+- [x] **Step 7: Write `src/scenes/types.ts` and `SceneRouter.tsx`**
 
 ```ts
 // src/scenes/types.ts
@@ -1821,7 +1821,7 @@ export const SceneRouter: React.FC<SceneProps & {type: SceneType}> = ({type, ...
 };
 ```
 
-- [ ] **Step 8: Verify types and commit**
+- [x] **Step 8: Verify types and commit**
 
 ```bash
 npm run lint
@@ -1837,7 +1837,7 @@ git commit -m "feat: add seven scene types with enter and exit motion"
 - Create: `src/Ad.tsx`, `src/parts/CaptionBar.tsx`, `src/parts/Background.tsx`, `src/briefs.ts`
 - Modify: `src/Root.tsx`, delete `src/Composition.tsx`
 
-- [ ] **Step 1: Write `src/parts/Background.tsx`**
+- [x] **Step 1: Write `src/parts/Background.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1865,7 +1865,7 @@ export const Background: React.FC = () => {
 };
 ```
 
-- [ ] **Step 2: Write `src/parts/CaptionBar.tsx`**
+- [x] **Step 2: Write `src/parts/CaptionBar.tsx`**
 
 ```tsx
 import React from 'react';
@@ -1930,7 +1930,7 @@ export const CaptionBar: React.FC<{
 
 Note: drop the unused `isActive` variable. Keep only `const on = chunk.words[activeIndex] === word;`.
 
-- [ ] **Step 3: Write `src/briefs.ts`**
+- [x] **Step 3: Write `src/briefs.ts`**
 
 ```ts
 import type {Brief, Timing} from './model';
@@ -1944,7 +1944,7 @@ export const entries: Entry[] = [
 ];
 ```
 
-- [ ] **Step 4: Write `src/Ad.tsx`**
+- [x] **Step 4: Write `src/Ad.tsx`**
 
 ```tsx
 import React, {useMemo} from 'react';
@@ -2008,7 +2008,7 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
 };
 ```
 
-- [ ] **Step 5: Write `src/Root.tsx`**
+- [x] **Step 5: Write `src/Root.tsx`**
 
 ```tsx
 import React from 'react';
@@ -2041,7 +2041,7 @@ export const RemotionRoot: React.FC = () => (
 );
 ```
 
-- [ ] **Step 6: Delete the template composition and verify**
+- [x] **Step 6: Delete the template composition and verify**
 
 ```bash
 rm src/Composition.tsx
@@ -2051,7 +2051,7 @@ npx remotion compositions
 
 Expected: three ids listed, `devsolutions-9x16`, `devsolutions-1x1`, `devsolutions-16x9`.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add -A
@@ -2065,7 +2065,7 @@ git commit -m "feat: assemble the ad composition from brief and timing"
 **Files:**
 - Create: `scripts/render.ts`, `scripts/check.ts`, `scripts/lib/ffmpeg.ts`
 
-- [ ] **Step 1: Write `scripts/lib/ffmpeg.ts`**
+- [x] **Step 1: Write `scripts/lib/ffmpeg.ts`**
 
 ```ts
 import {execFileSync} from 'node:child_process';
@@ -2127,7 +2127,7 @@ export const probe = (file: string): Probe => {
 
 Note: the module-level `probe` function name collides with the local `probe` helper. Rename the local helper to `runProbe`.
 
-- [ ] **Step 2: Write `scripts/render.ts`**
+- [x] **Step 2: Write `scripts/render.ts`**
 
 ```ts
 #!/usr/bin/env tsx
@@ -2157,7 +2157,7 @@ for (const key of keys) {
 }
 ```
 
-- [ ] **Step 3: Write `scripts/check.ts`**
+- [x] **Step 3: Write `scripts/check.ts`**
 
 ```ts
 #!/usr/bin/env tsx
@@ -2201,7 +2201,7 @@ console.log(`output check passed for ${name}`);
 
 For `checkRejectsStaleTiming`, add an exported `checkFiles(name): string[]` from `scripts/check.ts` and a test in `tests/check.test.ts` that points it at a fake timing file whose duration is 10 seconds while the WAV is 37.92, asserting the returned array mentions duration.
 
-- [ ] **Step 4: Render the 9x16 ad**
+- [x] **Step 4: Render the 9x16 ad**
 
 ```bash
 npm run ad -- devsolutions
@@ -2209,7 +2209,7 @@ npm run ad -- devsolutions
 
 Expected: `out/devsolutions-9x16.mp4` exists.
 
-- [ ] **Step 5: Run the output check**
+- [x] **Step 5: Run the output check**
 
 ```bash
 npm run check
@@ -2217,7 +2217,7 @@ npm run check
 
 Expected: `output check passed for devsolutions` for all three sizes once `--all` has been rendered.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add -A
@@ -2231,7 +2231,7 @@ git commit -m "feat: add render pipeline with loudness normalisation and output 
 **Files:**
 - Create: `scripts/snapshot.ts`, `tests/helpers/pngdiff.ts`
 
-- [ ] **Step 1: Write `tests/helpers/pngdiff.ts`**
+- [x] **Step 1: Write `tests/helpers/pngdiff.ts`**
 
 ```ts
 import {PNG} from 'pngjs';
@@ -2256,7 +2256,7 @@ export const diffRatio = (a: Buffer, b: Buffer): number => {
 };
 ```
 
-- [ ] **Step 2: Write `scripts/snapshot.ts`**
+- [x] **Step 2: Write `scripts/snapshot.ts`**
 
 ```ts
 #!/usr/bin/env tsx
@@ -2333,7 +2333,7 @@ git commit -m "feat: add per-scene snapshot regression checks"
 **Files:**
 - Create: `README.md` (replace the template)
 
-- [ ] **Step 1: Write `README.md`**
+- [x] **Step 1: Write `README.md`**
 
 Include: what this folder does, the four commands (`npm run align`, `npm run ad`, `npm run check`, `npm test`), where to drop a new audio file, how to write the brief, how to update snapshots, and the Remotion licence note for teams over three people.
 
