@@ -1,0 +1,480 @@
+{
+  "audio_duration": 37.92,
+  "words": [
+    {
+      "word_bangla": "মানুষ",
+      "start_time": 0,
+      "end_time": 0.4
+    },
+    {
+      "word_bangla": "কেন",
+      "start_time": 0.4,
+      "end_time": 0.7
+    },
+    {
+      "word_bangla": "আপনার",
+      "start_time": 0.7,
+      "end_time": 1.05
+    },
+    {
+      "word_bangla": "নিউজ",
+      "start_time": 1.05,
+      "end_time": 1.35
+    },
+    {
+      "word_bangla": "পোর্টালে",
+      "start_time": 1.35,
+      "end_time": 1.8
+    },
+    {
+      "word_bangla": "ঢুকে",
+      "start_time": 1.8,
+      "end_time": 2.15
+    },
+    {
+      "word_bangla": "তিন",
+      "start_time": 2.15,
+      "end_time": 2.45
+    },
+    {
+      "word_bangla": "সেকেন্ডেই",
+      "start_time": 2.45,
+      "end_time": 3
+    },
+    {
+      "word_bangla": "বের",
+      "start_time": 3,
+      "end_time": 3.25
+    },
+    {
+      "word_bangla": "হয়ে",
+      "start_time": 3.25,
+      "end_time": 3.45
+    },
+    {
+      "word_bangla": "যায়",
+      "start_time": 3.45,
+      "end_time": 3.7
+    },
+    {
+      "word_bangla": "জানেন?",
+      "start_time": 3.7,
+      "end_time": 4.1
+    },
+    {
+      "word_bangla": "কারণ",
+      "start_time": 4.5,
+      "end_time": 4.9
+    },
+    {
+      "word_bangla": "আপনার",
+      "start_time": 4.9,
+      "end_time": 5.25
+    },
+    {
+      "word_bangla": "সাইট",
+      "start_time": 5.25,
+      "end_time": 5.6
+    },
+    {
+      "word_bangla": "এখনও",
+      "start_time": 5.6,
+      "end_time": 6
+    },
+    {
+      "word_bangla": "২০১৫",
+      "start_time": 6,
+      "end_time": 6.85
+    },
+    {
+      "word_bangla": "সালেই",
+      "start_time": 6.85,
+      "end_time": 7.25
+    },
+    {
+      "word_bangla": "আটকে",
+      "start_time": 7.25,
+      "end_time": 7.6
+    },
+    {
+      "word_bangla": "আছে।",
+      "start_time": 7.6,
+      "end_time": 8
+    },
+    {
+      "word_bangla": "এখনকার",
+      "start_time": 8.4,
+      "end_time": 8.9
+    },
+    {
+      "word_bangla": "পাঠকরা",
+      "start_time": 8.9,
+      "end_time": 9.4
+    },
+    {
+      "word_bangla": "লম্বা",
+      "start_time": 9.4,
+      "end_time": 9.75
+    },
+    {
+      "word_bangla": "রচনা",
+      "start_time": 9.75,
+      "end_time": 10.2
+    },
+    {
+      "word_bangla": "পড়তে",
+      "start_time": 10.2,
+      "end_time": 10.55
+    },
+    {
+      "word_bangla": "চায়",
+      "start_time": 10.55,
+      "end_time": 10.8
+    },
+    {
+      "word_bangla": "না।",
+      "start_time": 10.8,
+      "end_time": 11.1
+    },
+    {
+      "word_bangla": "তাই",
+      "start_time": 11.45,
+      "end_time": 11.75
+    },
+    {
+      "word_bangla": "আমাদের",
+      "start_time": 11.75,
+      "end_time": 12.15
+    },
+    {
+      "word_bangla": "এআই",
+      "start_time": 12.15,
+      "end_time": 12.55
+    },
+    {
+      "word_bangla": "এজেন্ট",
+      "start_time": 12.55,
+      "end_time": 12.95
+    },
+    {
+      "word_bangla": "আপনার",
+      "start_time": 12.95,
+      "end_time": 13.3
+    },
+    {
+      "word_bangla": "পোর্টালের",
+      "start_time": 13.3,
+      "end_time": 13.75
+    },
+    {
+      "word_bangla": "প্রতিটি",
+      "start_time": 13.75,
+      "end_time": 14.15
+    },
+    {
+      "word_bangla": "নিউজে",
+      "start_time": 14.15,
+      "end_time": 14.55
+    },
+    {
+      "word_bangla": "অটোমেটিক",
+      "start_time": 14.55,
+      "end_time": 15.15
+    },
+    {
+      "word_bangla": "যুক্ত",
+      "start_time": 15.15,
+      "end_time": 15.45
+    },
+    {
+      "word_bangla": "করে",
+      "start_time": 15.45,
+      "end_time": 15.7
+    },
+    {
+      "word_bangla": "দেয়",
+      "start_time": 15.7,
+      "end_time": 16
+    },
+    {
+      "word_bangla": "তিন",
+      "start_time": 16,
+      "end_time": 16.3
+    },
+    {
+      "word_bangla": "লাইনের",
+      "start_time": 16.3,
+      "end_time": 16.7
+    },
+    {
+      "word_bangla": "এআই",
+      "start_time": 16.7,
+      "end_time": 17.05
+    },
+    {
+      "word_bangla": "সামারি",
+      "start_time": 17.05,
+      "end_time": 17.5
+    },
+    {
+      "word_bangla": "এবং",
+      "start_time": 17.5,
+      "end_time": 17.8
+    },
+    {
+      "word_bangla": "খবর",
+      "start_time": 17.8,
+      "end_time": 18.15
+    },
+    {
+      "word_bangla": "শোনার",
+      "start_time": 18.15,
+      "end_time": 18.5
+    },
+    {
+      "word_bangla": "জন্য",
+      "start_time": 18.5,
+      "end_time": 18.8
+    },
+    {
+      "word_bangla": "অডিও",
+      "start_time": 18.8,
+      "end_time": 19.2
+    },
+    {
+      "word_bangla": "সামারি।",
+      "start_time": 19.2,
+      "end_time": 19.75
+    },
+    {
+      "word_bangla": "আর",
+      "start_time": 20.2,
+      "end_time": 20.45
+    },
+    {
+      "word_bangla": "ভিজিটর",
+      "start_time": 20.45,
+      "end_time": 20.9
+    },
+    {
+      "word_bangla": "আনবে",
+      "start_time": 20.9,
+      "end_time": 21.25
+    },
+    {
+      "word_bangla": "কোথা",
+      "start_time": 21.25,
+      "end_time": 21.55
+    },
+    {
+      "word_bangla": "থেকে?",
+      "start_time": 21.55,
+      "end_time": 21.95
+    },
+    {
+      "word_bangla": "এজেন্ট",
+      "start_time": 22.35,
+      "end_time": 22.75
+    },
+    {
+      "word_bangla": "নিজেই",
+      "start_time": 22.75,
+      "end_time": 23.1
+    },
+    {
+      "word_bangla": "প্রতিদিন",
+      "start_time": 23.1,
+      "end_time": 23.55
+    },
+    {
+      "word_bangla": "২৪টা",
+      "start_time": 23.55,
+      "end_time": 24.1
+    },
+    {
+      "word_bangla": "ট্রেন্ডিং",
+      "start_time": 24.1,
+      "end_time": 24.55
+    },
+    {
+      "word_bangla": "খবর",
+      "start_time": 24.55,
+      "end_time": 24.85
+    },
+    {
+      "word_bangla": "খুঁজে",
+      "start_time": 24.85,
+      "end_time": 25.2
+    },
+    {
+      "word_bangla": "সাইটে",
+      "start_time": 25.2,
+      "end_time": 25.55
+    },
+    {
+      "word_bangla": "পোস্ট",
+      "start_time": 25.55,
+      "end_time": 25.9
+    },
+    {
+      "word_bangla": "করার",
+      "start_time": 25.9,
+      "end_time": 26.2
+    },
+    {
+      "word_bangla": "সাথে",
+      "start_time": 26.2,
+      "end_time": 26.45
+    },
+    {
+      "word_bangla": "সাথে",
+      "start_time": 26.45,
+      "end_time": 26.75
+    },
+    {
+      "word_bangla": "দারুণ",
+      "start_time": 26.75,
+      "end_time": 27.1
+    },
+    {
+      "word_bangla": "সব",
+      "start_time": 27.1,
+      "end_time": 27.35
+    },
+    {
+      "word_bangla": "ফটোকার্ড",
+      "start_time": 27.35,
+      "end_time": 27.85
+    },
+    {
+      "word_bangla": "ডিজাইন",
+      "start_time": 27.85,
+      "end_time": 28.3
+    },
+    {
+      "word_bangla": "করে",
+      "start_time": 28.3,
+      "end_time": 28.55
+    },
+    {
+      "word_bangla": "আপনার",
+      "start_time": 28.55,
+      "end_time": 28.9
+    },
+    {
+      "word_bangla": "ফেসবুক",
+      "start_time": 28.9,
+      "end_time": 29.35
+    },
+    {
+      "word_bangla": "পেজে",
+      "start_time": 29.35,
+      "end_time": 29.7
+    },
+    {
+      "word_bangla": "আপলোড",
+      "start_time": 29.7,
+      "end_time": 30.2
+    },
+    {
+      "word_bangla": "করে",
+      "start_time": 30.2,
+      "end_time": 30.4
+    },
+    {
+      "word_bangla": "দেবে।",
+      "start_time": 30.4,
+      "end_time": 30.8
+    },
+    {
+      "word_bangla": "একা",
+      "start_time": 31.25,
+      "end_time": 31.55
+    },
+    {
+      "word_bangla": "হাতে",
+      "start_time": 31.55,
+      "end_time": 31.85
+    },
+    {
+      "word_bangla": "নিজের",
+      "start_time": 31.85,
+      "end_time": 32.15
+    },
+    {
+      "word_bangla": "লোকাল",
+      "start_time": 32.15,
+      "end_time": 32.55
+    },
+    {
+      "word_bangla": "পোর্টালকে",
+      "start_time": 32.55,
+      "end_time": 33.05
+    },
+    {
+      "word_bangla": "জাতীয়",
+      "start_time": 33.05,
+      "end_time": 33.5
+    },
+    {
+      "word_bangla": "মানের",
+      "start_time": 33.5,
+      "end_time": 33.85
+    },
+    {
+      "word_bangla": "স্মার্ট",
+      "start_time": 33.85,
+      "end_time": 34.2
+    },
+    {
+      "word_bangla": "পোর্টালে",
+      "start_time": 34.2,
+      "end_time": 34.65
+    },
+    {
+      "word_bangla": "রূপান্তর",
+      "start_time": 34.65,
+      "end_time": 35.1
+    },
+    {
+      "word_bangla": "করতে",
+      "start_time": 35.1,
+      "end_time": 35.4
+    },
+    {
+      "word_bangla": "চান?",
+      "start_time": 35.4,
+      "end_time": 35.8
+    },
+    {
+      "word_bangla": "ডেমো",
+      "start_time": 36.15,
+      "end_time": 36.5
+    },
+    {
+      "word_bangla": "লিংক",
+      "start_time": 36.5,
+      "end_time": 36.8
+    },
+    {
+      "word_bangla": "পেতে",
+      "start_time": 36.8,
+      "end_time": 37.1
+    },
+    {
+      "word_bangla": "এখনই",
+      "start_time": 37.1,
+      "end_time": 37.45
+    },
+    {
+      "word_bangla": "মেসেজ",
+      "start_time": 37.45,
+      "end_time": 37.8
+    },
+    {
+      "word_bangla": "দিন।",
+      "start_time": 37.8,
+      "end_time": 37.92
+    }
+  ]
+}

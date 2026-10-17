@@ -1,0 +1,62 @@
+{
+  "name": "devsolutions",
+  "product": "DevSolutions BD AI Agent",
+  "cta": "ইনবক্স করুন",
+  "contact": "facebook.com/devsolutionsbd",
+  "language": "bn",
+  "audio": "audio/devsolutions.wav",
+  "timing": "devsolutions.timing.json",
+  "brand": {"watermark": true},
+  "scenes": [
+    {
+      "type": "hook",
+      "kicker": "নিউজ পোর্টাল মালিকদের জন্য",
+      "headline": "৩ সেকেন্ডেই পাঠক বের হয়ে যায়"
+    },
+    {
+      "type": "problem",
+      "kicker": "আপনার সাইটের অবস্থা",
+      "headline": "এখনও ২০১৫ সালে আটকে",
+      "stat": {"value": "২০১৫", "label": "সালে থেমে আছে সাইট"}
+    },
+    {
+      "type": "problem",
+      "kicker": "পাঠক বদলে গেছে",
+      "headline": "লম্বা রচনা পড়তে চায় না"
+    },
+    {
+      "type": "feature",
+      "kicker": "সমাধান",
+      "headline": "এআই এজেন্ট নিজেই যোগ করে",
+      "bullets": [
+        "প্রতিটি নিউজে ৩ লাইনের এআই সামারি",
+        "খবর শোনার জন্য অডিও সামারি"
+      ]
+    },
+    {
+      "type": "question",
+      "headline": "ভিজিটর আনবে কোথা থেকে?"
+    },
+    {
+      "type": "feature",
+      "kicker": "প্রতিদিন অটোপোস্ট",
+      "headline": "খবর, ফটোকার্ড, ফেসবুক",
+      "stat": {"value": "২৪", "label": "ট্রেন্ডিং খবর প্রতিদিন"},
+      "bullets": [
+        "ট্রেন্ডিং খবর অটো সাইটে পোস্ট",
+        "ফটোকার্ড অটো ফেসবুক পেজে"
+      ]
+    },
+    {
+      "type": "promise",
+      "kicker": "রূপান্তর",
+      "headline": "লোকাল পোর্টাল থেকে স্মার্ট পোর্টাল",
+      "before": "লোকাল পোর্টাল",
+      "after": "জাতীয় মানের স্মার্ট পোর্টাল"
+    },
+    {
+      "type": "cta",
+      "headline": "ডেমো লিংক পেতে এখনই মেসেজ দিন"
+    }
+  ]
+}
