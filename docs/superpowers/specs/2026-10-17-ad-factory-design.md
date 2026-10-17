@@ -393,3 +393,26 @@ audio and its output wins.
 5. The logo watermark is hidden during the CTA scene, which shows its own large logo.
 6. `tsconfig.scripts.json` checks scripts and tests with `types: ["node"]` only, to keep
    the `@types/web` and `@types/node` globals apart.
+
+## 19. Visual redesign v2 deltas
+
+User feedback on the first render: text-only animation was not enough. The ad now shows
+contextual product visuals on a clean light background.
+
+1. **Light theme.** `src/brand.ts` palette is now light: `bg #F4F6FB`, white surfaces,
+   dark ink text, blue accents `#1668E3`. Grain and vignette are removed.
+   Captions sit on a white pill with dark text; the spoken word is a blue chip.
+2. **Product mockups in code.** New parts under `src/parts/mockups/`: Browser, NewsPage,
+   Avatar, TimerRing, Stamp, Counter, Lines, AiPanel, AudioPlayer, Chips, CardStack,
+   PhotoCard, FacebookPost, PortalWindow, InboxThread. Every scene is rebuilt on them.
+3. **Scene layouts.** A scene may carry `layout` to pick a special layout when two scenes
+   share a `type`. Registered layouts: `longread` (wall of text, reader swipes away),
+   `trending` (card stack, photo card, Facebook post). Unknown layouts fail validation.
+4. **Screenshot slots.** Mockups carry the video now. Real product screenshots can replace
+   them later from `public/screens/` without touching the scenes.
+5. **Music bed.** `npm run music -- <name>` synthesises a soft pad with ffmpeg lavfi
+   (detuned F chord, tremolo, lowpass, fades), normalised to -35 LUFS, exactly the voice
+   duration. The render mixes it under the voice (video stream copied, duration unchanged)
+   then applies the usual measured gain to -14 LUFS. `--no-music` skips the bed.
+6. **Bangla digits.** `src/text/bn.ts` converts ASCII digits to Bangla digits for all
+   counters and timer labels.

@@ -9,8 +9,10 @@ The first ad in here: **DevSolutions BD** — an AI agent for Bangladeshi online
 
 ```bash
 npm run align -- <name>          # snap word timings onto the real pauses of the audio
+npm run music -- <name>          # generate the music bed under the voice
 npm run ad -- <name>             # render the 9x16 video
 npm run ad -- <name> --all       # render 9x16, 1x1 and 16x9
+npm run ad -- <name> --no-music  # render without the music bed
 npm run check -- <name>          # verify duration, size and codecs of the outputs
 npm test                         # all tests, including text fitting against the real font
 npm run snapshots                # compare rendered frames against the stored baselines
@@ -20,6 +22,13 @@ npm run new-ad -- <name>         # scaffold the files for the next ad
 ```
 
 Output files land in `out/`. The ad length always equals the voice length. For this ad: 37.92 s.
+
+The look is light and clean. Each scene shows a product mockup built in code: browser
+windows, news pages, AI panels, audio players, trending cards, Facebook posts. Real
+product screenshots can replace the mockups later. Drop them into `public/screens/`.
+
+The music bed is a soft pad made with ffmpeg. It sits 20 dB under the voice and never
+changes the length. If it sounds wrong, render with `--no-music`.
 
 ## How an ad is built
 
@@ -42,7 +51,10 @@ Output files land in `out/`. The ad length always equals the voice length. For t
    - `type` is optional. It picks the layout: hook, problem, feature, question, stat, promise, cta.
    - `segments: 2` on a scene means it covers two audio pauses. Use it when the voice stops
      mid-sentence. The counts must add up to the number of pauses, or the build fails.
-5. Run `npm run align -- <name>`, then `npm run ad -- <name> --all`, then `npm run check -- <name>`.
+   - `layout` is optional. It picks a special layout for that scene: longread or trending.
+     Use it when two scenes share the same `type` but need different visuals.
+5. Run `npm run align -- <name>`, then `npm run music -- <name>`,
+   then `npm run ad -- <name> --all`, then `npm run check -- <name>`.
 6. Register the ad in `src/briefs.ts` so the compositions appear in the studio.
 
 ## Rules the factory enforces
@@ -62,11 +74,12 @@ Output files land in `out/`. The ad length always equals the voice length. For t
 
 ```
 briefs/            brief, raw timings, aligned timings
-public/audio/      voice files
+public/audio/      voice files and generated music beds
 public/brand/      logos
 public/fonts/      Noto Sans Bengali Regular and Bold
-scripts/           align, render, check, snapshot, new-ad
-src/               the composition: scenes, parts, timing engine, brand constants
+public/screens/    optional product screenshots (empty for now)
+scripts/           align, music, render, check, snapshot, new-ad
+src/               the composition: scenes, mockup parts, timing engine, brand constants
 tests/             unit tests plus the stored snapshot baselines
 out/               rendered videos and stills (not committed)
 ```

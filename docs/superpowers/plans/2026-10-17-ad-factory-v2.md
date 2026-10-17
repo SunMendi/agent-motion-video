@@ -40,9 +40,9 @@
 - [x] Step 1: Write failing tests (`tests/music.test.ts`: duration match, non-positive rejects, mix keeps duration + aac).
 - [x] Step 2: Run `npx vitest run tests/music.test.ts` → FAIL (files missing).
 - [x] Step 3: Implement `music-core.ts` (detuned F-chord sines, tremolo f=0.12 d=0.55, lowpass 700, 2 s fades), `mixAudio` in `ffmpeg.ts` (`amix duration=first normalize=0`, video stream copied), `scripts/music.ts` CLI (duration = `audio_duration + 0.2`), render.ts mix-then-normalise with `--no-music` flag.
-- [ ] Step 4: Run `npx vitest run tests/music.test.ts` → PASS (3 tests).
-- [ ] Step 5: Generate the real bed: `npm run music -- devsolutions` → `public/audio/devsolutions.music.wav`.
-- [ ] Step 6: Commit: `feat: add music bed generation and mix it in the render`.
+- [x] Step 4: Run `npx vitest run tests/music.test.ts` → PASS (4 tests; bed loudness target added).
+- [x] Step 5: Generate the real bed: `npm run music -- devsolutions` → `public/audio/devsolutions.music.wav` (bed -35 LUFS, voice -15 LUFS).
+- [x] Step 6: Commit done (`feat: add music bed generation and mix it in the render`).
 
 ### Task 2: Re-render and verify all three sizes
 
@@ -58,8 +58,8 @@
 
 **Files:** `README.md`, `docs/superpowers/specs/2026-10-17-ad-factory-design.md` (section 19), `docs/superpowers/plans/2026-10-17-ad-factory.md` (checkboxes).
 
-- [ ] Step 1: README: add music command, `--no-music`, screenshot slots note (`public/screens/` ready, none wired yet), v2 mockup parts list.
-- [ ] Step 2: Spec section 19: record light theme, mockup parts, layout field (`longread`, `trending`), music bed design.
+- [x] Step 1: README updated (music command, `--no-music`, layout field, screenshot slots, mockup look).
+- [x] Step 2: Spec section 19 written (light theme, mockup parts, layouts, screenshot slots, music bed, Bangla digits).
 - [ ] Step 3: Tick plan checkboxes for completed v1 steps if any remain unticked.
 - [ ] Step 4: Run `npm run lint && npx vitest run && npm run snapshots` → all green.
 - [ ] Step 5: Commit: `docs: record v2 design and usage`.
