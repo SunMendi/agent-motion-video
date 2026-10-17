@@ -1,58 +1,83 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {palette, safe, typeSize} from '../brand';
-import {useEnter} from './useEnter';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {palette, typeSize} from '../brand';
+import {popStyle, useEnter} from './useEnter';
+import {CopyBlock, Stage} from './Stage';
+import {InboxThread} from '../parts/mockups/InboxThread';
 import {LogoPlate} from '../parts/LogoPlate';
 import type {SceneProps} from './types';
 
+/** Send a message, get the demo link. */
 export const Cta: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const frame = useCurrentFrame();
   const {style} = useEnter(durationInFrames);
-  const beat = interpolate(Math.sin(frame / 6), [-1, 1], [1, 1.06]);
+  const wide = width > height;
+  const pop = popStyle(frame, 30, 8, 0.94);
+  const beat = interpolate(Math.sin(frame / 7), [-1, 1], [1, 1.04]);
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: safe.side,
-        paddingBottom: Math.round(height * 0.22),
-        ...style,
-      }}
-    >
-      <LogoPlate width={Math.round(width * 0.5)} />
-      <div
-        style={{
-          color: palette.ink,
-          fontWeight: 700,
-          textAlign: 'center',
-          fontSize: typeSize('headline', width, height),
-          marginTop: 56,
-          lineHeight: 1.3,
-          maxWidth: width - safe.side * 2,
-        }}
-      >
-        {copy.headline}
-      </div>
-      <div
-        style={{
-          marginTop: 48,
-          background: palette.blue,
-          color: palette.ink,
-          fontWeight: 700,
-          fontSize: typeSize('body', width, height),
-          padding: '26px 56px',
-          borderRadius: 999,
-          transform: `scale(${beat})`,
-          boxShadow: '0 20px 50px rgba(22,104,227,0.45)',
-        }}
-      >
-        {copy.cta ?? 'ইনবক্স করুন'}
-      </div>
-      {copy.contact ? (
-        <div style={{color: palette.muted, fontSize: typeSize('kicker', width, height), marginTop: 32}}>
-          {copy.contact}
+    <Stage
+      wide={wide}
+      width={width}
+      height={height}
+      style={style}
+      gap={28}
+      visual={
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: wide ? 'row' : 'column',
+            alignItems: 'center',
+            gap: 28,
+            justifyContent: 'center',
+          }}
+        >
+          <LogoPlate width={wide ? 210 : Math.min(width * 0.4, 260)} />
+          <div style={pop}>
+            <InboxThread
+              question="ডেমো লিংক পেতে চাই"
+              answer="লিংক পাঠানো হলো ✓"
+              width={wide ? 420 : Math.min(width - 160, 480)}
+            />
+          </div>
         </div>
-      ) : null}
-    </AbsoluteFill>
+      }
+      copy={
+        <div style={{textAlign: 'center', maxWidth: width - 144}}>
+          <CopyBlock
+            headline={copy.headline}
+            headlineSize={typeSize('headline', width, height)}
+            align="center"
+          />
+          <div
+            style={{
+              marginTop: 26,
+              display: 'inline-flex',
+              background: palette.blue,
+              color: '#fff',
+              fontWeight: 700,
+              fontSize: typeSize('body', width, height),
+              padding: '20px 46px',
+              borderRadius: 999,
+              transform: `scale(${beat})`,
+              boxShadow: '0 16px 38px rgba(22,104,227,0.35)',
+            }}
+          >
+            {copy.cta ?? 'ইনবক্স করুন'}
+          </div>
+          {copy.contact ? (
+            <div
+              style={{
+                marginTop: 20,
+                color: palette.muted,
+                fontSize: typeSize('kicker', width, height) + 4,
+              }}
+            >
+              {copy.contact}
+            </div>
+          ) : null}
+        </div>
+      }
+    />
   );
 };

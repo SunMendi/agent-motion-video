@@ -1,76 +1,85 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {palette, safe, typeSize} from '../brand';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {typeSize} from '../brand';
 import {useEnter} from './useEnter';
+import {CopyBlock, Stage} from './Stage';
+import {PortalWindow} from '../parts/mockups/PortalWindow';
 import type {SceneProps} from './types';
 
+/** A local portal grows into a national quality smart portal. */
 export const PromiseScene: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const frame = useCurrentFrame();
   const {style} = useEnter(durationInFrames);
   const wide = width > height;
-  const sweep = interpolate(frame, [10, 40], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const card = (dim: boolean, grow: number): React.CSSProperties => ({
-    flex: 1,
-    minWidth: 0,
-    opacity: dim ? interpolate(sweep, [0, 1], [1, 0.45]) : interpolate(sweep, [0, 1], [0.45, 1]),
-    transform: `scale(${1 + grow * sweep})`,
-    background: dim ? 'rgba(255,255,255,0.04)' : 'rgba(22,104,227,0.18)',
-    border: `1px solid ${dim ? 'rgba(255,255,255,0.08)' : 'rgba(22,104,227,0.5)'}`,
-    borderRadius: 28,
-    padding: 40,
-    color: palette.ink,
-    fontWeight: 700,
-    fontSize: typeSize('body', width, height),
-    lineHeight: 1.4,
-    textAlign: 'center',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  const grow = interpolate(frame, [16, 52], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
   });
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: wide ? 'center' : 'stretch',
-        padding: safe.side,
-        ...style,
-      }}
-    >
-      <div
-        style={{
-          color: palette.muted,
-          fontSize: typeSize('kicker', width, height),
-          marginBottom: 24,
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.kicker}
-      </div>
-      <div
-        style={{
-          color: palette.ink,
-          fontWeight: 700,
-          fontSize: typeSize('headline', width, height),
-          marginBottom: 48,
-          lineHeight: 1.3,
-          maxWidth: wide ? Math.min(width - safe.side * 2, 1400) : 'none',
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.headline}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 28,
-          width: wide ? 'min(1200px, 100%)' : '100%',
-        }}
-      >
-        <div style={card(true, -0.04)}>{copy.before}</div>
-        <div style={{color: palette.blue, fontSize: typeSize('headline', width, height)}}>{'→'}</div>
-        <div style={card(false, 0.04)}>{copy.after}</div>
-      </div>
-    </AbsoluteFill>
+    <Stage
+      wide={wide}
+      width={width}
+      height={height}
+      style={style}
+      gap={36}
+      visual={
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: wide ? 30 : 18,
+          }}
+        >
+          <div
+            style={{
+              opacity: interpolate(grow, [0, 1], [1, 0.35]),
+              transform: `scale(${interpolate(grow, [0, 1], [1, 0.9])})`,
+            }}
+          >
+            <PortalWindow
+              name="লোকাল পোর্টাল"
+              width={wide ? 300 : Math.min((width - 200) * 0.44, 380)}
+              height={wide ? 190 : 220}
+            />
+          </div>
+          <div
+            style={{
+              fontSize: wide ? 38 : 48,
+              color: '#1668E3',
+              fontWeight: 700,
+              transform: `translateX(${interpolate(grow, [0, 1], [0, 10])}px)`,
+            }}
+          >
+            →
+          </div>
+          <div
+            style={{
+              transform: `scale(${interpolate(grow, [0, 1], [0.82, 1])})`,
+              opacity: interpolate(grow, [0.2, 1], [0, 1], {
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
+              }),
+            }}
+          >
+            <PortalWindow
+              name="স্মার্ট পোর্টাল"
+              smart
+              width={wide ? 420 : Math.min((width - 170) * 0.6, 560)}
+              height={wide ? 250 : 300}
+            />
+          </div>
+        </div>
+      }
+      copy={
+        <CopyBlock
+          kicker={copy.kicker}
+          headline={copy.headline}
+          headlineSize={typeSize('headline', width, height)}
+          align={wide ? 'center' : 'left'}
+        />
+      }
+    />
   );
 };

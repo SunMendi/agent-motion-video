@@ -1,65 +1,72 @@
 import React from 'react';
-import {AbsoluteFill} from 'remotion';
-import {palette, safe, typeSize} from '../brand';
-import {useEnter} from './useEnter';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {typeSize} from '../brand';
+import {popStyle, useEnter} from './useEnter';
+import {CopyBlock, Stage} from './Stage';
+import {Browser} from '../parts/mockups/Browser';
+import {NewsPage} from '../parts/mockups/NewsPage';
+import {Stamp} from '../parts/mockups/Stamp';
+import {Avatar} from '../parts/mockups/Avatar';
 import type {SceneProps} from './types';
 
+/** An old site, stuck in 2015, loading forever. */
 export const Problem: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
-  const {style, enter} = useEnter(durationInFrames);
+  const frame = useCurrentFrame();
+  const {style} = useEnter(durationInFrames);
   const wide = width > height;
+  const browserW = wide ? Math.min(width * 0.5, 720) : width - 144;
+  const browserH = wide ? 320 : Math.min(height * 0.3, 400);
+  const stamp = popStyle(frame, 30, 22, 1.8);
+  const stuck = interpolate(frame, [0, 30], [0, 0.2], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: wide ? 'center' : 'stretch',
-        padding: safe.side,
-        ...style,
-      }}
-    >
-      <div
-        style={{
-          background: 'rgba(255,255,255,0.04)',
-          border: '1px solid rgba(255,255,255,0.08)',
-          borderRadius: 32,
-          padding: 48,
-          maxWidth: wide ? Math.min(width - safe.side * 2, 1400) : 'none',
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        <div style={{color: palette.muted, fontSize: typeSize('kicker', width, height), marginBottom: 24}}>
-          {copy.kicker}
-        </div>
-        {copy.stat ? (
+    <Stage
+      wide={wide}
+      width={width}
+      height={height}
+      style={style}
+      visual={
+        <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
+          <Browser url="old-portal.com.bd" width={browserW} height={browserH}>
+            <NewsPage site="পুরনো সাইট" accent="#8A93A6" dense progress={stuck} />
+          </Browser>
           <div
             style={{
-              display: 'flex',
-              alignItems: 'baseline',
-              gap: 24,
-              flexWrap: 'wrap',
-              justifyContent: wide ? 'center' : 'flex-start',
+              position: 'absolute',
+              right: wide ? -30 : -6,
+              top: -26,
+              transformOrigin: 'center',
+              ...stamp,
             }}
           >
-            <div style={{color: palette.alert, fontWeight: 700, fontSize: typeSize('hook', width, height)}}>
-              {copy.stat.value}
-            </div>
-            <div style={{color: palette.muted, fontSize: typeSize('body', width, height)}}>
-              {copy.stat.label}
-            </div>
+            <Stamp text="২০১৫" size={wide ? 62 : 78} />
           </div>
-        ) : null}
-        <div
-          style={{
-            color: palette.ink,
-            fontWeight: 700,
-            fontSize: typeSize('headline', width, height),
-            lineHeight: 1.3,
-            marginTop: 24,
-            opacity: enter,
-          }}
-        >
-          {copy.headline}
+          <div
+            style={{
+              position: 'absolute',
+              left: wide ? -20 : -4,
+              bottom: -22,
+              opacity: interpolate(frame, [40, 56], [0, 1], {
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
+              }),
+            }}
+          >
+            <Avatar size={wide ? 74 : 88} mood="sad" />
+          </div>
         </div>
-      </div>
-    </AbsoluteFill>
+      }
+      copy={
+        <CopyBlock
+          kicker={copy.kicker}
+          headline={copy.headline}
+          headlineSize={typeSize('headline', width, height)}
+          align={wide ? 'center' : 'left'}
+        />
+      }
+    />
   );
 };

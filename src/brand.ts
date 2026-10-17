@@ -1,17 +1,28 @@
 export const FPS = 30;
 
 export const palette = {
-  bg: '#0A0D14',
+  bg: '#F4F6FB',
+  surface: '#FFFFFF',
+  line: '#E3E8F2',
   blue: '#1668E3',
   blueDeep: '#0B3FA8',
-  ink: '#FFFFFF',
-  muted: '#98A2B6',
+  blueSoft: '#E8F0FD',
+  ink: '#0B1220',
+  muted: '#5B6478',
+  faint: '#A6AFC2',
   alert: '#FF5A4E',
+  alertSoft: '#FFE9E7',
+  good: '#12B76A',
   plate: '#FFFFFF',
-  plateInk: '#0B1220',
 } as const;
 
-export const safe = {top: 180, bottom: 320, side: 80} as const;
+export const shadow = {
+  card: '0 18px 44px rgba(15, 32, 71, 0.10)',
+  soft: '0 8px 22px rgba(15, 32, 71, 0.08)',
+  pop: '0 26px 60px rgba(15, 32, 71, 0.16)',
+} as const;
+
+export const safe = {top: 150, bottom: 300, side: 80} as const;
 
 export type SizeKey = '9x16' | '1x1' | '16x9';
 
@@ -28,11 +39,11 @@ export const safeWidth = (width: number): number => width - safe.side * 2;
 export type TypeLevel = 'hook' | 'headline' | 'body' | 'caption' | 'kicker';
 
 const BASE: Record<TypeLevel, number> = {
-  hook: 110,
-  headline: 84,
-  body: 46,
-  caption: 58,
-  kicker: 34,
+  hook: 92,
+  headline: 72,
+  body: 40,
+  caption: 52,
+  kicker: 30,
 };
 
 export const typeSize = (level: TypeLevel, width: number, height: number): number =>

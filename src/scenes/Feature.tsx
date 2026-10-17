@@ -1,80 +1,99 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {palette, safe, typeSize} from '../brand';
-import {useEnter} from './useEnter';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {palette, typeSize} from '../brand';
+import {useEnter, wipe} from './useEnter';
+import {CopyBlock, Stage} from './Stage';
+import {Browser} from '../parts/mockups/Browser';
+import {NewsPage} from '../parts/mockups/NewsPage';
+import {AiPanel} from '../parts/mockups/AiPanel';
+import {AudioPlayer} from '../parts/mockups/AudioPlayer';
 import type {SceneProps} from './types';
 
+/** The agent writes the summary, then speaks the news. */
 export const Feature: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
   const {style} = useEnter(durationInFrames);
   const wide = width > height;
-  const bullets = copy.bullets ?? [];
-  const step = Math.max(6, Math.floor((durationInFrames - 40) / Math.max(bullets.length, 1)));
+  const browserW = wide ? Math.min(width * 0.42, 620) : width - 144;
+  const browserH = wide ? 300 : Math.min(height * 0.24, 330);
+
+  const panelIn = interpolate(frame, [18, 44], [1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  // the audio player lands on the real pause in the voice at 15.77s
+  const playerIn = wipe(frame, 126, 142);
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: wide ? 'center' : 'stretch',
-        padding: safe.side,
-        ...style,
-      }}
-    >
-      <div
-        style={{
-          color: palette.blue,
-          fontSize: typeSize('kicker', width, height),
-          marginBottom: 24,
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.kicker}
-      </div>
-      <div
-        style={{
-          color: palette.ink,
-          fontWeight: 700,
-          fontSize: typeSize('headline', width, height),
-          lineHeight: 1.3,
-          marginBottom: 48,
-          maxWidth: wide ? Math.min(width - safe.side * 2, 1400) : 'none',
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.headline}
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 28,
-          alignItems: wide ? 'center' : 'stretch',
-        }}
-      >
-        {bullets.map((bullet, i) => {
-          const at = 20 + i * step;
-          const enter = spring({frame: frame - at, fps, config: {damping: 16, stiffness: 140}});
-          const leave = interpolate(frame, [durationInFrames - 6, durationInFrames], [1, 0], {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-          });
-          return (
+    <Stage
+      wide={wide}
+      width={width}
+      height={height}
+      style={style}
+      gap={34}
+      visual={
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: wide ? 'row' : 'column',
+            alignItems: 'center',
+            gap: 30,
+            justifyContent: 'center',
+          }}
+        >
+          <div style={{position: 'relative'}}>
+            <Browser url="newsportal.com.bd/রাজনীতি" width={browserW} height={browserH}>
+              <NewsPage site="নিউজ পোর্টাল" />
+            </Browser>
             <div
-              key={bullet}
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 24,
-                opacity: Math.min(enter, leave),
-                transform: `translateX(${interpolate(enter, [0, 1], [-40, 0])}px)`,
+                position: 'absolute',
+                right: wide ? -110 : -8,
+                top: wide ? 26 : 36,
+                transform: `translateX(${panelIn * 120}px)`,
+                opacity: 1 - panelIn,
               }}
             >
-              <div style={{width: 14, height: 14, borderRadius: 8, background: palette.blue, flexShrink: 0}} />
-              <div style={{color: palette.ink, fontSize: typeSize('body', width, height)}}>{bullet}</div>
+              <AiPanel
+                lines={['ক্ষমতার নতুন নেতৃত্ব নিয়ে আলোচনা', 'নির্বাচনী ইশতেহার এখনই দেখুন', '৩ লাইনে সম্পূর্ণ খবর']}
+                width={wide ? 360 : Math.min(width - 180, 420)}
+              />
             </div>
-          );
-        })}
-      </div>
-    </AbsoluteFill>
+          </div>
+          <div
+            style={{
+              opacity: playerIn,
+              transform: `translateY(${(1 - playerIn) * 26}px)`,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 14,
+            }}
+          >
+            <AudioPlayer width={wide ? 420 : Math.min(width - 144, 480)} delay={142} />
+            <div
+              style={{
+                background: palette.blueSoft,
+                color: palette.blue,
+                fontWeight: 700,
+                fontSize: wide ? 16 : 19,
+                padding: '8px 18px',
+                borderRadius: 99,
+              }}
+            >
+              খবর শুনে নিন
+            </div>
+          </div>
+        </div>
+      }
+      copy={
+        <CopyBlock
+          kicker={copy.kicker}
+          headline={copy.headline}
+          headlineSize={typeSize('headline', width, height)}
+          align={wide ? 'center' : 'left'}
+        />
+      }
+    />
   );
 };

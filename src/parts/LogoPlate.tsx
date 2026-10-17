@@ -1,12 +1,13 @@
 import React from 'react';
 import {Img, staticFile} from 'remotion';
-import {palette} from '../brand';
+import {palette, shadow} from '../brand';
 
 /** The logo is a JPG on white, so it always sits on a white plate. */
-export const LogoPlate: React.FC<{width: number; radius?: number; padding?: number}> = ({
+export const LogoPlate: React.FC<{width: number; radius?: number; padding?: number; style?: React.CSSProperties}> = ({
   width,
-  radius = 28,
-  padding = 24,
+  radius = 24,
+  padding = 18,
+  style,
 }) => (
   <div
     style={{
@@ -14,12 +15,14 @@ export const LogoPlate: React.FC<{width: number; radius?: number; padding?: numb
       borderRadius: radius,
       padding,
       display: 'inline-block',
-      boxShadow: '0 24px 60px rgba(0,0,0,0.45)',
+      border: `1px solid ${palette.line}`,
+      boxShadow: shadow.card,
+      ...style,
     }}
   >
     <Img
       src={staticFile('brand/logo.jpg')}
-      style={{width, height: 'auto', display: 'block', borderRadius: 6}}
+      style={{width, height: 'auto', display: 'block', borderRadius: 8}}
     />
   </div>
 );

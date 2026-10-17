@@ -21,6 +21,7 @@
     },
     {
       "type": "problem",
+      "layout": "longread",
       "kicker": "পাঠক বদলে গেছে",
       "headline": "লম্বা রচনা পড়তে চায় না"
     },
@@ -41,6 +42,7 @@
     },
     {
       "type": "feature",
+      "layout": "trending",
       "kicker": "প্রতিদিন অটোপোস্ট",
       "headline": "খবর, ফটোকার্ড, ফেসবুক",
       "stat": {"value": "২৪", "label": "ট্রেন্ডিং খবর প্রতিদিন"},

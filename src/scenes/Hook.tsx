@@ -1,45 +1,80 @@
 import React from 'react';
-import {AbsoluteFill} from 'remotion';
-import {palette, safe, typeSize} from '../brand';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {palette, typeSize} from '../brand';
 import {useEnter} from './useEnter';
+import {CopyBlock, Stage} from './Stage';
+import {Browser} from '../parts/mockups/Browser';
+import {NewsPage} from '../parts/mockups/NewsPage';
+import {Avatar} from '../parts/mockups/Avatar';
+import {TimerRing} from '../parts/mockups/TimerRing';
+import {Counter} from '../parts/mockups/Counter';
 import type {SceneProps} from './types';
 
+/** The reader arrives, the 3 second timer runs out, the reader leaves. */
 export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
+  const frame = useCurrentFrame();
   const {style} = useEnter(durationInFrames);
   const wide = width > height;
+  const browserW = wide ? Math.min(width * 0.5, 720) : width - 144;
+  const browserH = wide ? 330 : Math.min(height * 0.3, 420);
+
+  const walkIn = interpolate(frame, [12, 34], [-140, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const walkOut = interpolate(frame, [58, 92], [0, 260], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const readerOpacity = interpolate(frame, [80, 92], [1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
   return (
-    <AbsoluteFill
-      style={{
-        justifyContent: 'center',
-        alignItems: wide ? 'center' : 'stretch',
-        padding: safe.side,
-        ...style,
-      }}
-    >
-      <div
-        style={{
-          color: palette.alert,
-          fontSize: typeSize('kicker', width, height),
-          letterSpacing: 2,
-          marginBottom: 28,
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.kicker}
-      </div>
-      <div
-        style={{
-          color: palette.ink,
-          fontWeight: 700,
-          fontSize: typeSize('hook', width, height),
-          lineHeight: 1.25,
-          maxWidth: wide ? Math.min(width - safe.side * 2, 1500) : width - safe.side * 2,
-          textAlign: wide ? 'center' : 'left',
-        }}
-      >
-        {copy.headline}
-      </div>
-      <div style={{height: 10, width: 220, background: palette.alert, marginTop: 40, borderRadius: 6}} />
-    </AbsoluteFill>
+    <Stage
+      wide={wide}
+      width={width}
+      height={height}
+      style={style}
+      visual={
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30}}>
+          <Browser url="newsportal.com.bd" width={browserW} height={browserH}>
+            <NewsPage site="নিউজ পোর্টাল" />
+          </Browser>
+          <div style={{display: 'flex', alignItems: 'center', gap: 28}}>
+            <TimerRing seconds={3} size={wide ? 150 : 180} label="সেকেন্ড" />
+            <div
+              style={{
+                background: palette.surface,
+                border: `1px solid ${palette.line}`,
+                borderRadius: 20,
+                padding: '18px 24px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 16,
+              }}
+            >
+              <div style={{transform: `translateX(${walkIn + walkOut}px)`, opacity: readerOpacity}}>
+                <Avatar size={64} mood={frame > 58 ? 'away' : 'ok'} />
+              </div>
+              <div>
+                <Counter from={100} to={12} durationFrames={26} size={wide ? 54 : 64} color={palette.alert} />
+                <div style={{fontSize: 17, color: palette.muted, marginTop: 2}}>পাঠক রয়ে গেছেন</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+      copy={
+        <CopyBlock
+          kicker={copy.kicker}
+          headline={copy.headline}
+          headlineSize={typeSize('hook', width, height)}
+          kickerColor={palette.alert}
+          align={wide ? 'center' : 'left'}
+        />
+      }
+    />
   );
 };

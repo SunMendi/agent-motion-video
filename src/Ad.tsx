@@ -6,7 +6,6 @@ import type {Brief, Timing} from './model';
 import {activeWordIndex, durationFrames, groupCaptions, sceneFrames, sceneSpans} from './timing';
 import {Background} from './parts/Background';
 import {CaptionBar} from './parts/CaptionBar';
-import {Grain} from './parts/Grain';
 import {LogoPlate} from './parts/LogoPlate';
 import {ProgressBar} from './parts/ProgressBar';
 import {Sweep} from './parts/Sweep';
@@ -41,7 +40,6 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
   return (
     <AbsoluteFill style={{fontFamily: `"${FONT_FAMILY}", sans-serif`, backgroundColor: palette.bg}}>
       <Background />
-      <Grain />
       {scenes.map((scene, i) => (
         <Sequence
           key={`s-${i}`}
@@ -51,6 +49,7 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
         >
           <SceneRouter
             type={scene.type}
+            layout={scene.copy.layout}
             copy={{...scene.copy, cta: scene.copy.cta ?? brief.cta, contact: scene.copy.contact ?? brief.contact}}
             durationInFrames={scene.end - scene.start}
             width={width}

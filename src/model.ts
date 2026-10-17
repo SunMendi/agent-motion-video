@@ -1,8 +1,13 @@
 export const SCENE_TYPES = ['hook', 'problem', 'feature', 'question', 'stat', 'promise', 'cta'] as const;
 export type SceneType = (typeof SCENE_TYPES)[number];
 
+/** Named layouts that override the type-based scene pick. */
+export const SCENE_LAYOUTS = ['longread', 'trending'] as const;
+export type SceneLayout = (typeof SCENE_LAYOUTS)[number];
+
 export type SceneCopy = {
   type?: SceneType;
+  layout?: SceneLayout;
   kicker?: string;
   headline: string;
   bullets?: string[];
@@ -59,6 +64,9 @@ export const validateBrief = (b: Brief): string[] => {
     }
     if (s.segments !== undefined && (!Number.isInteger(s.segments) || s.segments < 1)) {
       out.push(`scenes[${i}].segments: must be a positive integer, got ${String(s.segments)}`);
+    }
+    if (s.layout !== undefined && !SCENE_LAYOUTS.includes(s.layout)) {
+      out.push(`scenes[${i}].layout: unknown value ${String(s.layout)}`);
     }
   });
   return out;
