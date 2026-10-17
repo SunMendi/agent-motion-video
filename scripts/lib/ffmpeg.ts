@@ -1,4 +1,4 @@
-import {execFileSync} from 'node:child_process';
+import {execFileSync, spawnSync} from 'node:child_process';
 import * as ffImport from 'ffmpeg-static';
 import * as fpImport from 'ffprobe-static';
 
@@ -18,8 +18,14 @@ const resolveBinary = (mod: unknown): string => {
 const ffmpegBin = resolveBinary(ffImport);
 const ffprobeBin = resolveBinary(fpImport);
 
-const runFfmpeg = (args: string[]): string =>
-  execFileSync(ffmpegBin, args, {maxBuffer: 1024 * 1024 * 64}).toString();
+const runFfmpeg = (args: string[]): string => {
+  const res = spawnSync(ffmpegBin, args, {maxBuffer: 1024 * 1024 * 64, encoding: 'utf8'});
+  if (res.status !== 0) {
+    throw new Error(`ffmpeg exited ${res.status}: ${res.stderr?.slice(-800)}`);
+  }
+  // ffmpeg prints filter reports on stderr, so both streams are searched.
+  return `${res.stdout ?? ''}\n${res.stderr ?? ''}`;
+};
 
 const runFfprobe = (args: string[]): string =>
   execFileSync(ffprobeBin, args, {maxBuffer: 1024 * 1024 * 64}).toString();

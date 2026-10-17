@@ -10,7 +10,15 @@ export const Cta: React.FC<SceneProps> = ({copy, durationInFrames, width, height
   const {style} = useEnter(durationInFrames);
   const beat = interpolate(Math.sin(frame / 6), [-1, 1], [1, 1.06]);
   return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', padding: safe.side, ...style}}>
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: safe.side,
+        paddingBottom: Math.round(height * 0.22),
+        ...style,
+      }}
+    >
       <LogoPlate width={Math.round(width * 0.5)} />
       <div
         style={{

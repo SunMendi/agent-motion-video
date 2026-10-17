@@ -36,6 +36,7 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
   }
   const localIndex = chunk ? activeWordIndex(chunk.words, t) : -1;
   const activeIndex = localIndex;
+  const activeScene = scenes.find((s) => frame >= s.start && frame < s.end) ?? null;
 
   return (
     <AbsoluteFill style={{fontFamily: `"${FONT_FAMILY}", sans-serif`, backgroundColor: palette.bg}}>
@@ -65,7 +66,7 @@ export const Ad: React.FC<{brief: Brief; timing: Timing; width: number; height: 
         ),
       )}
       <CaptionBar chunk={chunk} activeIndex={activeIndex} width={width} height={height} />
-      {brief.brand?.watermark ? (
+      {brief.brand?.watermark && activeScene?.type !== 'cta' ? (
         <div
           style={{
             position: 'absolute',
