@@ -11,6 +11,8 @@ export type SceneCopy = {
   after?: string;
   cta?: string;
   contact?: string;
+  /** How many audio pauses this scene covers. Default 1. Must sum to the audio's segment count. */
+  segments?: number;
 };
 
 export type Brief = {
@@ -54,6 +56,9 @@ export const validateBrief = (b: Brief): string[] => {
     if (!s.headline) out.push(`scenes[${i}].headline: required`);
     if (s.type && !SCENE_TYPES.includes(s.type)) {
       out.push(`scenes[${i}].type: unknown value ${String(s.type)}`);
+    }
+    if (s.segments !== undefined && (!Number.isInteger(s.segments) || s.segments < 1)) {
+      out.push(`scenes[${i}].segments: must be a positive integer, got ${String(s.segments)}`);
     }
   });
   return out;

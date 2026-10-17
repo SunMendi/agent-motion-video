@@ -56,6 +56,39 @@ describe('sceneSpans', () => {
     const bad = {...brief, scenes: [{headline: 'only'}]};
     expect(() => sceneSpans(timing, bad)).toThrow(/scenes/);
   });
+  it('lets one scene cover several segments', () => {
+    const threeRuns: Timing = {
+      audio_duration: 7,
+      words: [
+        {w: 'a', s: 0, e: 0.5},
+        {w: 'b', s: 3, e: 3.4},
+        {w: 'c', s: 6, e: 6.5},
+      ],
+    };
+    const merged = {
+      ...brief,
+      scenes: [
+        {headline: 'one', type: 'hook' as const, segments: 2},
+        {headline: 'two', type: 'question' as const},
+      ],
+    };
+    const spans = sceneSpans(threeRuns, merged);
+    expect(spans).toHaveLength(2);
+    expect(spans[0].start).toBe(0);
+    expect(spans[0].end).toBeCloseTo(3.4, 5);
+    expect(spans[1].start).toBeCloseTo(6, 5);
+    expect(spans[1].end).toBe(7);
+  });
+  it('fails loudly when the segments field does not add up', () => {
+    const bad = {
+      ...brief,
+      scenes: [
+        {headline: 'one', type: 'hook' as const},
+        {headline: 'two', type: 'question' as const, segments: 2},
+      ],
+    };
+    expect(() => sceneSpans(timing, bad)).toThrow(/segments/);
+  });
   it('uses the copy type when present', () => {
     expect(sceneSpans(timing, brief)[1].type).toBe('question');
   });

@@ -19,6 +19,9 @@ export const ruleType = (index: number, count: number, seconds: number, headline
 
 const SPLIT_GAP = 0.25;
 
+export const totalSegments = (scenes: Brief['scenes']): number =>
+  scenes.reduce((sum, s) => sum + (s.segments ?? 1), 0);
+
 /** Split the word list into beats: every pause of 0.25s or more ends a beat. */
 export const sceneSpans = (timing: Timing, brief: Brief): SceneSpan[] => {
   const {words} = timing;
@@ -36,18 +39,24 @@ export const sceneSpans = (timing: Timing, brief: Brief): SceneSpan[] => {
   }
   runs.push({start, end: timing.audio_duration});
 
-  if (runs.length !== brief.scenes.length) {
+  if (runs.length !== totalSegments(brief.scenes)) {
     throw new Error(
-      `brief.scenes has ${brief.scenes.length} entries but the audio has ${runs.length} segments. ` +
-        'Add or remove scenes so both counts match.',
+      `brief.scenes has ${brief.scenes.length} entries covering ${totalSegments(brief.scenes)} segments ` +
+        `(${brief.scenes.map((s) => s.segments ?? 1).join('+')}) but the audio has ${runs.length} segments. ` +
+        'Adjust the "segments" field of each scene so the counts match.',
     );
   }
 
-  return runs.map((run, i) => {
-    const copy = brief.scenes[i];
-    const type = copy.type ?? ruleType(i, runs.length, run.end - run.start, copy.headline);
+  let used = 0;
+  return brief.scenes.map((copy, i) => {
+    const count = copy.segments ?? 1;
+    const group = runs.slice(used, used + count);
+    used += count;
+    const start = group[0].start;
+    const end = group[group.length - 1].end;
+    const type = copy.type ?? ruleType(i, brief.scenes.length, end - start, copy.headline);
     if (!SCENE_TYPES.includes(type)) throw new Error(`unknown scene type ${String(type)}`);
-    return {...run, type, copy};
+    return {start, end, type, copy};
   });
 };
 
