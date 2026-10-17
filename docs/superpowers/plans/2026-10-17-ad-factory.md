@@ -17,6 +17,7 @@
 3. Snapshot comparison uses `pngjs` with a hand-written diff, not `pixelmatch`. Same acceptance: fail above 0.5% differing pixels.
 4. Loudness is applied as measured constant gain (`volume`), not dynamic `loudnorm`, so duration cannot shift.
 5. `tsconfig.json` excludes `scripts` and `tests`. A second `tsconfig.scripts.json` checks them with `types: ["node"]` only, which avoids `@types/web` and `@types/node` global clashes.
+6. A scene may carry `segments: <n>` to cover more than one audio pause. Found while rendering: the aligned audio splits into 11 segments but the brief has 8 beats, because the voice pauses mid-sentence ("কোথা থেকে?", "করতে চান?"). The per-scene counts must sum to the segment count or the build fails loudly.
 
 ## Global Constraints
 
