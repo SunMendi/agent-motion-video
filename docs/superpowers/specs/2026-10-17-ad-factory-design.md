@@ -378,3 +378,18 @@ audio and its output wins.
 5. No Bangla line overflows the safe area in any size.
 6. The video plays with correct audio, correct 1080x1920 size, H.264.
 7. The README alone is enough for a non-developer to make the next ad.
+
+## 18. Deltas recorded during the build
+
+1. A scene may carry `segments: <n>` to cover more than one audio pause. The aligned audio
+   splits into 11 segments at the 0.25 s rule, while the DevSolutions brief has 8 beats,
+   because the voice pauses mid-sentence ("কোথা থেকে?", "করতে চান?"). Per-scene counts must
+   sum to the segment count or the build fails loudly.
+2. Caption chunks are word groups of at most 6, wrapped by measured pixel width. The
+   grapheme-per-line rule from section 13 is a guard, not the driver.
+3. Loudness uses one measured constant gain to -14 LUFS, not dynamic `loudnorm`, so the
+   duration cannot shift.
+4. Snapshot comparison uses `pngjs` with a hand-written diff; acceptance stays at 0.5%.
+5. The logo watermark is hidden during the CTA scene, which shows its own large logo.
+6. `tsconfig.scripts.json` checks scripts and tests with `types: ["node"]` only, to keep
+   the `@types/web` and `@types/node` globals apart.
