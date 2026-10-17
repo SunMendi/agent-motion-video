@@ -8,11 +8,26 @@ export const Feature: React.FC<SceneProps> = ({copy, durationInFrames, width, he
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const {style} = useEnter(durationInFrames);
+  const wide = width > height;
   const bullets = copy.bullets ?? [];
   const step = Math.max(6, Math.floor((durationInFrames - 40) / Math.max(bullets.length, 1)));
   return (
-    <AbsoluteFill style={{justifyContent: 'center', padding: safe.side, ...style}}>
-      <div style={{color: palette.blue, fontSize: typeSize('kicker', width, height), marginBottom: 24}}>
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: wide ? 'center' : 'stretch',
+        padding: safe.side,
+        ...style,
+      }}
+    >
+      <div
+        style={{
+          color: palette.blue,
+          fontSize: typeSize('kicker', width, height),
+          marginBottom: 24,
+          textAlign: wide ? 'center' : 'left',
+        }}
+      >
         {copy.kicker}
       </div>
       <div
@@ -22,11 +37,20 @@ export const Feature: React.FC<SceneProps> = ({copy, durationInFrames, width, he
           fontSize: typeSize('headline', width, height),
           lineHeight: 1.3,
           marginBottom: 48,
+          maxWidth: wide ? Math.min(width - safe.side * 2, 1400) : 'none',
+          textAlign: wide ? 'center' : 'left',
         }}
       >
         {copy.headline}
       </div>
-      <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 28,
+          alignItems: wide ? 'center' : 'stretch',
+        }}
+      >
         {bullets.map((bullet, i) => {
           const at = 20 + i * step;
           const enter = spring({frame: frame - at, fps, config: {damping: 16, stiffness: 140}});

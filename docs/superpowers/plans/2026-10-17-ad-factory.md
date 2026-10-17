@@ -2303,7 +2303,7 @@ if (failures.length) {
 }
 ```
 
-- [ ] **Step 3: Create the baselines**
+- [x] **Step 3: Create the baselines**
 
 ```bash
 npm run snapshots:update
@@ -2311,7 +2311,7 @@ npm run snapshots:update
 
 Expected: one baseline PNG per scene plus the final frame.
 
-- [ ] **Step 4: Verify the comparison passes**
+- [x] **Step 4: Verify the comparison passes**
 
 ```bash
 npm run snapshots
@@ -2319,7 +2319,7 @@ npm run snapshots
 
 Expected: all frames ok.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add -A
@@ -2337,7 +2337,7 @@ git commit -m "feat: add per-scene snapshot regression checks"
 
 Include: what this folder does, the four commands (`npm run align`, `npm run ad`, `npm run check`, `npm test`), where to drop a new audio file, how to write the brief, how to update snapshots, and the Remotion licence note for teams over three people.
 
-- [ ] **Step 2: Run the full acceptance sequence**
+- [x] **Step 2: Run the full acceptance sequence**
 
 ```bash
 npm test
@@ -2348,7 +2348,7 @@ npm run check
 
 Expected: tests green, all three files present, duration matches 37.92 s within 0.05 s.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add -A

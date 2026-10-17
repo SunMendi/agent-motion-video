@@ -6,14 +6,23 @@ import type {SceneProps} from './types';
 
 export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const {style} = useEnter(durationInFrames);
+  const wide = width > height;
   return (
-    <AbsoluteFill style={{justifyContent: 'center', padding: safe.side, ...style}}>
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: wide ? 'center' : 'stretch',
+        padding: safe.side,
+        ...style,
+      }}
+    >
       <div
         style={{
           color: palette.alert,
           fontSize: typeSize('kicker', width, height),
           letterSpacing: 2,
           marginBottom: 28,
+          textAlign: wide ? 'center' : 'left',
         }}
       >
         {copy.kicker}
@@ -24,7 +33,8 @@ export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, heigh
           fontWeight: 700,
           fontSize: typeSize('hook', width, height),
           lineHeight: 1.25,
-          maxWidth: width - safe.side * 2,
+          maxWidth: wide ? Math.min(width - safe.side * 2, 1500) : width - safe.side * 2,
+          textAlign: wide ? 'center' : 'left',
         }}
       >
         {copy.headline}

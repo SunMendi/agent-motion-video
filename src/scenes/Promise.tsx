@@ -7,6 +7,7 @@ import type {SceneProps} from './types';
 export const PromiseScene: React.FC<SceneProps> = ({copy, durationInFrames, width, height}) => {
   const frame = useCurrentFrame();
   const {style} = useEnter(durationInFrames);
+  const wide = width > height;
   const sweep = interpolate(frame, [10, 40], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const card = (dim: boolean, grow: number): React.CSSProperties => ({
     flex: 1,
@@ -27,8 +28,22 @@ export const PromiseScene: React.FC<SceneProps> = ({copy, durationInFrames, widt
     justifyContent: 'center',
   });
   return (
-    <AbsoluteFill style={{justifyContent: 'center', padding: safe.side, ...style}}>
-      <div style={{color: palette.muted, fontSize: typeSize('kicker', width, height), marginBottom: 24}}>
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: wide ? 'center' : 'stretch',
+        padding: safe.side,
+        ...style,
+      }}
+    >
+      <div
+        style={{
+          color: palette.muted,
+          fontSize: typeSize('kicker', width, height),
+          marginBottom: 24,
+          textAlign: wide ? 'center' : 'left',
+        }}
+      >
         {copy.kicker}
       </div>
       <div
@@ -38,11 +53,20 @@ export const PromiseScene: React.FC<SceneProps> = ({copy, durationInFrames, widt
           fontSize: typeSize('headline', width, height),
           marginBottom: 48,
           lineHeight: 1.3,
+          maxWidth: wide ? Math.min(width - safe.side * 2, 1400) : 'none',
+          textAlign: wide ? 'center' : 'left',
         }}
       >
         {copy.headline}
       </div>
-      <div style={{display: 'flex', alignItems: 'center', gap: 28}}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 28,
+          width: wide ? 'min(1200px, 100%)' : '100%',
+        }}
+      >
         <div style={card(true, -0.04)}>{copy.before}</div>
         <div style={{color: palette.blue, fontSize: typeSize('headline', width, height)}}>{'→'}</div>
         <div style={card(false, 0.04)}>{copy.after}</div>
