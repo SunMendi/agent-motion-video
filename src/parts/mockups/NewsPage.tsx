@@ -1,16 +1,20 @@
 import React from 'react';
+import {interpolate, useCurrentFrame} from 'remotion';
 import {palette} from '../../brand';
 
 const NAV = ['রাজনীতি', 'অর্থনীতি', 'খেলা', 'বিনোদন', 'বিশ্ব'];
 
-/** A photo-like image block: layered gradients and soft shapes. */
+/** A photo-like image block: layered gradients, soft shapes, slow zoom. */
 export const Thumb: React.FC<{
   width: number | string;
   height: number | string;
   hue?: number;
   radius?: number;
   style?: React.CSSProperties;
-}> = ({width, height, hue = 210, radius = 10, style}) => (
+}> = ({width, height, hue = 210, radius = 10, style}) => {
+  const frame = useCurrentFrame();
+  const zoom = 1 + interpolate(frame, [0, 150], [0, 0.14], {extrapolateRight: 'clamp'});
+  return (
   <div
     style={{
       width,
@@ -23,6 +27,14 @@ export const Thumb: React.FC<{
       ...style,
     }}
   >
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        transform: `scale(${zoom})`,
+        transformOrigin: '45% 40%',
+      }}
+    >
     <div
       style={{
         position: 'absolute',
@@ -56,8 +68,10 @@ export const Thumb: React.FC<{
         background: 'rgba(255,255,255,0.18)',
       }}
     />
+    </div>
   </div>
-);
+  );
+};
 
 /** A realistic fake news site page, drawn in code with real headlines. */
 export const NewsPage: React.FC<{

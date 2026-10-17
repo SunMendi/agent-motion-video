@@ -4,6 +4,7 @@ import {palette, typeSize} from '../brand';
 import {popStyle, useEnter} from './useEnter';
 import {CopyBlock, Stage} from './Stage';
 import {InboxThread} from '../parts/mockups/InboxThread';
+import {CursorClick} from '../parts/fx/CursorClick';
 import type {SceneProps} from './types';
 
 /** Send a message, get the demo link. */
@@ -39,22 +40,24 @@ export const Cta: React.FC<SceneProps> = ({copy, durationInFrames, width, height
             headlineSize={typeSize('headline', width, height)}
             align="center"
           />
-          <div
-            style={{
-              marginTop: 26,
-              display: 'inline-flex',
-              background: palette.blue,
-              color: '#fff',
-              fontWeight: 700,
-              fontSize: typeSize('body', width, height),
-              padding: '20px 46px',
-              borderRadius: 999,
-              transform: `scale(${beat})`,
-              boxShadow: '0 16px 38px rgba(22,104,227,0.35)',
-            }}
-          >
-            {copy.cta ?? 'ইনবক্স করুন'}
-          </div>
+          <span style={{position: 'relative', display: 'inline-block', marginTop: 26}}>
+            <span
+              style={{
+                display: 'inline-flex',
+                background: palette.blue,
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: typeSize('body', width, height),
+                padding: '20px 46px',
+                borderRadius: 999,
+                transform: `scale(${beat})`,
+                boxShadow: '0 16px 38px rgba(22,104,227,0.35)',
+              }}
+            >
+              {copy.cta ?? 'ইনবক্স করুন'}
+            </span>
+            <CursorClick to={{x: 130, y: 48}} from={{x: 330, y: 210}} clickAt={16} repeat={44} />
+          </span>
           {copy.contact ? (
             <div
               style={{

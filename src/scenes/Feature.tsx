@@ -7,6 +7,7 @@ import {Browser} from '../parts/mockups/Browser';
 import {NewsPage} from '../parts/mockups/NewsPage';
 import {AiPanel} from '../parts/mockups/AiPanel';
 import {AudioPlayer} from '../parts/mockups/AudioPlayer';
+import {Sparkles} from '../parts/fx/Sparkles';
 import type {SceneProps} from './types';
 
 /** The agent writes the summary, then speaks the news. */
@@ -42,6 +43,13 @@ export const Feature: React.FC<SceneProps> = ({copy, durationInFrames, width, he
           }}
         >
           <div style={{position: 'relative'}}>
+            <Sparkles
+              spots={[
+                {x: 8, y: 18, size: 24, phase: 0.4},
+                {x: browserW + 40, y: browserH - 20, size: 28, phase: 2.2},
+                {x: browserW - 60, y: browserH + 30, size: 20, phase: 3.8},
+              ]}
+            />
             <Browser url="newsportal.com.bd/রাজনীতি" width={browserW} height={browserH}>
               <NewsPage site="নিউজ পোর্টাল" />
             </Browser>

@@ -1,16 +1,17 @@
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-/** Enter with a spring, fade out in the last six frames of the scene. */
+/** Enter with a spring, then leave with a fast rise and shrink. */
 export const useEnter = (durationInFrames: number) => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const enter = spring({frame, fps, config: {damping: 16, stiffness: 190}});
-  const leave = interpolate(frame, [durationInFrames - 6, durationInFrames], [1, 0], {
+  const leave = interpolate(frame, [durationInFrames - 5, durationInFrames], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const opacity = Math.min(enter, leave);
-  const rise = interpolate(enter, [0, 1], [24, 0]);
+  const opacity = Math.min(1, enter * 1.4) * (1 - leave);
+  const rise = interpolate(enter, [0, 1], [34, 0]) - leave * 26;
+  const scale = interpolate(enter, [0, 1], [0.94, 1]) * (1 - leave * 0.05);
   return {
     frame,
     fps,
@@ -18,7 +19,11 @@ export const useEnter = (durationInFrames: number) => {
     leave,
     opacity,
     rise,
-    style: {opacity, transform: `translateY(${rise}px)`},
+    style: {
+      opacity,
+      transform: `translateY(${rise}px) scale(${scale})`,
+      transformOrigin: 'center center',
+    },
   } as const;
 };
 

@@ -8,6 +8,7 @@ import {NewsPage} from '../parts/mockups/NewsPage';
 import {Avatar} from '../parts/mockups/Avatar';
 import {TimerRing} from '../parts/mockups/TimerRing';
 import {Counter} from '../parts/mockups/Counter';
+import {Sparkles} from '../parts/fx/Sparkles';
 import type {SceneProps} from './types';
 
 /** The reader arrives, the 3 second timer runs out, the reader leaves. */
@@ -39,7 +40,15 @@ export const Hook: React.FC<SceneProps> = ({copy, durationInFrames, width, heigh
       height={height}
       style={style}
       visual={
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30, position: 'relative'}}>
+          <Sparkles
+            spots={[
+              {x: 46, y: 96, size: 30, phase: 0},
+              {x: browserW - 40, y: 42, size: 24, phase: 1.6},
+              {x: 130, y: browserH + 130, size: 22, phase: 3.1},
+              {x: browserW - 90, y: browserH + 160, size: 26, phase: 4.4},
+            ]}
+          />
           <div style={pop}>
             <Browser url="newsportal.com.bd" width={browserW} height={browserH}>
               <NewsPage site="নিউজ পোর্টাল" />
