@@ -64,6 +64,26 @@ export const normalise = (input: string, output: string, target = -14): void => 
   ]);
 };
 
+/** Mix a music bed under the voice. The video stream is copied untouched and
+ * the result ends with the voice track, so the duration never changes. */
+export const mixAudio = (video: string, music: string, output: string, musicVolume = 1.0): void => {
+  runFfmpeg([
+    '-y',
+    '-i', video,
+    '-i', music,
+    '-filter_complex',
+    `[0:a]volume=1[voice];[1:a]volume=${musicVolume}[bed];` +
+      '[voice][bed]amix=inputs=2:duration=first:normalize=0[a]',
+    '-map', '0:v',
+    '-map', '[a]',
+    '-c:v', 'copy',
+    '-c:a', 'aac',
+    '-b:a', '192k',
+    '-movflags', '+faststart',
+    output,
+  ]);
+};
+
 export type Probe = {
   duration: number;
   width: number;

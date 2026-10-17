@@ -38,6 +38,7 @@
     "lint": "eslint src && tsc && tsc -p tsconfig.scripts.json",
     "test": "vitest run",
     "align": "tsx scripts/align.ts",
+    "music": "tsx scripts/music.ts",
     "ad": "tsx scripts/render.ts",
     "check": "tsx scripts/check.ts",
     "snapshots": "tsx scripts/snapshot.ts",

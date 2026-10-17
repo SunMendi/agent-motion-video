@@ -1,16 +1,17 @@
 #!/usr/bin/env tsx
 import {execFileSync} from 'node:child_process';
-import {mkdirSync} from 'node:fs';
+import {existsSync, mkdirSync, rmSync} from 'node:fs';
 import path from 'node:path';
 import {sizes, type SizeKey} from '../src/brand';
-import {normalise} from './lib/ffmpeg';
+import {mixAudio, normalise} from './lib/ffmpeg';
 
 const name = process.argv[2];
 const all = process.argv.includes('--all');
+const noMusic = process.argv.includes('--no-music');
 const only = (process.argv.find((a) => a.startsWith('--size=')) ?? '').split('=')[1] as SizeKey | undefined;
 
 if (!name) {
-  console.error('Usage: npm run ad -- <brief-name> [--all] [--size=9x16]');
+  console.error('Usage: npm run ad -- <brief-name> [--all] [--size=9x16] [--no-music]');
   process.exit(1);
 }
 
@@ -25,10 +26,18 @@ for (const key of keys) {
   const id = `${name}-${key}`;
   const raw = path.resolve('out', `${id}.raw.mp4`);
   const final = path.resolve('out', `${id}.mp4`);
+  const music = path.resolve('public/audio', `${name}.music.wav`);
   console.log(`rendering ${id}`);
   execFileSync('npx', ['remotion', 'render', id, raw, '--codec', 'h264', '--crf', '18'], {
     stdio: 'inherit',
   });
-  normalise(raw, final);
+  if (!noMusic && existsSync(music)) {
+    const mixed = path.resolve('out', `${id}.mixed.mp4`);
+    mixAudio(raw, music, mixed);
+    normalise(mixed, final);
+    rmSync(mixed);
+  } else {
+    normalise(raw, final);
+  }
   console.log(`wrote ${final}`);
 }
