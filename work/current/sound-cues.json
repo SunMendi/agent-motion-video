@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "video_id": "free-ai-tools-showcase",
+  "fps": 30,
+  "total_frames": 2549,
+  "cues": [
+    {
+      "scene": "SceneIntro",
+      "event_id": "e01-intro-riser",
+      "file": "public/current/sfx/riser.wav",
+      "purpose": "Build initial tension during hook",
+      "startFrame": 0,
+      "duration_frames": 28,
+      "fade_out_frames": 4,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneIntro",
+      "event_id": "e01-pill-whoosh",
+      "file": "public/current/sfx/whoosh.wav",
+      "purpose": "Top hook pill slide in",
+      "startFrame": 15,
+      "duration_frames": 12,
+      "fade_out_frames": 3,
+      "gain": 0.24
+    },
+    {
+      "scene": "SceneIntro",
+      "event_id": "e01-badge-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "5 Tools glow badge reveal",
+      "startFrame": 28,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneIntro",
+      "event_id": "e01-grid-thud",
+      "file": "public/current/sfx/thud.wav",
+      "purpose": "Card deck landing on stage",
+      "startFrame": 42,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneIntro",
+      "event_id": "e01-scan-beam",
+      "file": "public/current/sfx/scan.wav",
+      "purpose": "Scanning rail sweep across grid",
+      "startFrame": 60,
+      "duration_frames": 16,
+      "fade_out_frames": 4,
+      "gain": 0.16
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Scene transition wipe to Napkin AI",
+      "startFrame": 360,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-tool-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Tool 01 badge reveal",
+      "startFrame": 376,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-prompt-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Prompt box click selection",
+      "startFrame": 398,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-diagram-spark",
+      "file": "public/current/sfx/ping.wav",
+      "purpose": "AI diagram generation trigger",
+      "startFrame": 442,
+      "duration_frames": 15,
+      "fade_out_frames": 4,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-nodes-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Diagram node branching",
+      "startFrame": 485,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.18
+    },
+    {
+      "scene": "SceneNapkin",
+      "event_id": "e02-snap-shutter",
+      "file": "public/current/sfx/camera_shutter.wav",
+      "purpose": "Diagram snapshot viewport lock",
+      "startFrame": 545,
+      "duration_frames": 10,
+      "fade_out_frames": 3,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Scene transition wipe to Gamma",
+      "startFrame": 780,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-badge-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Tool 02 badge reveal",
+      "startFrame": 796,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-prompt-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Prompt submission click",
+      "startFrame": 818,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-deck-whoosh",
+      "file": "public/current/sfx/whoosh.wav",
+      "purpose": "Slide deck panel slide in",
+      "startFrame": 855,
+      "duration_frames": 12,
+      "fade_out_frames": 3,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-slide-shutter",
+      "file": "public/current/sfx/camera_shutter.wav",
+      "purpose": "Slide layout capture",
+      "startFrame": 905,
+      "duration_frames": 10,
+      "fade_out_frames": 3,
+      "gain": 0.25
+    },
+    {
+      "scene": "SceneGamma",
+      "event_id": "e03-chart-meter",
+      "file": "public/current/sfx/meter.wav",
+      "purpose": "Analytics bar chart rise",
+      "startFrame": 945,
+      "duration_frames": 18,
+      "fade_out_frames": 4,
+      "gain": 0.18
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Scene transition wipe to Perplexity",
+      "startFrame": 1200,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-badge-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Tool 03 badge reveal",
+      "startFrame": 1216,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-search-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Search query input submit",
+      "startFrame": 1238,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-source-scan",
+      "file": "public/current/sfx/scan.wav",
+      "purpose": "Live web citation source scan",
+      "startFrame": 1275,
+      "duration_frames": 16,
+      "fade_out_frames": 4,
+      "gain": 0.18
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-answer-lock",
+      "file": "public/current/sfx/camera_shutter.wav",
+      "purpose": "Verified answer card lock",
+      "startFrame": 1335,
+      "duration_frames": 10,
+      "fade_out_frames": 3,
+      "gain": 0.26
+    },
+    {
+      "scene": "ScenePerplexity",
+      "event_id": "e04-citation-ping",
+      "file": "public/current/sfx/ping.wav",
+      "purpose": "Citation checkmark chime",
+      "startFrame": 1385,
+      "duration_frames": 15,
+      "fade_out_frames": 4,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Scene transition wipe to NotebookLM",
+      "startFrame": 1620,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-badge-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Tool 04 badge reveal",
+      "startFrame": 1636,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-doc-whoosh",
+      "file": "public/current/sfx/whoosh.wav",
+      "purpose": "PDF document batch ingest",
+      "startFrame": 1658,
+      "duration_frames": 12,
+      "fade_out_frames": 3,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-podcast-scan",
+      "file": "public/current/sfx/scan.wav",
+      "purpose": "Document note synthesis",
+      "startFrame": 1715,
+      "duration_frames": 16,
+      "fade_out_frames": 4,
+      "gain": 0.18
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-wave-ping",
+      "file": "public/current/sfx/ping.wav",
+      "purpose": "AI podcast waveform start",
+      "startFrame": 1765,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneNotebook",
+      "event_id": "e05-host-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Host audio wave activation",
+      "startFrame": 1815,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.18
+    },
+    {
+      "scene": "SceneAdobePodcast",
+      "event_id": "e06-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Scene transition wipe to Adobe Podcast",
+      "startFrame": 2040,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneAdobePodcast",
+      "event_id": "e06-badge-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Tool 05 badge reveal",
+      "startFrame": 2056,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneAdobePodcast",
+      "event_id": "e06-toggle-click",
+      "file": "public/current/sfx/click.wav",
+      "purpose": "Enhance speech toggle click",
+      "startFrame": 2095,
+      "duration_frames": 6,
+      "fade_out_frames": 2,
+      "gain": 0.24
+    },
+    {
+      "scene": "SceneAdobePodcast",
+      "event_id": "e06-split-compare",
+      "file": "public/current/sfx/split.wav",
+      "purpose": "Split before and after comparison",
+      "startFrame": 2110,
+      "duration_frames": 12,
+      "fade_out_frames": 3,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneAdobePodcast",
+      "event_id": "e06-studio-ping",
+      "file": "public/current/sfx/ping.wav",
+      "purpose": "Studio sound badge chime",
+      "startFrame": 2165,
+      "duration_frames": 15,
+      "fade_out_frames": 4,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneOutro",
+      "event_id": "e07-outro-riser",
+      "file": "public/current/sfx/riser.wav",
+      "purpose": "Build anticipation for closing summary",
+      "startFrame": 2370,
+      "duration_frames": 28,
+      "fade_out_frames": 4,
+      "gain": 0.20
+    },
+    {
+      "scene": "SceneOutro",
+      "event_id": "e07-scene-swoosh",
+      "file": "public/current/sfx/swoosh.wav",
+      "purpose": "Final scene transition",
+      "startFrame": 2378,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.26
+    },
+    {
+      "scene": "SceneOutro",
+      "event_id": "e07-cards-thud",
+      "file": "public/current/sfx/thud.wav",
+      "purpose": "5 tool cards compact stack landing",
+      "startFrame": 2415,
+      "duration_frames": 14,
+      "fade_out_frames": 4,
+      "gain": 0.24
+    },
+    {
+      "scene": "SceneOutro",
+      "event_id": "e07-cta-pop",
+      "file": "public/current/sfx/pop.wav",
+      "purpose": "Bookmark save call to action pop",
+      "startFrame": 2455,
+      "duration_frames": 8,
+      "fade_out_frames": 2,
+      "gain": 0.22
+    },
+    {
+      "scene": "SceneOutro",
+      "event_id": "e07-final-ping",
+      "file": "public/current/sfx/ping.wav",
+      "purpose": "Final closing chime",
+      "startFrame": 2495,
+      "duration_frames": 15,
+      "fade_out_frames": 4,
+      "gain": 0.20
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "status": "draft",
+  "video_id": "",
+  "transcript_file": "work/current/transcript.reviewed.json",
+  "layout_file": "src/shared/video-layout.json",
+  "style_frames": [],
+  "animatic_file": null,
+  "notes": "Authoring example only. Replace timing, narration IDs, states, bounds, and assets for this recording. The reset template starts with zero shots.",
+  "shots": [
+    {
+      "id": "shot-01",
+      "start_frame": 0,
+      "end_frame": 90,
+      "narration": "",
+      "narration_ids": [],
+      "viewer_takeaway": "",
+      "subject": "",
+      "visual_mode": "diagram",
+      "body_labels": [],
+      "assets": [],
+      "states": {"before": "", "action": "", "after": ""},
+      "keyframes": [
+        {"frame": 0, "focal_point": "", "bounds": {"x": 64, "y": 320, "width": 896, "height": 1380}}
+      ],
+      "events": [
+        {"id": "event-01", "anchor_id": "w000001", "anchor_edge": "start", "offset_frames": 0, "duration_frames": 30, "action": ""}
+      ],
+      "acceptance_criteria": [],
+      "entrance": "",
+      "main_action": "",
+      "exit": "",
+      "next_shot_connection": "",
+      "transition": {"type": "cut", "duration_frames": 0},
+      "sound_cues": []
+    }
+  ]
+}

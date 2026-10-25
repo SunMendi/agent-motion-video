@@ -15,17 +15,17 @@ const FONTS: Record<string, string> = {
   '700': 'public/fonts/NotoSansBengali-Bold.ttf',
 };
 
-const cache = new Map<string, fontkit.Font>();
+const cache = new Map<string, Font>();
 
 /** Width in pixels of `text` drawn at `sizePx`, measured from the real font file.
  * Scripts and tests only: the browser uses canvas measureText instead. */
 export const nodeMeasure = (sizePx: number, weight: '400' | '700' = '400'): Measure => {
   const abs = path.resolve(FONTS[weight]);
   if (!cache.has(abs)) cache.set(abs, fontkit.openSync(abs));
-  const font = cache.get(abs) as fontkit.Font;
+  const font = cache.get(abs) as Font;
   return (text: string): number => {
     const run = font.layout(text);
-    const units = run.positions.reduce((sum, p) => sum + p.xAdvance, 0);
+    const units = run.positions.reduce((sum: number, p: {xAdvance: number}) => sum + p.xAdvance, 0);
     return (units * sizePx) / font.unitsPerEm;
   };
 };

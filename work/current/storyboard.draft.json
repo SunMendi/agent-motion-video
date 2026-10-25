@@ -1,0 +1,729 @@
+{
+  "schema_version": 2,
+  "status": "draft",
+  "video_id": "free-ai-tools-showcase",
+  "transcript_file": "work/current/transcript.reviewed.json",
+  "layout_file": "src/shared/video-layout.json",
+  "style_frames": [
+    "work/current/review/style-01.svg",
+    "work/current/review/style-02.svg",
+    "work/current/review/style-03.svg"
+  ],
+  "animatic_file": null,
+  "notes": "Full 85-second storyboard schema v2 for Free AI Tools Showcase. Covers all 5 game-changing free AI tools with distinct visual actions, realistic UI mockups, 3D perspective shifts, and smooth transitions across 2549 frames.",
+  "shots": [
+    {
+      "id": "shot-01",
+      "start_frame": 0,
+      "end_frame": 386,
+      "narration": "এই ৫টি এআই টুলের এতো কাজ করা যায় যেমন পিডিএফ বুঝবে, প্রেজেন্টেশন বানাবে এমনকি তোমার ভয়েসও পরিষ্কার করবে শেষেরটার বিফোর-আফটার শুনলে পার্থক্যটা নিজেই বুঝবে।",
+      "narration_ids": ["p01", "p02", "p03", "p04"],
+      "viewer_takeaway": "Discover 5 high-impact, 100% free AI tools that dramatically accelerate daily productivity.",
+      "subject": "Futuristic HUD holographic grid revealing 5 glowing AI tool badges",
+      "visual_mode": "hook-overview",
+      "body_labels": ["৫টি সেরা এআই", "১০০% ফ্রি টুলস", "কাজের গতি"],
+      "assets": [
+        "public/current/tools/napkin.png",
+        "public/current/tools/gamma.png",
+        "public/current/tools/perplexity.png",
+        "public/current/tools/notebook.png",
+        "public/current/tools/adobe_podcast.png"
+      ],
+      "states": {
+        "before": "A sleek dark cybernetic stage with ambient blue radial glow and scanning grid lines.",
+        "action": "A bold central title badge slams in, and five holographic 3D cards assemble in an orbit.",
+        "after": "The first card (Napkin AI) zooms forward with a dynamic light sweep, taking the focal stage."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Central title badge and cybernetic scanning grid",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 190,
+          "focal_point": "Five orbiting 3D tool cards with glowing status indicators",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e01-intro",
+          "anchor_id": "p01",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Bold headline entrance with spring physics and cyan glow pulse"
+        },
+        {
+          "id": "e01-tools-peek",
+          "anchor_id": "p02",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Five floating 3D tool cards cascade into view with free badges"
+        },
+        {
+          "id": "e01-audio-hint",
+          "anchor_id": "p03",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Audio waveform icon and voice cleaning preview badge light up"
+        },
+        {
+          "id": "e01-before-after",
+          "anchor_id": "p04",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Before and After comparison preview cards expand in 3D perspective"
+        }
+      ],
+      "acceptance_criteria": [
+        "Viewers instantly recognize the 5 free AI tools value proposition within the first 3 seconds.",
+        "Captions remain anchored cleanly at the top without overlapping the central card orbit.",
+        "High contrast typography is perfectly readable on mobile screens."
+      ],
+      "entrance": "Camera zooms slightly into a dark particle grid with an expanding ambient radial glow.",
+      "main_action": "Five glowing cards orbit and lock into perspective as feature badges illuminate.",
+      "exit": "Card 1 (Napkin AI) expands smoothly into the camera as other cards recede into background depth.",
+      "next_shot_connection": "Card 1 transforms into the full interactive Napkin AI browser mockup.",
+      "transition": {"type": "zoom-in-continuity", "duration_frames": 12},
+      "sound_cues": [
+        {
+          "event_id": "e01-intro",
+          "purpose": "Punchy hook whoosh",
+          "file": "public/current/sfx/whoosh.wav",
+          "gain": 0.22,
+          "duration_frames": 12,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e01-tools-peek",
+          "purpose": "Cards cascading pop",
+          "file": "public/current/sfx/pop.wav",
+          "gain": 0.18,
+          "duration_frames": 8,
+          "fade_out_frames": 3
+        },
+        {
+          "event_id": "e01-audio-hint",
+          "purpose": "Audio scan effect",
+          "file": "public/current/sfx/scan.wav",
+          "gain": 0.20,
+          "duration_frames": 16,
+          "fade_out_frames": 5
+        },
+        {
+          "event_id": "e01-before-after",
+          "purpose": "Comparison impact riser",
+          "file": "public/current/sfx/riser.wav",
+          "gain": 0.22,
+          "duration_frames": 22,
+          "fade_out_frames": 6
+        }
+      ]
+    },
+    {
+      "id": "shot-02",
+      "start_frame": 386,
+      "end_frame": 859,
+      "narration": "১ নম্বর, ন্যাপকিন এআই। কোনো আইডিয়া বোঝাতে বিশাল প্যারাগ্রাফ লিখে ফেলেছ? লেখাটা এখানে পেস্ট করে ভিজ্যুয়াল জেনারেট করো। সেটাই হয়ে যাবে ডায়াগ্রাম বা ফ্লোচার্ট। যেমন ইন্টারনেট কীভাবে কাজ করে, পুরো ব্যাপারটা এক ছবিতে!",
+      "narration_ids": ["p05", "p06", "p07", "p08", "p09", "p10"],
+      "viewer_takeaway": "Napkin AI turns messy text notes into professional diagrams and flowcharts in seconds.",
+      "subject": "Realistic Napkin AI browser mockup transforming raw text into an infographic flowchart",
+      "visual_mode": "mockup-transformation",
+      "body_labels": ["ন্যাপকিন এআই", "টেক্সট থেকে ডায়াগ্রাম", "১-ক্লিক ম্যাজিক"],
+      "assets": ["public/current/tools/napkin.png"],
+      "states": {
+        "before": "A clean Napkin AI browser window showing an input note field with raw text.",
+        "action": "A 1-Click Magic button sparks, and dynamic connector lines link into diagram nodes.",
+        "after": "A multi-node infographic flowchart displays with crisp labels, arrows, and custom icons."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Napkin AI browser mockup with input text box",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 240,
+          "focal_point": "Dynamic nodes branching into visual infographic flowchart",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e02-napkin-enter",
+          "anchor_id": "p05",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Napkin AI browser mockup slides in with slight 3D perspective tilt"
+        },
+        {
+          "id": "e02-text-input",
+          "anchor_id": "p06",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Raw text lines appear inside the input card with typing cursor effect"
+        },
+        {
+          "id": "e02-ai-process",
+          "anchor_id": "p07",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Dashed connection lines extend downward with glowing pulse"
+        },
+        {
+          "id": "e02-diagram-pop",
+          "anchor_id": "p08",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Three infographic diagram cards pop in with spring scale physics"
+        },
+        {
+          "id": "e02-internet-flow",
+          "anchor_id": "p09",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Internet architecture diagram unfolds with interactive packet pulses"
+        },
+        {
+          "id": "e02-highlight",
+          "anchor_id": "p10",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Final diagram card highlights with bright blue border and checkmark"
+        }
+      ],
+      "acceptance_criteria": [
+        "Napkin AI mockup is authentic and clearly readable at 1080x1920 mobile viewport.",
+        "The transformation from text to diagram visually tells the story without relying on speech alone.",
+        "Animation easing uses snappy springs with zero jerky frame jumps."
+      ],
+      "entrance": "Card tilts into view with smooth perspective rotation along the Y axis.",
+      "main_action": "Sparks fire from the central button, instantly assembling the flowchart nodes.",
+      "exit": "The finished diagram card slides left as the stage rotates slightly for Gamma.",
+      "next_shot_connection": "The flowchart card rotates 90 degrees to become the title slide of Gamma presentation.",
+      "transition": {"type": "perspective-swipe", "duration_frames": 10},
+      "sound_cues": [
+        {
+          "event_id": "e02-napkin-enter",
+          "purpose": "Browser mockup entrance whoosh",
+          "file": "public/current/sfx/swoosh.wav",
+          "gain": 0.20,
+          "duration_frames": 14,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e02-ai-process",
+          "purpose": "Generator scan sound",
+          "file": "public/current/sfx/scan.wav",
+          "gain": 0.18,
+          "duration_frames": 16,
+          "fade_out_frames": 5
+        },
+        {
+          "event_id": "e02-diagram-pop",
+          "purpose": "Nodes pop in",
+          "file": "public/current/sfx/pop.wav",
+          "gain": 0.22,
+          "duration_frames": 8,
+          "fade_out_frames": 3
+        },
+        {
+          "event_id": "e02-highlight",
+          "purpose": "Completion ping",
+          "file": "public/current/sfx/ping.wav",
+          "gain": 0.19,
+          "duration_frames": 15,
+          "fade_out_frames": 5
+        }
+      ]
+    },
+    {
+      "id": "shot-03",
+      "start_frame": 859,
+      "end_frame": 1339,
+      "narration": "২ নম্বর, গামা। কাল প্রেজেন্টেশন, অথচ একটা স্লাইডও বানাও নি? টপিক, কার জন্য, আর কয়টা স্লাইড লাগবে বলে দাও। গামা একটা ড্রাফট সাজিয়ে দিবে। তবে খেয়াল করো, শুরুর ৪০০ ফ্রি ক্রেডিট শেষ হলে রিফিল হয় না।",
+      "narration_ids": ["p11", "p12", "p13", "p14", "p15"],
+      "viewer_takeaway": "Gamma generates complete slide presentations from a single prompt in minutes with free credits.",
+      "subject": "Realistic Gamma interface generating multi-card presentation deck with responsive slides",
+      "visual_mode": "mockup-presentation",
+      "body_labels": ["গামা অ্যাপ", "ইনস্ট্যান্ট স্লাইড", "প্রেজেন্টেশন"],
+      "assets": ["public/current/tools/gamma.png"],
+      "states": {
+        "before": "A countdown timer flashing 'Due Tomorrow' alongside Gamma's prompt input bar.",
+        "action": "A topic prompt is submitted, and Gamma automatically synthesizes a 3-slide deck.",
+        "after": "A full presentation deck floats in perspective with a helpful free-credit counter meter."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Gamma prompt box with urgency presentation badge",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 240,
+          "focal_point": "Multi-slide presentation deck carousel with theme styling",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e03-gamma-enter",
+          "anchor_id": "p11",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Gamma interface drops in with purple gradient accent glow"
+        },
+        {
+          "id": "e03-urgency-clock",
+          "anchor_id": "p12",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Urgency callout card pops with clock icon and zero slides alert"
+        },
+        {
+          "id": "e03-topic-prompt",
+          "anchor_id": "p13",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Topic input badge fills with prompt text and card count indicator"
+        },
+        {
+          "id": "e03-slide-deck",
+          "anchor_id": "p14",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Three presentation slides fan out horizontally in smooth 3D carousel"
+        },
+        {
+          "id": "e03-credit-tip",
+          "anchor_id": "p15",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Free credit meter badge highlights at bottom with amber warning pill"
+        }
+      ],
+      "acceptance_criteria": [
+        "Gamma presentation deck displays polished visual slides with realistic typography.",
+        "Credit limit notice is clearly distinguished as a helpful tip without cluttering the screen.",
+        "Slide carousel motion feels tactile and modern."
+      ],
+      "entrance": "Slide deck drops down from above with heavy surface spring settling.",
+      "main_action": "Slides fan out like a physical deck of cards, showcasing charts and headers.",
+      "exit": "Slide deck scales into a compact search pill as the screen transitions to Perplexity.",
+      "next_shot_connection": "Gamma search bar morphs directly into Perplexity's conversational query input.",
+      "transition": {"type": "morph-shrink", "duration_frames": 10},
+      "sound_cues": [
+        {
+          "event_id": "e03-gamma-enter",
+          "purpose": "Heavy card landing thud",
+          "file": "public/current/sfx/thud.wav",
+          "gain": 0.22,
+          "duration_frames": 14,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e03-urgency-clock",
+          "purpose": "Urgency alert click",
+          "file": "public/current/sfx/click.wav",
+          "gain": 0.18,
+          "duration_frames": 6,
+          "fade_out_frames": 2
+        },
+        {
+          "event_id": "e03-slide-deck",
+          "purpose": "Slide fan-out swoosh",
+          "file": "public/current/sfx/whoosh.wav",
+          "gain": 0.20,
+          "duration_frames": 12,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e03-credit-tip",
+          "purpose": "Credit meter sound",
+          "file": "public/current/sfx/meter.wav",
+          "gain": 0.24,
+          "duration_frames": 18,
+          "fade_out_frames": 5
+        }
+      ]
+    },
+    {
+      "id": "shot-04",
+      "start_frame": 1339,
+      "end_frame": 1745,
+      "narration": "৩ নম্বর, পারপ্লেক্সিটি এআই। এআই উত্তর দিলো, কিন্তু তথ্যটা কোথা থেকে আসলো? এখানে প্রশ্ন করলে উত্তরের সঙ্গে সোর্স লিংকও পাবা। রিসার্চ করার সময় লিংকগুলো থেকে তথ্য মিলিয়ে নিতে পারবা।",
+      "narration_ids": ["p16", "p17", "p18", "p19"],
+      "viewer_takeaway": "Perplexity AI backs every answer with live, clickable web citations for trustworthy research.",
+      "subject": "Realistic Perplexity search engine mockup providing grounded answers with live source citations",
+      "visual_mode": "mockup-search",
+      "body_labels": ["পারপ্লেক্সিটি", "সরাসরি সোর্স লিংক", "রিসার্চ পার্টনার"],
+      "assets": ["public/current/tools/perplexity.png"],
+      "states": {
+        "before": "A search query input box with a glowing cyan cursor and a skeptic question badge.",
+        "action": "A concise AI summary generates with numbered interactive citation badges [1], [2], [3].",
+        "after": "Detailed source cards (arXiv, GitHub, MIT Review) unfold below with verification checkmarks."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Perplexity search box and query card",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 200,
+          "focal_point": "Grounded answer text with 3 live source link cards",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e04-perp-enter",
+          "anchor_id": "p16",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Perplexity search interface springs into focus with cyan accent beam"
+        },
+        {
+          "id": "e04-source-doubt",
+          "anchor_id": "p17",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Doubt query pill pops up asking 'Where is the proof?'"
+        },
+        {
+          "id": "e04-sources-reveal",
+          "anchor_id": "p18",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Three source pills [arXiv], [GitHub], [MIT Review] reveal with link icons"
+        },
+        {
+          "id": "e04-verified-check",
+          "anchor_id": "p19",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Verified fact checkmark pulses beside the synthesized summary answer"
+        }
+      ],
+      "acceptance_criteria": [
+        "Citation links are visually obvious and look like genuine academic/web sources.",
+        "The comparison between unverified AI answers and cited Perplexity answers is crystal clear.",
+        "Layout remains balanced with ample negative space supporting legibility."
+      ],
+      "entrance": "Search interface glides up from bottom with snappy velocity settle.",
+      "main_action": "Citation badges emit pulse rings, highlighting direct links to source documents.",
+      "exit": "Source documents stack into a dense PDF icon, ready for NotebookLM.",
+      "next_shot_connection": "The verified document citation collapses into a heavy PDF document icon.",
+      "transition": {"type": "collapse-stack", "duration_frames": 10},
+      "sound_cues": [
+        {
+          "event_id": "e04-perp-enter",
+          "purpose": "Search interface entrance",
+          "file": "public/current/sfx/swoosh.wav",
+          "gain": 0.20,
+          "duration_frames": 13,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e04-sources-reveal",
+          "purpose": "Citation link pop",
+          "file": "public/current/sfx/pop.wav",
+          "gain": 0.22,
+          "duration_frames": 8,
+          "fade_out_frames": 2
+        },
+        {
+          "event_id": "e04-verified-check",
+          "purpose": "Verification ping",
+          "file": "public/current/sfx/ping.wav",
+          "gain": 0.21,
+          "duration_frames": 15,
+          "fade_out_frames": 5
+        }
+      ]
+    },
+    {
+      "id": "shot-05",
+      "start_frame": 1745,
+      "end_frame": 2105,
+      "narration": "৪ নম্বর, জেমিনি নোটবুক, আগের নোটবুকএলএম। লম্বা পিডিএফ আপলোড করে বলো, সহজ করে বুঝিয়ে দাও। চাইলে অডিও ওভারভিউ বানিয়ে পডকাস্টের মতো শুনতেও পারবা।",
+      "narration_ids": ["p20", "p21", "p22"],
+      "viewer_takeaway": "NotebookLM digests 50+ page PDFs into easy summaries and creates 2-host audio podcasts.",
+      "subject": "Realistic Google NotebookLM workspace synthesizing multi-page PDFs into conversational audio",
+      "visual_mode": "mockup-notebook",
+      "body_labels": ["জেমিনি নোটবুক", "পিডিএফ সামারি", "অডিও পডকাস্ট"],
+      "assets": ["public/current/tools/notebook.png"],
+      "states": {
+        "before": "A heavy 80-page PDF document card sitting on the desk looking intimidating.",
+        "action": "The PDF is dragged into NotebookLM's notebook source panel, instantly generating key takeaways.",
+        "after": "An 'Audio Overview' media player card activates with dual-host avatars and lively audio waves."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "NotebookLM source panel with bulky uploaded PDF document",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 180,
+          "focal_point": "Audio Overview player with animated dual-host conversation waves",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e05-notebook-enter",
+          "anchor_id": "p20",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "NotebookLM notebook workspace slides in with warm amber accent glow"
+        },
+        {
+          "id": "e05-heavy-pdf",
+          "anchor_id": "p21",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Bulky PDF file icon with '80 Pages' warning lands into upload slot"
+        },
+        {
+          "id": "e05-audio-podcast",
+          "anchor_id": "p22",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 55,
+          "action": "Audio podcast player emerges with dynamic soundwave equalizer bars"
+        }
+      ],
+      "acceptance_criteria": [
+        "The PDF-to-Podcast concept is instantly understandable through visual metaphors.",
+        "Equalizer audio bars bounce rhythmically to indicate natural AI voice conversation.",
+        "Color grading highlights Google NotebookLM's distinctive clean style."
+      ],
+      "entrance": "Notebook workspace slides in from right with subtle perspective rotation.",
+      "main_action": "Soundwaves pulse symmetrically between Host 1 and Host 2 avatars.",
+      "exit": "The audio player's waveform expands into a full-screen frequency spectrum for Adobe Podcast.",
+      "next_shot_connection": "The audio equalizer waveform matches seamlessly with Adobe Podcast's audio visualizer.",
+      "transition": {"type": "audio-wave-continuity", "duration_frames": 10},
+      "sound_cues": [
+        {
+          "event_id": "e05-notebook-enter",
+          "purpose": "Notebook entrance whoosh",
+          "file": "public/current/sfx/whoosh.wav",
+          "gain": 0.20,
+          "duration_frames": 12,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e05-heavy-pdf",
+          "purpose": "Document drop impact",
+          "file": "public/current/sfx/thud.wav",
+          "gain": 0.22,
+          "duration_frames": 14,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e05-audio-podcast",
+          "purpose": "Podcast player activation ping",
+          "file": "public/current/sfx/ping.wav",
+          "gain": 0.22,
+          "duration_frames": 15,
+          "fade_out_frames": 5
+        }
+      ]
+    },
+    {
+      "id": "shot-06",
+      "start_frame": 2105,
+      "end_frame": 2411,
+      "narration": "৫ নম্বর, অ্যাডোবি পডকাস্ট। ভয়েস রেকর্ড করেছ, কিন্তু পেছনের ফ্যানের আওয়াজ বেশি? এনহ্যান্স স্পিচ দিয়ে নয়েজ আর একো কমাতে পারো।",
+      "narration_ids": ["p23", "p24", "p25"],
+      "viewer_takeaway": "Adobe Podcast Enhance removes room echo and fan noise to deliver studio-quality voice recordings.",
+      "subject": "Realistic Adobe Podcast Enhance UI showing live before/after waveform noise removal",
+      "visual_mode": "mockup-audio-enhancement",
+      "body_labels": ["অ্যাডোবি পডকাস্ট", "নয়েজ রিমুভাল", "স্টুডিও সাউন্ড"],
+      "assets": ["public/current/tools/adobe_podcast.png"],
+      "states": {
+        "before": "A spiky, jagged red audio waveform depicting heavy fan noise and echo in a bedroom recording.",
+        "action": "The 'Enhance Speech' toggle switch slides to ON with an emerald neon illumination.",
+        "after": "The waveform instantly smooths into a crisp, rich studio-quality voice spectrum."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Adobe Podcast interface with noisy spiky waveform",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 150,
+          "focal_point": "Clean studio waveform with Enhance Speech switch illuminated",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e06-adobe-enter",
+          "anchor_id": "p23",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Adobe Podcast studio card enters with emerald green glow"
+        },
+        {
+          "id": "e06-fan-noise",
+          "anchor_id": "p24",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Red spiky noise waveform jitters violently with fan disturbance icon"
+        },
+        {
+          "id": "e06-enhanced-toggle",
+          "anchor_id": "p25",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Enhance Speech switch toggles to ON, flattening noise and purifying vocal waveform"
+        }
+      ],
+      "acceptance_criteria": [
+        "Before and after difference between noisy and enhanced audio is visually striking.",
+        "Waveform transformation is smooth and synchronized with the speech explanation.",
+        "Adobe Podcast branding and website address are prominently featured."
+      ],
+      "entrance": "Studio card rises with clean 3D perspective rotation along X axis.",
+      "main_action": "Toggle switch slides right, triggering a green wipe beam that cleans the waveform.",
+      "exit": "All 5 tools stack into a single unified grid as the scene transitions to the Outro.",
+      "next_shot_connection": "Adobe Podcast card scales down to join the other 4 tools in the final stack grid.",
+      "transition": {"type": "grid-reunite", "duration_frames": 10},
+      "sound_cues": [
+        {
+          "event_id": "e06-adobe-enter",
+          "purpose": "Studio interface entrance",
+          "file": "public/current/sfx/swoosh.wav",
+          "gain": 0.20,
+          "duration_frames": 13,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e06-fan-noise",
+          "purpose": "Noise meter buzzing effect",
+          "file": "public/current/sfx/meter.wav",
+          "gain": 0.22,
+          "duration_frames": 16,
+          "fade_out_frames": 5
+        },
+        {
+          "event_id": "e06-enhanced-toggle",
+          "purpose": "Toggle switch click and chime",
+          "file": "public/current/sfx/click.wav",
+          "gain": 0.24,
+          "duration_frames": 8,
+          "fade_out_frames": 2
+        }
+      ]
+    },
+    {
+      "id": "shot-07",
+      "start_frame": 2411,
+      "end_frame": 2549,
+      "narration": "নিচে কমেন্টে লেখো \"tools\", আমি এই ৫টা টুলের লিংক দিয়ে দিচ্ছি।",
+      "narration_ids": ["p26", "p27"],
+      "viewer_takeaway": "Comment 'tools' to get the direct links to all 5 AI platforms instantly in direct message.",
+      "subject": "All 5 AI tool badges gathered together with an animated comment prompt box",
+      "visual_mode": "call-to-action",
+      "body_labels": ["কমেন্টে লিখুন TOOLS", "লিংক ইনবক্সে", "সেভ করুন"],
+      "assets": [
+        "public/current/tools/napkin.png",
+        "public/current/tools/gamma.png",
+        "public/current/tools/perplexity.png",
+        "public/current/tools/notebook.png",
+        "public/current/tools/adobe_podcast.png"
+      ],
+      "states": {
+        "before": "All 5 AI tool logos assembled in an impressive high-tech Bento grid.",
+        "action": "A pulsing neon comment bubble expands with the keyword 'TOOLS' and paper-plane send icon.",
+        "after": "A 'Save & Share' bookmark badge glides into the footer with active follower counter."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "All 5 AI tool logos assembled in sleek Bento grid",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        },
+        {
+          "frame": 70,
+          "focal_point": "Pulsing 'TOOLS' comment prompt and direct message send badge",
+          "bounds": {"x": 90, "y": 420, "width": 830, "height": 1150}
+        }
+      ],
+      "events": [
+        {
+          "id": "e07-comment-prompt",
+          "anchor_id": "p26",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 45,
+          "action": "Bento grid of all 5 tools locks in with coordinated light sweeps"
+        },
+        {
+          "id": "e07-tools-links",
+          "anchor_id": "p27",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 50,
+          "action": "Callout comment box pulses with typing indicator 'TOOLS' and glow ring"
+        }
+      ],
+      "acceptance_criteria": [
+        "Call to action is unmistakable and prominently positioned in the mobile safe zone.",
+        "All 5 tool names remain visible simultaneously for quick reference and screenshotting.",
+        "Final frame holds cleanly without abrupt cutoffs or stutter."
+      ],
+      "entrance": "Bento grid zooms into center with high-energy spring lock.",
+      "main_action": "Comment pill expands in lower third with pulsing gradient ring and send icon.",
+      "exit": "Subtle camera drift holds the complete visual brand until the final frame.",
+      "next_shot_connection": "Final shot of composition; holds for viewer interaction and loop playback.",
+      "transition": {"type": "hold-loop", "duration_frames": 0},
+      "sound_cues": [
+        {
+          "event_id": "e07-comment-prompt",
+          "purpose": "Final assembly whoosh",
+          "file": "public/current/sfx/whoosh.wav",
+          "gain": 0.22,
+          "duration_frames": 12,
+          "fade_out_frames": 4
+        },
+        {
+          "event_id": "e07-tools-links",
+          "purpose": "Comment callout camera shutter",
+          "file": "public/current/sfx/camera_shutter.wav",
+          "gain": 0.25,
+          "duration_frames": 10,
+          "fade_out_frames": 3
+        }
+      ]
+    }
+  ]
+}

@@ -8,3 +8,17 @@ out
 
 # local agent workspace
 .superpowers
+
+# Reusable workspace: keep instructions and templates, ignore generated media.
+.venv
+.venv/
+.venv*
+__pycache__/
+work/setup/
+work/current/*.mp4
+work/current/review/
+exports/*.mp4
+public/current/*
+!public/current/.gitkeep
+public/workspace-smoke/tone.wav
+src/shared/workspace.compiled.css

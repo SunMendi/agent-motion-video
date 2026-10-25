@@ -1,0 +1,13 @@
+{
+  "note": "Target requirements only. Reading this file or running video:doctor does not install anything.",
+  "packages": [
+    "react", "react-dom", "remotion", "@remotion/cli", "@remotion/media",
+    "@remotion/transitions", "@remotion/fonts", "@remotion/layout-utils",
+    "@remotion/captions", "tailwindcss", "@remotion/tailwind-v4", "zod",
+    "lucide-react", "sharp", "typescript", "tsx", "vitest"
+  ],
+  "python_package": "faster_whisper",
+  "remotion_skill_source": "https://github.com/remotion-dev/skills",
+  "remotion_skill_paths": [".agents/skills", ".claude/skills", "skills/remotion-best-practices", "skills/remotion"],
+  "shared_font_files": ["public/fonts/NotoSansBengali-Regular.ttf", "public/fonts/NotoSansBengali-Bold.ttf"]
+}

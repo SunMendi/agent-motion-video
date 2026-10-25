@@ -192,7 +192,7 @@ wrap to max 3 lines. All sizes scale by `min(width, height) / 1080` so 1:1 and
 1. Background: slow gradient mesh in brand blue, dark base.
 2. Grain and vignette, static, 6% opacity.
 3. Scene content, one per beat.
-4. Caption bar, bottom third, inside the safe area.
+4. Caption bar at the top, below platform UI and clear of the main visual action, inside the safe area.
 5. Logo watermark, top-left.
 6. Progress bar, top, one pixel of blue that fills across the whole video.
 

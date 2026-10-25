@@ -1,0 +1,76 @@
+{
+  "assets": [
+    {
+      "path": "public/current/bangla.wav",
+      "source": "user supplied",
+      "license": "user supplied",
+      "usage": "unmodified narration"
+    },
+    {
+      "path": "public/audio/music-bed.mp3",
+      "source": "existing shared workspace bed",
+      "license": "workspace asset; provenance not separately recorded",
+      "usage": "ducked background music"
+    },
+    {
+      "path": "public/current/sfx/scan.wav",
+      "source": "locally synthesized sine sweep",
+      "license": "original",
+      "usage": "token scan contact"
+    },
+    {
+      "path": "public/current/sfx/split.wav",
+      "source": "locally synthesized sine sweep",
+      "license": "original",
+      "usage": "token separation"
+    },
+    {
+      "path": "public/current/sfx/meter.wav",
+      "source": "locally synthesized sine sweep",
+      "license": "original",
+      "usage": "meter response"
+    },
+    {
+      "path": "public/fonts/HindSiliguri-Bold.ttf",
+      "source": "existing shared workspace font",
+      "license": "see shared workspace setup record",
+      "usage": "captions and Bengali SVG text"
+    },
+    {
+      "path": "src/video/MainVideo.tsx",
+      "source": "original authored vector shapes",
+      "license": "original",
+      "usage": "frame-derived SVG animation"
+    },
+    {
+      "path": "public/audio/sfx/whooshes/fast-whoosh-01.mp3",
+      "source": "pre-existing shared workspace SFX",
+      "license": "source/licence not independently verified",
+      "usage": "Card slide whoosh"
+    },
+    {
+      "path": "public/audio/sfx/impacts/heavy-thud-01.mp3",
+      "source": "pre-existing shared workspace SFX",
+      "license": "source/licence not independently verified",
+      "usage": "3x cost impact"
+    },
+    {
+      "path": "public/audio/sfx/ui/dial-tick-soft-01.mp3",
+      "source": "pre-existing shared workspace SFX",
+      "license": "source/licence not independently verified",
+      "usage": "Coin drop tick"
+    },
+    {
+      "path": "public/audio/sfx/pops/bubble-pop-01.mp3",
+      "source": "pre-existing shared workspace SFX",
+      "license": "source/licence not independently verified",
+      "usage": "Token machine reveal"
+    },
+    {
+      "path": "src/video/VisualScenes.tsx",
+      "source": "original code-native vector artwork",
+      "license": "original",
+      "usage": "scene visuals and frame-derived animation"
+    }
+  ]
+}

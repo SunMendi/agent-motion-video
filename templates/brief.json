@@ -1,0 +1,16 @@
+{
+  "video_id": "",
+  "outcome": "",
+  "audience": "",
+  "language": "bn-BD",
+  "audio_file": "public/current/voice.wav",
+  "script_file": null,
+  "visual_script_file": null,
+  "references": [],
+  "output": {"width": 1080, "height": 1920, "fps": 30},
+  "design": {"direction": "agent-select", "brand_assets": [], "required_colors": [], "required_fonts": []},
+  "audio": {"preserve_voice": true, "music": true, "sound_effects": true},
+  "budget": "free-assets-and-local-rendering",
+  "constraints": [],
+  "approval_required_for_input_changes": true
+}

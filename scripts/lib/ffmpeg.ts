@@ -30,8 +30,8 @@ const runFfmpeg = (args: string[]): string => {
 const runFfprobe = (args: string[]): string =>
   execFileSync(ffprobeBin, args, {maxBuffer: 1024 * 1024 * 64}).toString();
 
-/** Integrated loudness in LUFS and true peak in dBTP. */
-export const measureLoudness = (file: string): {i: number; tp: number} => {
+/** Integrated loudness in LUFS, true peak in dBTP, and loudness range in LU. */
+export const measureLoudness = (file: string): {i: number; tp: number; lra: number} => {
   const out = runFfmpeg([
     '-hide_banner',
     '-i', file,
@@ -41,8 +41,12 @@ export const measureLoudness = (file: string): {i: number; tp: number} => {
   ]);
   const match = out.match(/\{[\s\S]*?\}/);
   if (!match) throw new Error(`loudnorm did not report measurements for ${file}`);
-  const json = JSON.parse(match[0]) as {input_i: string; input_tp: string};
-  return {i: Number(json.input_i), tp: Number(json.input_tp)};
+  const json = JSON.parse(match[0]) as {input_i: string; input_tp: string; input_lra?: string};
+  return {
+    i: Number(json.input_i),
+    tp: Number(json.input_tp),
+    lra: json.input_lra ? Number(json.input_lra) : 0,
+  };
 };
 
 /** Constant measured gain to -14 LUFS, keeping the duration untouched. */
@@ -90,26 +94,45 @@ export type Probe = {
   height: number;
   videoCodec: string;
   audioCodec: string;
+  fps: number;
 };
 
 export const probeFile = (file: string): Probe => {
   const out = runFfprobe([
     '-v', 'error',
-    '-show_entries', 'format=duration:stream=codec_type,codec_name,width,height',
+    '-show_entries', 'format=duration:stream=codec_type,codec_name,width,height,r_frame_rate,avg_frame_rate',
     '-of', 'json',
     file,
   ]);
   const parsed = JSON.parse(out) as {
     format: {duration: string};
-    streams: Array<{codec_type: string; codec_name: string; width?: number; height?: number}>;
+    streams: Array<{
+      codec_type: string;
+      codec_name: string;
+      width?: number;
+      height?: number;
+      r_frame_rate?: string;
+      avg_frame_rate?: string;
+    }>;
   };
   const video = parsed.streams.find((s) => s.codec_type === 'video');
   const audio = parsed.streams.find((s) => s.codec_type === 'audio');
+
+  let fps = 0;
+  const rateStr = video?.avg_frame_rate || video?.r_frame_rate || '';
+  if (rateStr && rateStr.includes('/')) {
+    const [num, den] = rateStr.split('/').map(Number);
+    if (den && den > 0) fps = Math.round(num / den);
+  } else if (rateStr) {
+    fps = Math.round(Number(rateStr));
+  }
+
   return {
     duration: Number(parsed.format.duration),
     width: video?.width ?? 0,
     height: video?.height ?? 0,
     videoCodec: video?.codec_name ?? '',
     audioCodec: audio?.codec_name ?? '',
+    fps,
   };
 };

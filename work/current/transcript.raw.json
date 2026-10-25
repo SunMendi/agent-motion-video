@@ -1,0 +1,1687 @@
+{
+  "audio_duration": 84.96,
+  "audio_sha256": "acc7cc341cc9bcdb0ff7bfc3cf2479170144d09947b504fcfed2ab783bab4d37",
+  "review_status": "unreviewed",
+  "review_notes": "Raw ASR word estimates generated from freeaai.wav using faster-whisper base model.",
+  "words": [
+    {
+      "id": "w000001",
+      "w": "3A5Tai",
+      "s": 0.0,
+      "e": 1.26,
+      "probability": 0.9
+    },
+    {
+      "id": "w000002",
+      "w": "AI",
+      "s": 1.26,
+      "e": 1.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000003",
+      "w": "Tooledhe",
+      "s": 1.5,
+      "e": 2.04,
+      "probability": 0.9
+    },
+    {
+      "id": "w000004",
+      "w": "Atoqaatchkaraja",
+      "s": 2.04,
+      "e": 3.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000005",
+      "w": "Jaanu",
+      "s": 3.22,
+      "e": 3.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000006",
+      "w": "Pdf",
+      "s": 3.8,
+      "e": 4.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000007",
+      "w": "Bhojbe,",
+      "s": 4.7,
+      "e": 5.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000008",
+      "w": "Presentation",
+      "s": 5.68,
+      "e": 6.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000009",
+      "w": "Bona",
+      "s": 6.22,
+      "e": 6.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000010",
+      "w": "Be",
+      "s": 6.5,
+      "e": 6.72,
+      "probability": 0.9
+    },
+    {
+      "id": "w000011",
+      "w": "Amun",
+      "s": 6.72,
+      "e": 7.34,
+      "probability": 0.9
+    },
+    {
+      "id": "w000012",
+      "w": "ki",
+      "s": 7.34,
+      "e": 7.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000013",
+      "w": "Tomar",
+      "s": 7.46,
+      "e": 7.66,
+      "probability": 0.9
+    },
+    {
+      "id": "w000014",
+      "w": "Voya",
+      "s": 7.66,
+      "e": 8.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000015",
+      "w": "Sopurishkar",
+      "s": 8.02,
+      "e": 8.64,
+      "probability": 0.9
+    },
+    {
+      "id": "w000016",
+      "w": "kurbe",
+      "s": 8.64,
+      "e": 9.0,
+      "probability": 0.9
+    },
+    {
+      "id": "w000017",
+      "w": "Shishitur",
+      "s": 9.0,
+      "e": 9.98,
+      "probability": 0.9
+    },
+    {
+      "id": "w000018",
+      "w": "bhi",
+      "s": 9.98,
+      "e": 10.26,
+      "probability": 0.9
+    },
+    {
+      "id": "w000019",
+      "w": "4aftar",
+      "s": 10.26,
+      "e": 11.0,
+      "probability": 0.9
+    },
+    {
+      "id": "w000020",
+      "w": "shunle",
+      "s": 11.0,
+      "e": 11.36,
+      "probability": 0.9
+    },
+    {
+      "id": "w000021",
+      "w": "ae",
+      "s": 11.36,
+      "e": 11.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000022",
+      "w": "parthokotan",
+      "s": 11.5,
+      "e": 12.12,
+      "probability": 0.9
+    },
+    {
+      "id": "w000023",
+      "w": "Nijai",
+      "s": 12.12,
+      "e": 12.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000024",
+      "w": "Bhojbe",
+      "s": 12.42,
+      "e": 12.86,
+      "probability": 0.9
+    },
+    {
+      "id": "w000025",
+      "w": "Ack",
+      "s": 12.86,
+      "e": 13.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000026",
+      "w": "Numbur,",
+      "s": 13.7,
+      "e": 14.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000027",
+      "w": "Nape",
+      "s": 14.34,
+      "e": 14.74,
+      "probability": 0.9
+    },
+    {
+      "id": "w000028",
+      "w": "Kini",
+      "s": 14.74,
+      "e": 14.96,
+      "probability": 0.9
+    },
+    {
+      "id": "w000029",
+      "w": "AI",
+      "s": 14.96,
+      "e": 15.3,
+      "probability": 0.9
+    },
+    {
+      "id": "w000030",
+      "w": "Kono",
+      "s": 15.3,
+      "e": 16.0,
+      "probability": 0.9
+    },
+    {
+      "id": "w000031",
+      "w": "idea",
+      "s": 16.0,
+      "e": 16.32,
+      "probability": 0.9
+    },
+    {
+      "id": "w000032",
+      "w": "bozhathe",
+      "s": 16.32,
+      "e": 16.82,
+      "probability": 0.9
+    },
+    {
+      "id": "w000033",
+      "w": "ge",
+      "s": 16.82,
+      "e": 16.94,
+      "probability": 0.9
+    },
+    {
+      "id": "w000034",
+      "w": "biśhal",
+      "s": 16.94,
+      "e": 17.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000035",
+      "w": "para",
+      "s": 17.5,
+      "e": 17.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000036",
+      "w": "-Graph",
+      "s": 17.7,
+      "e": 17.96,
+      "probability": 0.9
+    },
+    {
+      "id": "w000037",
+      "w": "likhe",
+      "s": 17.96,
+      "e": 18.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000038",
+      "w": "fila",
+      "s": 18.24,
+      "e": 18.48,
+      "probability": 0.9
+    },
+    {
+      "id": "w000039",
+      "w": "cho",
+      "s": 18.48,
+      "e": 18.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000040",
+      "w": "Le",
+      "s": 18.68,
+      "e": 19.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000041",
+      "w": "Khat",
+      "s": 19.28,
+      "e": 19.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000042",
+      "w": "hai",
+      "s": 19.46,
+      "e": 19.52,
+      "probability": 0.9
+    },
+    {
+      "id": "w000043",
+      "w": "khane",
+      "s": 19.52,
+      "e": 19.76,
+      "probability": 0.9
+    },
+    {
+      "id": "w000044",
+      "w": "paste",
+      "s": 19.76,
+      "e": 20.04,
+      "probability": 0.9
+    },
+    {
+      "id": "w000045",
+      "w": "kore",
+      "s": 20.04,
+      "e": 20.32,
+      "probability": 0.9
+    },
+    {
+      "id": "w000046",
+      "w": "visual",
+      "s": 20.32,
+      "e": 20.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000047",
+      "w": "generet",
+      "s": 20.68,
+      "e": 21.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000048",
+      "w": "koreo",
+      "s": 21.18,
+      "e": 21.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000049",
+      "w": "Shitai",
+      "s": 21.68,
+      "e": 22.16,
+      "probability": 0.9
+    },
+    {
+      "id": "w000050",
+      "w": "huye",
+      "s": 22.16,
+      "e": 22.36,
+      "probability": 0.9
+    },
+    {
+      "id": "w000051",
+      "w": "jabhe",
+      "s": 22.36,
+      "e": 22.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000052",
+      "w": "diagram",
+      "s": 22.62,
+      "e": 23.0,
+      "probability": 0.9
+    },
+    {
+      "id": "w000053",
+      "w": "ba",
+      "s": 23.0,
+      "e": 23.36,
+      "probability": 0.9
+    },
+    {
+      "id": "w000054",
+      "w": "-flow",
+      "s": 23.36,
+      "e": 23.58,
+      "probability": 0.9
+    },
+    {
+      "id": "w000055",
+      "w": "chart",
+      "s": 23.58,
+      "e": 24.0,
+      "probability": 0.9
+    },
+    {
+      "id": "w000056",
+      "w": "Jamon",
+      "s": 24.0,
+      "e": 24.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000057",
+      "w": "internet",
+      "s": 24.7,
+      "e": 25.48,
+      "probability": 0.9
+    },
+    {
+      "id": "w000058",
+      "w": "kivhabe",
+      "s": 25.48,
+      "e": 26.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000059",
+      "w": "kaatchkarhe",
+      "s": 26.02,
+      "e": 26.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000060",
+      "w": "Puro",
+      "s": 26.7,
+      "e": 27.3,
+      "probability": 0.9
+    },
+    {
+      "id": "w000061",
+      "w": "bapart",
+      "s": 27.3,
+      "e": 27.72,
+      "probability": 0.9
+    },
+    {
+      "id": "w000062",
+      "w": "hai",
+      "s": 27.72,
+      "e": 27.84,
+      "probability": 0.9
+    },
+    {
+      "id": "w000063",
+      "w": "Ack",
+      "s": 27.84,
+      "e": 28.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000064",
+      "w": "cho",
+      "s": 28.18,
+      "e": 28.36,
+      "probability": 0.9
+    },
+    {
+      "id": "w000065",
+      "w": "bhi",
+      "s": 28.36,
+      "e": 28.52,
+      "probability": 0.9
+    },
+    {
+      "id": "w000066",
+      "w": "the",
+      "s": 28.52,
+      "e": 28.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000067",
+      "w": "Dui",
+      "s": 28.62,
+      "e": 29.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000068",
+      "w": "Numbur",
+      "s": 29.42,
+      "e": 29.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000069",
+      "w": "Gamma",
+      "s": 29.8,
+      "e": 30.6,
+      "probability": 0.9
+    },
+    {
+      "id": "w000070",
+      "w": "Kaal",
+      "s": 30.6,
+      "e": 31.3,
+      "probability": 0.9
+    },
+    {
+      "id": "w000071",
+      "w": "Präsentation",
+      "s": 31.3,
+      "e": 31.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000072",
+      "w": "Atocho",
+      "s": 31.92,
+      "e": 32.78,
+      "probability": 0.9
+    },
+    {
+      "id": "w000073",
+      "w": "Acta",
+      "s": 32.78,
+      "e": 33.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000074",
+      "w": "Slide",
+      "s": 33.24,
+      "e": 33.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000075",
+      "w": "O",
+      "s": 33.5,
+      "e": 33.72,
+      "probability": 0.9
+    },
+    {
+      "id": "w000076",
+      "w": "Banao",
+      "s": 33.72,
+      "e": 34.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000077",
+      "w": "Ni",
+      "s": 34.02,
+      "e": 34.16,
+      "probability": 0.9
+    },
+    {
+      "id": "w000078",
+      "w": "Topic",
+      "s": 34.16,
+      "e": 35.2,
+      "probability": 0.9
+    },
+    {
+      "id": "w000079",
+      "w": "Kadit",
+      "s": 35.2,
+      "e": 36.2,
+      "probability": 0.9
+    },
+    {
+      "id": "w000080",
+      "w": "Joonnaar",
+      "s": 36.2,
+      "e": 36.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000081",
+      "w": "Coita",
+      "s": 36.62,
+      "e": 36.98,
+      "probability": 0.9
+    },
+    {
+      "id": "w000082",
+      "w": "Slide",
+      "s": 36.98,
+      "e": 37.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000083",
+      "w": "Lack",
+      "s": 37.22,
+      "e": 37.5,
+      "probability": 0.9
+    },
+    {
+      "id": "w000084",
+      "w": "Bha",
+      "s": 37.5,
+      "e": 37.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000085",
+      "w": "Bha",
+      "s": 37.62,
+      "e": 37.72,
+      "probability": 0.9
+    },
+    {
+      "id": "w000086",
+      "w": "Bha",
+      "s": 37.72,
+      "e": 38.1,
+      "probability": 0.9
+    },
+    {
+      "id": "w000087",
+      "w": "Bha",
+      "s": 38.1,
+      "e": 38.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000088",
+      "w": "Bha",
+      "s": 38.22,
+      "e": 38.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000089",
+      "w": "Dhao",
+      "s": 38.42,
+      "e": 38.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000090",
+      "w": "Gamma",
+      "s": 38.42,
+      "e": 38.88,
+      "probability": 0.9
+    },
+    {
+      "id": "w000091",
+      "w": "Acta",
+      "s": 38.88,
+      "e": 39.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000092",
+      "w": "Draft",
+      "s": 39.08,
+      "e": 39.34,
+      "probability": 0.9
+    },
+    {
+      "id": "w000093",
+      "w": "Chha",
+      "s": 39.34,
+      "e": 39.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000094",
+      "w": "Ji",
+      "s": 39.62,
+      "e": 39.74,
+      "probability": 0.9
+    },
+    {
+      "id": "w000095",
+      "w": "Ede",
+      "s": 39.74,
+      "e": 39.88,
+      "probability": 0.9
+    },
+    {
+      "id": "w000096",
+      "w": "Bha",
+      "s": 39.88,
+      "e": 40.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000097",
+      "w": "Tbha",
+      "s": 40.08,
+      "e": 40.54,
+      "probability": 0.9
+    },
+    {
+      "id": "w000098",
+      "w": "Kheal",
+      "s": 40.54,
+      "e": 40.9,
+      "probability": 0.9
+    },
+    {
+      "id": "w000099",
+      "w": "Kauro,",
+      "s": 40.9,
+      "e": 41.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000100",
+      "w": "Saurur",
+      "s": 41.66,
+      "e": 41.96,
+      "probability": 0.9
+    },
+    {
+      "id": "w000101",
+      "w": "Chhashur",
+      "s": 41.96,
+      "e": 42.44,
+      "probability": 0.9
+    },
+    {
+      "id": "w000102",
+      "w": "Free",
+      "s": 42.44,
+      "e": 42.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000103",
+      "w": "Credit",
+      "s": 42.68,
+      "e": 42.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000104",
+      "w": "Seshwale",
+      "s": 42.92,
+      "e": 43.56,
+      "probability": 0.9
+    },
+    {
+      "id": "w000105",
+      "w": "Automatic",
+      "s": 43.56,
+      "e": 44.2,
+      "probability": 0.9
+    },
+    {
+      "id": "w000106",
+      "w": "Refill",
+      "s": 44.2,
+      "e": 44.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000107",
+      "w": "Haina",
+      "s": 44.62,
+      "e": 44.98,
+      "probability": 0.9
+    },
+    {
+      "id": "w000108",
+      "w": "Dui",
+      "s": 45.14,
+      "e": 45.64,
+      "probability": 0.9
+    },
+    {
+      "id": "w000109",
+      "w": "Numbur",
+      "s": 45.64,
+      "e": 46.12,
+      "probability": 0.9
+    },
+    {
+      "id": "w000110",
+      "w": "Perplexity",
+      "s": 46.12,
+      "e": 47.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000111",
+      "w": "AI",
+      "s": 47.24,
+      "e": 47.9,
+      "probability": 0.9
+    },
+    {
+      "id": "w000112",
+      "w": "Uttar",
+      "s": 47.9,
+      "e": 48.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000113",
+      "w": "Dilo",
+      "s": 48.28,
+      "e": 48.58,
+      "probability": 0.9
+    },
+    {
+      "id": "w000114",
+      "w": "Kintu",
+      "s": 48.58,
+      "e": 49.3,
+      "probability": 0.9
+    },
+    {
+      "id": "w000115",
+      "w": "Tottara",
+      "s": 49.3,
+      "e": 49.76,
+      "probability": 0.9
+    },
+    {
+      "id": "w000116",
+      "w": "Kutha",
+      "s": 49.76,
+      "e": 49.98,
+      "probability": 0.9
+    },
+    {
+      "id": "w000117",
+      "w": "Tha",
+      "s": 49.98,
+      "e": 50.1,
+      "probability": 0.9
+    },
+    {
+      "id": "w000118",
+      "w": "Kyaan",
+      "s": 50.1,
+      "e": 50.4,
+      "probability": 0.9
+    },
+    {
+      "id": "w000119",
+      "w": "Loh",
+      "s": 50.4,
+      "e": 50.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000120",
+      "w": "Ikhani",
+      "s": 50.62,
+      "e": 51.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000121",
+      "w": "Prushna",
+      "s": 51.24,
+      "e": 51.58,
+      "probability": 0.9
+    },
+    {
+      "id": "w000122",
+      "w": "Kaur",
+      "s": 51.58,
+      "e": 51.76,
+      "probability": 0.9
+    },
+    {
+      "id": "w000123",
+      "w": "Le",
+      "s": 51.76,
+      "e": 51.9,
+      "probability": 0.9
+    },
+    {
+      "id": "w000124",
+      "w": "Uttara",
+      "s": 51.9,
+      "e": 52.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000125",
+      "w": "Shinge",
+      "s": 52.24,
+      "e": 52.62,
+      "probability": 0.9
+    },
+    {
+      "id": "w000126",
+      "w": "Source",
+      "s": 52.62,
+      "e": 52.9,
+      "probability": 0.9
+    },
+    {
+      "id": "w000127",
+      "w": "Links",
+      "s": 52.9,
+      "e": 53.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000128",
+      "w": "Bha",
+      "s": 53.18,
+      "e": 53.54,
+      "probability": 0.9
+    },
+    {
+      "id": "w000129",
+      "w": "Bha",
+      "s": 53.54,
+      "e": 53.66,
+      "probability": 0.9
+    },
+    {
+      "id": "w000130",
+      "w": "Bha",
+      "s": 53.66,
+      "e": 54.04,
+      "probability": 0.9
+    },
+    {
+      "id": "w000131",
+      "w": "Research",
+      "s": 54.04,
+      "e": 54.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000132",
+      "w": "Kaurar",
+      "s": 54.46,
+      "e": 54.82,
+      "probability": 0.9
+    },
+    {
+      "id": "w000133",
+      "w": "Somai",
+      "s": 54.82,
+      "e": 55.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000134",
+      "w": "Link",
+      "s": 55.22,
+      "e": 55.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000135",
+      "w": "Hule",
+      "s": 55.42,
+      "e": 55.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000136",
+      "w": "Tottara",
+      "s": 55.8,
+      "e": 56.24,
+      "probability": 0.9
+    },
+    {
+      "id": "w000137",
+      "w": "Millianit",
+      "s": 56.24,
+      "e": 56.78,
+      "probability": 0.9
+    },
+    {
+      "id": "w000138",
+      "w": "Bha",
+      "s": 56.78,
+      "e": 56.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000139",
+      "w": "Bha",
+      "s": 56.92,
+      "e": 57.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000140",
+      "w": "Bha",
+      "s": 57.18,
+      "e": 58.18,
+      "probability": 0.9
+    },
+    {
+      "id": "w000141",
+      "w": "Gemini",
+      "s": 58.18,
+      "e": 58.96,
+      "probability": 0.9
+    },
+    {
+      "id": "w000142",
+      "w": "Notebook,",
+      "s": 58.96,
+      "e": 59.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000143",
+      "w": "Agad",
+      "s": 59.9,
+      "e": 60.16,
+      "probability": 0.9
+    },
+    {
+      "id": "w000144",
+      "w": "Notebook",
+      "s": 60.16,
+      "e": 60.6,
+      "probability": 0.9
+    },
+    {
+      "id": "w000145",
+      "w": "Lm,",
+      "s": 60.6,
+      "e": 60.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000146",
+      "w": "Lomba",
+      "s": 61.54,
+      "e": 61.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000147",
+      "w": "PDF",
+      "s": 61.92,
+      "e": 62.2,
+      "probability": 0.9
+    },
+    {
+      "id": "w000148",
+      "w": "Dké",
+      "s": 62.2,
+      "e": 62.64,
+      "probability": 0.9
+    },
+    {
+      "id": "w000149",
+      "w": "paara",
+      "s": 62.64,
+      "e": 62.7,
+      "probability": 0.9
+    },
+    {
+      "id": "w000150",
+      "w": "Richai",
+      "s": 62.7,
+      "e": 63.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000151",
+      "w": "chole",
+      "s": 63.06,
+      "e": 63.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000152",
+      "w": "hai",
+      "s": 63.28,
+      "e": 63.4,
+      "probability": 0.9
+    },
+    {
+      "id": "w000153",
+      "w": "Gha",
+      "s": 63.4,
+      "e": 63.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000154",
+      "w": "Itse",
+      "s": 63.46,
+      "e": 63.6,
+      "probability": 0.9
+    },
+    {
+      "id": "w000155",
+      "w": "Half'm",
+      "s": 63.98,
+      "e": 64.34,
+      "probability": 0.9
+    },
+    {
+      "id": "w000156",
+      "w": "likealies",
+      "s": 64.34,
+      "e": 64.54,
+      "probability": 0.9
+    },
+    {
+      "id": "w000157",
+      "w": "PandaB",
+      "s": 64.54,
+      "e": 64.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000158",
+      "w": "invention",
+      "s": 64.8,
+      "e": 64.94,
+      "probability": 0.9
+    },
+    {
+      "id": "w000159",
+      "w": "because",
+      "s": 64.94,
+      "e": 66.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000160",
+      "w": "there",
+      "s": 66.28,
+      "e": 66.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000161",
+      "w": "is",
+      "s": 66.28,
+      "e": 66.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000162",
+      "w": "no",
+      "s": 66.28,
+      "e": 66.44,
+      "probability": 0.9
+    },
+    {
+      "id": "w000163",
+      "w": "use",
+      "s": 66.44,
+      "e": 66.44,
+      "probability": 0.9
+    },
+    {
+      "id": "w000164",
+      "w": "selling",
+      "s": 66.44,
+      "e": 66.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000165",
+      "w": "his",
+      "s": 66.8,
+      "e": 66.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000166",
+      "w": "word",
+      "s": 66.8,
+      "e": 66.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000167",
+      "w": "That",
+      "s": 66.8,
+      "e": 66.8,
+      "probability": 0.9
+    },
+    {
+      "id": "w000168",
+      "w": "sounds",
+      "s": 66.8,
+      "e": 68.04,
+      "probability": 0.9
+    },
+    {
+      "id": "w000169",
+      "w": "like",
+      "s": 68.04,
+      "e": 68.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000170",
+      "w": "audio",
+      "s": 68.06,
+      "e": 68.26,
+      "probability": 0.9
+    },
+    {
+      "id": "w000171",
+      "w": "overview",
+      "s": 68.26,
+      "e": 68.9,
+      "probability": 0.9
+    },
+    {
+      "id": "w000172",
+      "w": "Bha",
+      "s": 68.9,
+      "e": 69.14,
+      "probability": 0.9
+    },
+    {
+      "id": "w000173",
+      "w": "Yummy,",
+      "s": 69.14,
+      "e": 69.6,
+      "probability": 0.9
+    },
+    {
+      "id": "w000174",
+      "w": "Theasking",
+      "s": 69.92,
+      "e": 70.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000175",
+      "w": "is",
+      "s": 70.06,
+      "e": 70.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000176",
+      "w": "pretty",
+      "s": 70.06,
+      "e": 70.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000177",
+      "w": "good",
+      "s": 70.06,
+      "e": 70.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000178",
+      "w": "Tuj",
+      "s": 71.72,
+      "e": 72.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000179",
+      "w": "Tho",
+      "s": 72.08,
+      "e": 72.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000180",
+      "w": "Bha",
+      "s": 72.08,
+      "e": 72.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000181",
+      "w": "Bha",
+      "s": 72.08,
+      "e": 72.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000182",
+      "w": "Numbur",
+      "s": 72.08,
+      "e": 72.56,
+      "probability": 0.9
+    },
+    {
+      "id": "w000183",
+      "w": "\"...Ad",
+      "s": 72.56,
+      "e": 73.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000184",
+      "w": "-O",
+      "s": 73.08,
+      "e": 73.2,
+      "probability": 0.9
+    },
+    {
+      "id": "w000185",
+      "w": "-B",
+      "s": 73.2,
+      "e": 73.26,
+      "probability": 0.9
+    },
+    {
+      "id": "w000186",
+      "w": "ay",
+      "s": 73.26,
+      "e": 73.42,
+      "probability": 0.9
+    },
+    {
+      "id": "w000187",
+      "w": "podcast",
+      "s": 73.42,
+      "e": 73.76,
+      "probability": 0.9
+    },
+    {
+      "id": "w000188",
+      "w": "Voice",
+      "s": 73.76,
+      "e": 74.72,
+      "probability": 0.9
+    },
+    {
+      "id": "w000189",
+      "w": "record",
+      "s": 74.72,
+      "e": 75.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000190",
+      "w": "Ascoh,",
+      "s": 75.06,
+      "e": 75.92,
+      "probability": 0.9
+    },
+    {
+      "id": "w000191",
+      "w": "but",
+      "s": 75.92,
+      "e": 76.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000192",
+      "w": "Why",
+      "s": 76.06,
+      "e": 76.44,
+      "probability": 0.9
+    },
+    {
+      "id": "w000193",
+      "w": "did",
+      "s": 76.44,
+      "e": 78.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000194",
+      "w": "you",
+      "s": 78.06,
+      "e": 78.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000195",
+      "w": "hand",
+      "s": 78.28,
+      "e": 78.28,
+      "probability": 0.9
+    },
+    {
+      "id": "w000196",
+      "w": "speech",
+      "s": 78.28,
+      "e": 78.82,
+      "probability": 0.9
+    },
+    {
+      "id": "w000197",
+      "w": "for",
+      "s": 78.82,
+      "e": 79.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000198",
+      "w": "these",
+      "s": 79.22,
+      "e": 79.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000199",
+      "w": "to",
+      "s": 79.22,
+      "e": 79.22,
+      "probability": 0.9
+    },
+    {
+      "id": "w000200",
+      "w": "childrenev",
+      "s": 79.22,
+      "e": 79.86,
+      "probability": 0.9
+    },
+    {
+      "id": "w000201",
+      "w": "championship",
+      "s": 79.86,
+      "e": 79.86,
+      "probability": 0.9
+    },
+    {
+      "id": "w000202",
+      "w": "brief,",
+      "s": 79.86,
+      "e": 80.36,
+      "probability": 0.9
+    },
+    {
+      "id": "w000203",
+      "w": "👍",
+      "s": 80.36,
+      "e": 80.78,
+      "probability": 0.9
+    },
+    {
+      "id": "w000204",
+      "w": "Until",
+      "s": 80.78,
+      "e": 80.98,
+      "probability": 0.9
+    },
+    {
+      "id": "w000205",
+      "w": "next,",
+      "s": 80.98,
+      "e": 81.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000206",
+      "w": "you",
+      "s": 81.52,
+      "e": 81.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000207",
+      "w": "can",
+      "s": 81.68,
+      "e": 81.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000208",
+      "w": "write",
+      "s": 81.68,
+      "e": 81.68,
+      "probability": 0.9
+    },
+    {
+      "id": "w000209",
+      "w": "in",
+      "s": 81.68,
+      "e": 82.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000210",
+      "w": "the",
+      "s": 82.02,
+      "e": 82.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000211",
+      "w": "comments",
+      "s": 82.02,
+      "e": 82.02,
+      "probability": 0.9
+    },
+    {
+      "id": "w000212",
+      "w": "that",
+      "s": 82.02,
+      "e": 82.76,
+      "probability": 0.9
+    },
+    {
+      "id": "w000213",
+      "w": "அمئی",
+      "s": 82.76,
+      "e": 83.06,
+      "probability": 0.9
+    },
+    {
+      "id": "w000214",
+      "w": "پاچھتا",
+      "s": 83.06,
+      "e": 83.46,
+      "probability": 0.9
+    },
+    {
+      "id": "w000215",
+      "w": "تو",
+      "s": 83.46,
+      "e": 83.58,
+      "probability": 0.9
+    },
+    {
+      "id": "w000216",
+      "w": "لیں",
+      "s": 83.58,
+      "e": 83.74,
+      "probability": 0.9
+    },
+    {
+      "id": "w000217",
+      "w": "لنگ",
+      "s": 83.74,
+      "e": 84.08,
+      "probability": 0.9
+    },
+    {
+      "id": "w000218",
+      "w": "دیدیدید",
+      "s": 84.08,
+      "e": 84.48,
+      "probability": 0.9
+    },
+    {
+      "id": "w000219",
+      "w": "چی",
+      "s": 84.48,
+      "e": 84.68,
+      "probability": 0.9
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.22,
+      "text": "3A5Tai AI Tooledhe Atoqaatchkaraja"
+    },
+    {
+      "start": 3.22,
+      "end": 6.72,
+      "text": "Jaanu Pdf Bhojbe, Presentation Bona Be"
+    },
+    {
+      "start": 6.72,
+      "end": 9.0,
+      "text": "Amun ki Tomar Voya Sopurishkar kurbe"
+    },
+    {
+      "start": 9.0,
+      "end": 12.86,
+      "text": "Shishitur bhi 4aftar shunle ae parthokotan Nijai Bhojbe"
+    },
+    {
+      "start": 12.86,
+      "end": 15.3,
+      "text": "Ack Numbur, Nape Kini AI"
+    },
+    {
+      "start": 15.3,
+      "end": 18.68,
+      "text": "Kono idea bozhathe ge biśhal para-Graph likhe fila cho"
+    },
+    {
+      "start": 18.68,
+      "end": 21.68,
+      "text": "Le Khat hai khane paste kore visual generet koreo"
+    },
+    {
+      "start": 21.68,
+      "end": 24.0,
+      "text": "Shitai huye jabhe diagram ba-flow chart"
+    },
+    {
+      "start": 24.0,
+      "end": 26.7,
+      "text": "Jamon internet kivhabe kaatchkarhe"
+    },
+    {
+      "start": 26.7,
+      "end": 28.62,
+      "text": "Puro bapart hai Ack cho bhi the"
+    },
+    {
+      "start": 28.62,
+      "end": 30.6,
+      "text": "Dui Numbur Gamma"
+    },
+    {
+      "start": 30.6,
+      "end": 34.16,
+      "text": "Kaal Präsentation Atocho Acta Slide O Banao Ni"
+    },
+    {
+      "start": 34.16,
+      "end": 38.42,
+      "text": "Topic Kadit Joonnaar Coita Slide Lack Bha Bha Bha Bha Bha Dhao"
+    },
+    {
+      "start": 38.42,
+      "end": 40.08,
+      "text": "Gamma Acta Draft Chha Ji Ede Bha"
+    },
+    {
+      "start": 40.08,
+      "end": 44.62,
+      "text": "Tbha Kheal Kauro, Saurur Chhashur Free Credit Seshwale Automatic Refill Haina"
+    },
+    {
+      "start": 45.14,
+      "end": 48.58,
+      "text": "Dui Numbur Perplexity AI Uttar Dilo"
+    },
+    {
+      "start": 48.58,
+      "end": 50.62,
+      "text": "Kintu Tottara Kutha Tha Kyaan Loh"
+    },
+    {
+      "start": 50.62,
+      "end": 54.04,
+      "text": "Ikhani Prushna Kaur Le Uttara Shinge Source Links Bha Bha Bha"
+    },
+    {
+      "start": 54.04,
+      "end": 58.18,
+      "text": "Research Kaurar Somai Link Hule Tottara Millianit Bha Bha Bha"
+    },
+    {
+      "start": 58.18,
+      "end": 63.6,
+      "text": "Gemini Notebook, Agad Notebook Lm, Lomba PDF Dké paara Richai chole hai Gha Itse"
+    },
+    {
+      "start": 64.18,
+      "end": 66.8,
+      "text": "Half'm likealies PandaB invention because there is no use selling his word"
+    },
+    {
+      "start": 66.8,
+      "end": 70.18,
+      "text": "That sounds like audio overview Bha Yummy, Theasking is pretty good"
+    },
+    {
+      "start": 71.72,
+      "end": 73.76,
+      "text": "Tuj Tho Bha Bha Numbur \"...Ad-O-B ay podcast"
+    },
+    {
+      "start": 73.76,
+      "end": 78.28,
+      "text": "Voice record Ascoh, but Why did you hand"
+    },
+    {
+      "start": 78.28,
+      "end": 80.36,
+      "text": "speech for these to childrenev championship brief,"
+    },
+    {
+      "start": 80.36,
+      "end": 82.76,
+      "text": "👍 Until next, you can write in the comments that"
+    },
+    {
+      "start": 82.76,
+      "end": 84.68,
+      "text": "அمئی پاچھتا تو لیں لنگ دیدیدید چی"
+    }
+  ],
+  "provenance": {
+    "tool": "faster-whisper",
+    "model": "base",
+    "device": "cpu",
+    "compute_type": "int8",
+    "audio_sha256": "acc7cc341cc9bcdb0ff7bfc3cf2479170144d09947b504fcfed2ab783bab4d37",
+    "language": "bn",
+    "timing_status": "unreviewed-asr-estimates"
+  }
+}

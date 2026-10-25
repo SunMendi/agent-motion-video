@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "errors": [],
+  "stats": {
+    "duration": 84.971,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "frames": 2549,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "sampleRate": 48000,
+    "channels": 2,
+    "sizeBytes": 6764550,
+    "integratedLufs": -15.77,
+    "truePeakDbtp": -4.01,
+    "loudnessRangeLu": 3.1,
+    "isNineSixteen": true
+  }
+}

@@ -13,3 +13,8 @@ declare module 'fontkit' {
   const fontkit: {openSync(path: string): Font};
   export default fontkit;
 }
+
+declare module 'ffprobe-static' {
+  const path: string;
+  export default path;
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 2,
+  "status": "draft",
+  "video_id": "",
+  "transcript_file": "work/current/transcript.reviewed.json",
+  "layout_file": "src/shared/video-layout.json",
+  "style_frames": [],
+  "animatic_file": null,
+  "shots": []
+}

@@ -1,0 +1,62 @@
+{
+  "brief": {
+    "video_id": "free-ai-tools-showcase",
+    "outcome": "Viewers discover 5 game-changing free AI tools they should use",
+    "audience": "Bangladeshi students, professionals, and creators",
+    "language": "bn-BD",
+    "audio_file": "public/current/freeaai.wav",
+    "script_file": null,
+    "visual_script_file": null,
+    "references": [],
+    "output": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30
+    },
+    "design": {
+      "direction": "agent-select",
+      "brand_assets": [
+        "public/current/tools/napkin.png",
+        "public/current/tools/gamma.png",
+        "public/current/tools/perplexity.png",
+        "public/current/tools/notebook.png",
+        "public/current/tools/adobe_podcast.png"
+      ],
+      "required_colors": [
+        "#0B0F17",
+        "#1E293B",
+        "#38BDF8",
+        "#EF4444",
+        "#10B981",
+        "#F59E0B"
+      ],
+      "required_fonts": [
+        "Hind Siliguri",
+        "Noto Sans Bengali"
+      ]
+    },
+    "audio": {
+      "preserve_voice": true,
+      "music": true,
+      "sound_effects": true
+    },
+    "budget": "free-assets-and-local-rendering",
+    "constraints": [
+      "9:16 vertical canvas (1080x1920)",
+      "Mobile safe zones"
+    ],
+    "approval_required_for_input_changes": true
+  },
+  "project": {
+    "video_id": "free-ai-tools-showcase",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "audioDuration": 84.96,
+    "audioSha256": "acc7cc341cc9bcdb0ff7bfc3cf2479170144d09947b504fcfed2ab783bab4d37",
+    "durationInFrames": 2549,
+    "inputFingerprint": "6c2f260cbb1c4b45536a4bbea54a861cf5e932a3844119bd7f52e5c179b945d4",
+    "ready": false
+  },
+  "prepared_at": "2026-10-25T09:15:11.439Z"
+}

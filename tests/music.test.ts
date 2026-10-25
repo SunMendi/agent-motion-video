@@ -6,7 +6,7 @@ import ffmpegPath from 'ffmpeg-static';
 import {generateMusic, MUSIC_VOLUME, BED_LUFS} from '../scripts/lib/music-core';
 import {measureLoudness, mixAudio, probeFile} from '../scripts/lib/ffmpeg';
 
-const bin = typeof ffmpegPath === 'string' ? ffmpegPath : String((ffmpegPath as {path: string}).path);
+const bin = typeof ffmpegPath === 'string' ? ffmpegPath : String(((ffmpegPath as unknown) as {path: string}).path);
 
 describe('music bed', () => {
   it('matches the requested duration', () => {

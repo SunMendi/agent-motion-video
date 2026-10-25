@@ -1,4 +1,26 @@
-# Bangla Audio-Driven Ad Factory
+# Agent Motion Video
+
+> An open-source workspace for coding agents to generate motion graphics videos with Remotion.
+
+## Reusable workspace
+
+Use [setup.md](setup.md) to check the environment before installation.
+Use [start.md](start.md) to start a video with any coding agent.
+Supply audio, audience, and outcome. The agent fills in [brief.json](brief.json); scripts and visual ideas are optional.
+Creative direction follows [audio-to-visual-director.md](audio-to-visual-director.md). Captions stay at the top. Shared stage, caption, audio, and timing helpers survive reset.
+Run `npm run video:compile` to derive the timeline from reviewed speech IDs.
+Run `npm run video:check-production` before rendering; the render command runs this gate too.
+Older storyboards need a reviewed migration to schema version 2 before another render. Existing exports are kept.
+The agent follows [workflow.md](workflow.md) after the review steps.
+Use [reset.md](reset.md) for the next video in the same project.
+
+Run `npm run video:doctor` to inspect missing requirements without installation.
+Run `npm run video:test` to test the workspace controls without new dependencies.
+
+The `video:*` commands use a separate Remotion entry point in this application.
+The existing Rust and DevSolutions compositions remain available through the original commands.
+
+The sections below describe the original DevSolutions ad factory.
 
 Turn a voice file plus a word-timing JSON into a word-synced Bangla video ad in three sizes.
 Built on [Remotion](https://remotion.dev). Everything runs on this machine. No cloud, no cost.
