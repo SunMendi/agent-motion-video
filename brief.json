@@ -1,9 +1,9 @@
 {
-  "video_id": "free-ai-tools-showcase",
-  "outcome": "Viewers discover 5 game-changing free AI tools they should use",
-  "audience": "Bangladeshi students, professionals, and creators",
+  "video_id": "os-deadlock-dining-philosophers",
+  "outcome": "Understand operating system deadlocks and resource allocation through the dining philosophers problem.",
+  "audience": "Computer science students, software developers, and tech enthusiasts.",
   "language": "bn-BD",
-  "audio_file": "public/current/freeaai.wav",
+  "audio_file": "public/current/os_audio.mp3",
   "script_file": null,
   "visual_script_file": null,
   "references": [],
@@ -14,25 +14,9 @@
   },
   "design": {
     "direction": "agent-select",
-    "brand_assets": [
-      "public/current/tools/napkin.png",
-      "public/current/tools/gamma.png",
-      "public/current/tools/perplexity.png",
-      "public/current/tools/notebook.png",
-      "public/current/tools/adobe_podcast.png"
-    ],
-    "required_colors": [
-      "#0B0F17",
-      "#1E293B",
-      "#38BDF8",
-      "#EF4444",
-      "#10B981",
-      "#F59E0B"
-    ],
-    "required_fonts": [
-      "Hind Siliguri",
-      "Noto Sans Bengali"
-    ]
+    "brand_assets": [],
+    "required_colors": [],
+    "required_fonts": []
   },
   "audio": {
     "preserve_voice": true,
@@ -40,9 +24,6 @@
     "sound_effects": true
   },
   "budget": "free-assets-and-local-rendering",
-  "constraints": [
-    "9:16 vertical canvas (1080x1920)",
-    "Mobile safe zones"
-  ],
+  "constraints": [],
   "approval_required_for_input_changes": true
 }

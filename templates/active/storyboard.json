@@ -1,5 +1,6 @@
 {
   "schema_version": 2,
+  "creative_contract_version": 1,
   "status": "draft",
   "video_id": "",
   "transcript_file": "work/current/transcript.reviewed.json",

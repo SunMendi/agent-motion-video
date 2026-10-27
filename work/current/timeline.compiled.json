@@ -1,1558 +1,1629 @@
 {
   "schema_version": 2,
-  "video_id": "free-ai-tools-showcase",
+  "video_id": "os-deadlock-dining-philosophers",
   "fps": 30,
-  "durationInFrames": 2549,
+  "durationInFrames": 2435,
   "captionMode": "phrase",
   "shots": [
     {
       "id": "shot-01",
       "start_frame": 0,
-      "end_frame": 386,
-      "narration": "এই ৫টি এআই টুলের এতো কাজ করা যায় যেমন পিডিএফ বুঝবে, প্রেজেন্টেশন বানাবে এমনকি তোমার ভয়েসও পরিষ্কার করবে শেষেরটার বিফোর-আফটার শুনলে পার্থক্যটা নিজেই বুঝবে।",
+      "end_frame": 210,
+      "narration": "পাঁচজন দার্শনিক এক টেবিলে বসে আছেন, সামনে গরম গরম খাবার, কিন্তু কেউ খেতে পারছেন না, কেন?",
       "narration_ids": [
         "p01",
         "p02",
-        "p03",
-        "p04"
+        "p03"
       ],
-      "viewer_takeaway": "Discover 5 high-impact, 100% free AI tools that dramatically accelerate daily productivity.",
-      "subject": "Futuristic HUD holographic grid revealing 5 glowing AI tool badges",
-      "visual_mode": "hook-overview",
+      "viewer_takeaway": "Hook: Five philosophers sit around a feast, but a mysterious rule prevents anyone from eating.",
+      "subject": "Dining philosophers feast table",
+      "visual_mode": "circular-banquet",
+      "visual_intent": {
+        "added_information": "Visualizes the physical dining setup with steam, bowls, and 5 seats before revealing the dilemma.",
+        "framing": "Top-down overhead banquet perspective centered on vertical stage.",
+        "motion_mechanism": "Table smoothly scales in with subtle rotating glow; bowls steam."
+      },
+      "entities": [
+        {
+          "name": "Philosophers P1-P5",
+          "narration_ids": [
+            "p01"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/table-setup.svg",
+            "public/current/philosopher-node.svg"
+          ],
+          "reason": "Circular abstract representation of concurrent threads"
+        }
+      ],
       "body_labels": [
-        "৫টি সেরা এআই",
-        "১০০% ফ্রি টুলস",
-        "কাজের গতি"
+        "The Riddle",
+        "5 Philosophers"
       ],
+      "text_exception": null,
+      "negative_space_reason": null,
       "assets": [
-        "public/current/tools/napkin.png",
-        "public/current/tools/gamma.png",
-        "public/current/tools/perplexity.png",
-        "public/current/tools/notebook.png",
-        "public/current/tools/adobe_podcast.png"
+        "public/current/table-setup.svg",
+        "public/current/philosopher-node.svg"
       ],
       "states": {
-        "before": "A sleek dark cybernetic stage with ambient blue radial glow and scanning grid lines.",
-        "action": "A bold central title badge slams in, and five holographic 3D cards assemble in an orbit.",
-        "after": "The first card (Napkin AI) zooms forward with a dynamic light sweep, taking the focal stage."
+        "before": "Empty dark room with table outline fading into focus.",
+        "action": "Five philosopher seats and steaming hot bowls materialize around the circular table.",
+        "after": "Puzzled expression glyphs float as everyone wonders why eating is blocked."
       },
       "keyframes": [
         {
           "frame": 0,
-          "focal_point": "Central title badge and cybernetic scanning grid",
+          "focal_point": "Banquet table entrance",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         },
         {
-          "frame": 190,
-          "focal_point": "Five orbiting 3D tool cards with glowing status indicators",
+          "frame": 100,
+          "focal_point": "Five philosophers seated with food",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 209,
+          "focal_point": "Puzzled lock / question badge",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         }
       ],
       "events": [
         {
-          "id": "e01-intro",
+          "id": "ev-01-enter",
           "anchor_id": "p01",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Bold headline entrance with spring physics and cyan glow pulse"
+          "duration_frames": 30,
+          "action": "Table and philosopher nodes spring into circular arrangement"
         },
         {
-          "id": "e01-tools-peek",
+          "id": "ev-01-food",
           "anchor_id": "p02",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Five floating 3D tool cards cascade into view with free badges"
+          "duration_frames": 25,
+          "action": "Steaming hot ramen plates reveal in front of all five seats"
         },
         {
-          "id": "e01-audio-hint",
+          "id": "ev-01-puzzle",
           "anchor_id": "p03",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Audio waveform icon and voice cleaning preview badge light up"
-        },
-        {
-          "id": "e01-before-after",
-          "anchor_id": "p04",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Before and After comparison preview cards expand in 3D perspective"
+          "duration_frames": 30,
+          "action": "Glowing question mark and lock badge appear"
         }
       ],
       "acceptance_criteria": [
-        "Viewers instantly recognize the 5 free AI tools value proposition within the first 3 seconds.",
-        "Captions remain anchored cleanly at the top without overlapping the central card orbit.",
-        "High contrast typography is perfectly readable on mobile screens."
+        "Top-down circular table is centered with 5 distinct philosopher nodes",
+        "Steaming food plates appear at each seat",
+        "Question mark indicator highlights the eating puzzle"
       ],
-      "entrance": "Camera zooms slightly into a dark particle grid with an expanding ambient radial glow.",
-      "main_action": "Five glowing cards orbit and lock into perspective as feature badges illuminate.",
-      "exit": "Card 1 (Napkin AI) expands smoothly into the camera as other cards recede into background depth.",
-      "next_shot_connection": "Card 1 transforms into the full interactive Napkin AI browser mockup.",
+      "entrance": "Smooth spring scale and fade in from center",
+      "main_action": "Steam particles float while nodes pulse subtly",
+      "exit": "Camera zooms forward as table elements shift into circuit topology",
+      "next_shot_connection": "Table lines blend into CPU kernel motherboard traces",
       "transition": {
-        "type": "zoom-in-continuity",
-        "duration_frames": 12
+        "type": "cut",
+        "duration_frames": 0
       },
-      "sound_cues": [
-        {
-          "event_id": "e01-intro",
-          "purpose": "Punchy hook whoosh",
-          "file": "public/current/sfx/whoosh.wav",
-          "gain": 0.22,
-          "duration_frames": 12,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e01-tools-peek",
-          "purpose": "Cards cascading pop",
-          "file": "public/current/sfx/pop.wav",
-          "gain": 0.18,
-          "duration_frames": 8,
-          "fade_out_frames": 3
-        },
-        {
-          "event_id": "e01-audio-hint",
-          "purpose": "Audio scan effect",
-          "file": "public/current/sfx/scan.wav",
-          "gain": 0.2,
-          "duration_frames": 16,
-          "fade_out_frames": 5
-        },
-        {
-          "event_id": "e01-before-after",
-          "purpose": "Comparison impact riser",
-          "file": "public/current/sfx/riser.wav",
-          "gain": 0.22,
-          "duration_frames": 22,
-          "fade_out_frames": 6
-        }
-      ]
+      "sound_cues": []
     },
     {
       "id": "shot-02",
-      "start_frame": 386,
-      "end_frame": 859,
-      "narration": "১ নম্বর, ন্যাপকিন এআই। কোনো আইডিয়া বোঝাতে বিশাল প্যারাগ্রাফ লিখে ফেলেছ? লেখাটা এখানে পেস্ট করে ভিজ্যুয়াল জেনারেট করো। সেটাই হয়ে যাবে ডায়াগ্রাম বা ফ্লোচার্ট। যেমন ইন্টারনেট কীভাবে কাজ করে, পুরো ব্যাপারটা এক ছবিতে!",
+      "start_frame": 210,
+      "end_frame": 384,
+      "narration": "এটা শুধু গল্প না, এটা কম্পিউটারের সবচেয়ে বড় সমস্যা, গল্পটা এরকম:",
       "narration_ids": [
-        "p05",
+        "p04",
+        "p05"
+      ],
+      "viewer_takeaway": "This is not folklore; it is the fundamental Operating System synchronization dilemma: Deadlock.",
+      "subject": "Operating System Kernel and Deadlock Dilemma",
+      "visual_mode": "tech-analogy-reveal",
+      "visual_intent": {
+        "added_information": "Bridges the allegory to real computing: processes, threads, and shared hardware resources.",
+        "framing": "Hero badge presentation with circuit grid background.",
+        "motion_mechanism": "Circuit lines connect to central OS processor chip."
+      },
+      "entities": [
+        {
+          "name": "OS Core Kernel",
+          "narration_ids": [
+            "p04"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/table-setup.svg"
+          ],
+          "reason": "Technical metaphor for central operating system kernel"
+        }
+      ],
+      "body_labels": [
+        "OS Core Problem",
+        "DEADLOCK"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
+      "assets": [
+        "public/current/table-setup.svg"
+      ],
+      "states": {
+        "before": "Table transitions into high-tech motherboard CPU layout.",
+        "action": "Circuit pulses race through bus lines as a glowing DEADLOCK title card reveals.",
+        "after": "Subtitle 'Deadlock & Concurrency' locks into focus."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Motherboard circuits forming",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 80,
+          "focal_point": "Central CPU and DEADLOCK banner",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 163,
+          "focal_point": "Transition into simulation rules",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "ev-02-os",
+          "anchor_id": "p04",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Motherboard circuits energize and DEADLOCK emblem lands"
+        },
+        {
+          "id": "ev-02-rule",
+          "anchor_id": "p05",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 25,
+          "action": "Banner slides to unveil the exact simulation rules"
+        }
+      ],
+      "acceptance_criteria": [
+        "Circuit board styling establishes technical computing theme",
+        "Bold DEADLOCK title badge is instantly legible",
+        "Clean transition prepares viewer for mathematical rules"
+      ],
+      "entrance": "Data pulse wipe across canvas",
+      "main_action": "Central chip pulses cyan and amber bus lanes",
+      "exit": "Iris opens back to the dining table with numbered IDs",
+      "next_shot_connection": "Seamless zoom back into the table showing P1 through P5",
+      "transition": {
+        "type": "cut",
+        "duration_frames": 0
+      },
+      "sound_cues": []
+    },
+    {
+      "id": "shot-03",
+      "start_frame": 384,
+      "end_frame": 750,
+      "narration": "পাঁচজন, নাম দিলাম P1 থেকে P5, গোল টেবিলের চারপাশে বসে আছেন। প্রত্যেকের সামনে এক প্লেট খাবার, আর দুজনের মাঝখানে একটা করে কাঠি। মোট কাঠি পাঁচটা।",
+      "narration_ids": [
         "p06",
         "p07",
         "p08",
         "p09",
         "p10"
       ],
-      "viewer_takeaway": "Napkin AI turns messy text notes into professional diagrams and flowcharts in seconds.",
-      "subject": "Realistic Napkin AI browser mockup transforming raw text into an infographic flowchart",
-      "visual_mode": "mockup-transformation",
-      "body_labels": [
-        "ন্যাপকিন এআই",
-        "টেক্সট থেকে ডায়াগ্রাম",
-        "১-ক্লিক ম্যাজিক"
+      "viewer_takeaway": "The precise topology: 5 Philosopher nodes (P1-P5), 5 plates, and exactly 5 shared chopsticks situated between neighbors.",
+      "subject": "System Topology and Resource Distribution",
+      "visual_mode": "topology-schematic",
+      "visual_intent": {
+        "added_information": "Shows exact geometric layout at 72-degree intervals and resource sharing between adjacent nodes.",
+        "framing": "Wide circular schematic taking full vertical stage.",
+        "motion_mechanism": "Sequential clockwise entrance of P1-P5, then plates, then chopsticks between them."
+      },
+      "entities": [
+        {
+          "name": "Chopsticks C1-C5",
+          "narration_ids": [
+            "p09",
+            "p10"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/chopstick-resource.svg"
+          ],
+          "reason": "Chopsticks represent scarce shared mutex resources"
+        }
       ],
+      "body_labels": [
+        "5 Nodes: P1-P5",
+        "Total: 5 Sticks"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
       "assets": [
-        "public/current/tools/napkin.png"
+        "public/current/table-setup.svg",
+        "public/current/philosopher-node.svg",
+        "public/current/chopstick-resource.svg"
       ],
       "states": {
-        "before": "A clean Napkin AI browser window showing an input note field with raw text.",
-        "action": "A 1-Click Magic button sparks, and dynamic connector lines link into diagram nodes.",
-        "after": "A multi-node infographic flowchart displays with crisp labels, arrows, and custom icons."
+        "before": "Table grid with five empty coordinate points.",
+        "action": "Nodes P1 through P5 drop in with glowing labels; chopsticks slot between each neighbor pair.",
+        "after": "Complete balanced circular state with stick counter indicating 5 total."
       },
       "keyframes": [
         {
           "frame": 0,
-          "focal_point": "Napkin AI browser mockup with input text box",
+          "focal_point": "Nodes P1 to P5 appearing clockwise",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        },
-        {
-          "frame": 240,
-          "focal_point": "Dynamic nodes branching into visual infographic flowchart",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        }
-      ],
-      "events": [
-        {
-          "id": "e02-napkin-enter",
-          "anchor_id": "p05",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Napkin AI browser mockup slides in with slight 3D perspective tilt"
-        },
-        {
-          "id": "e02-text-input",
-          "anchor_id": "p06",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Raw text lines appear inside the input card with typing cursor effect"
-        },
-        {
-          "id": "e02-ai-process",
-          "anchor_id": "p07",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Dashed connection lines extend downward with glowing pulse"
-        },
-        {
-          "id": "e02-diagram-pop",
-          "anchor_id": "p08",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Three infographic diagram cards pop in with spring scale physics"
-        },
-        {
-          "id": "e02-internet-flow",
-          "anchor_id": "p09",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Internet architecture diagram unfolds with interactive packet pulses"
-        },
-        {
-          "id": "e02-highlight",
-          "anchor_id": "p10",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Final diagram card highlights with bright blue border and checkmark"
-        }
-      ],
-      "acceptance_criteria": [
-        "Napkin AI mockup is authentic and clearly readable at 1080x1920 mobile viewport.",
-        "The transformation from text to diagram visually tells the story without relying on speech alone.",
-        "Animation easing uses snappy springs with zero jerky frame jumps."
-      ],
-      "entrance": "Card tilts into view with smooth perspective rotation along the Y axis.",
-      "main_action": "Sparks fire from the central button, instantly assembling the flowchart nodes.",
-      "exit": "The finished diagram card slides left as the stage rotates slightly for Gamma.",
-      "next_shot_connection": "The flowchart card rotates 90 degrees to become the title slide of Gamma presentation.",
-      "transition": {
-        "type": "perspective-swipe",
-        "duration_frames": 10
-      },
-      "sound_cues": [
-        {
-          "event_id": "e02-napkin-enter",
-          "purpose": "Browser mockup entrance whoosh",
-          "file": "public/current/sfx/swoosh.wav",
-          "gain": 0.2,
-          "duration_frames": 14,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e02-ai-process",
-          "purpose": "Generator scan sound",
-          "file": "public/current/sfx/scan.wav",
-          "gain": 0.18,
-          "duration_frames": 16,
-          "fade_out_frames": 5
-        },
-        {
-          "event_id": "e02-diagram-pop",
-          "purpose": "Nodes pop in",
-          "file": "public/current/sfx/pop.wav",
-          "gain": 0.22,
-          "duration_frames": 8,
-          "fade_out_frames": 3
-        },
-        {
-          "event_id": "e02-highlight",
-          "purpose": "Completion ping",
-          "file": "public/current/sfx/ping.wav",
-          "gain": 0.19,
-          "duration_frames": 15,
-          "fade_out_frames": 5
-        }
-      ]
-    },
-    {
-      "id": "shot-03",
-      "start_frame": 859,
-      "end_frame": 1339,
-      "narration": "২ নম্বর, গামা। কাল প্রেজেন্টেশন, অথচ একটা স্লাইডও বানাও নি? টপিক, কার জন্য, আর কয়টা স্লাইড লাগবে বলে দাও। গামা একটা ড্রাফট সাজিয়ে দিবে। তবে খেয়াল করো, শুরুর ৪০০ ফ্রি ক্রেডিট শেষ হলে রিফিল হয় না।",
-      "narration_ids": [
-        "p11",
-        "p12",
-        "p13",
-        "p14",
-        "p15"
-      ],
-      "viewer_takeaway": "Gamma generates complete slide presentations from a single prompt in minutes with free credits.",
-      "subject": "Realistic Gamma interface generating multi-card presentation deck with responsive slides",
-      "visual_mode": "mockup-presentation",
-      "body_labels": [
-        "গামা অ্যাপ",
-        "ইনস্ট্যান্ট স্লাইড",
-        "প্রেজেন্টেশন"
-      ],
-      "assets": [
-        "public/current/tools/gamma.png"
-      ],
-      "states": {
-        "before": "A countdown timer flashing 'Due Tomorrow' alongside Gamma's prompt input bar.",
-        "action": "A topic prompt is submitted, and Gamma automatically synthesizes a 3-slide deck.",
-        "after": "A full presentation deck floats in perspective with a helpful free-credit counter meter."
-      },
-      "keyframes": [
-        {
-          "frame": 0,
-          "focal_point": "Gamma prompt box with urgency presentation badge",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        },
-        {
-          "frame": 240,
-          "focal_point": "Multi-slide presentation deck carousel with theme styling",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        }
-      ],
-      "events": [
-        {
-          "id": "e03-gamma-enter",
-          "anchor_id": "p11",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Gamma interface drops in with purple gradient accent glow"
-        },
-        {
-          "id": "e03-urgency-clock",
-          "anchor_id": "p12",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Urgency callout card pops with clock icon and zero slides alert"
-        },
-        {
-          "id": "e03-topic-prompt",
-          "anchor_id": "p13",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Topic input badge fills with prompt text and card count indicator"
-        },
-        {
-          "id": "e03-slide-deck",
-          "anchor_id": "p14",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Three presentation slides fan out horizontally in smooth 3D carousel"
-        },
-        {
-          "id": "e03-credit-tip",
-          "anchor_id": "p15",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Free credit meter badge highlights at bottom with amber warning pill"
-        }
-      ],
-      "acceptance_criteria": [
-        "Gamma presentation deck displays polished visual slides with realistic typography.",
-        "Credit limit notice is clearly distinguished as a helpful tip without cluttering the screen.",
-        "Slide carousel motion feels tactile and modern."
-      ],
-      "entrance": "Slide deck drops down from above with heavy surface spring settling.",
-      "main_action": "Slides fan out like a physical deck of cards, showcasing charts and headers.",
-      "exit": "Slide deck scales into a compact search pill as the screen transitions to Perplexity.",
-      "next_shot_connection": "Gamma search bar morphs directly into Perplexity's conversational query input.",
-      "transition": {
-        "type": "morph-shrink",
-        "duration_frames": 10
-      },
-      "sound_cues": [
-        {
-          "event_id": "e03-gamma-enter",
-          "purpose": "Heavy card landing thud",
-          "file": "public/current/sfx/thud.wav",
-          "gain": 0.22,
-          "duration_frames": 14,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e03-urgency-clock",
-          "purpose": "Urgency alert click",
-          "file": "public/current/sfx/click.wav",
-          "gain": 0.18,
-          "duration_frames": 6,
-          "fade_out_frames": 2
-        },
-        {
-          "event_id": "e03-slide-deck",
-          "purpose": "Slide fan-out swoosh",
-          "file": "public/current/sfx/whoosh.wav",
-          "gain": 0.2,
-          "duration_frames": 12,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e03-credit-tip",
-          "purpose": "Credit meter sound",
-          "file": "public/current/sfx/meter.wav",
-          "gain": 0.24,
-          "duration_frames": 18,
-          "fade_out_frames": 5
-        }
-      ]
-    },
-    {
-      "id": "shot-04",
-      "start_frame": 1339,
-      "end_frame": 1745,
-      "narration": "৩ নম্বর, পারপ্লেক্সিটি এআই। এআই উত্তর দিলো, কিন্তু তথ্যটা কোথা থেকে আসলো? এখানে প্রশ্ন করলে উত্তরের সঙ্গে সোর্স লিংকও পাবা। রিসার্চ করার সময় লিংকগুলো থেকে তথ্য মিলিয়ে নিতে পারবা।",
-      "narration_ids": [
-        "p16",
-        "p17",
-        "p18",
-        "p19"
-      ],
-      "viewer_takeaway": "Perplexity AI backs every answer with live, clickable web citations for trustworthy research.",
-      "subject": "Realistic Perplexity search engine mockup providing grounded answers with live source citations",
-      "visual_mode": "mockup-search",
-      "body_labels": [
-        "পারপ্লেক্সিটি",
-        "সরাসরি সোর্স লিংক",
-        "রিসার্চ পার্টনার"
-      ],
-      "assets": [
-        "public/current/tools/perplexity.png"
-      ],
-      "states": {
-        "before": "A search query input box with a glowing cyan cursor and a skeptic question badge.",
-        "action": "A concise AI summary generates with numbered interactive citation badges [1], [2], [3].",
-        "after": "Detailed source cards (arXiv, GitHub, MIT Review) unfold below with verification checkmarks."
-      },
-      "keyframes": [
-        {
-          "frame": 0,
-          "focal_point": "Perplexity search box and query card",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        },
-        {
-          "frame": 200,
-          "focal_point": "Grounded answer text with 3 live source link cards",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
-          }
-        }
-      ],
-      "events": [
-        {
-          "id": "e04-perp-enter",
-          "anchor_id": "p16",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Perplexity search interface springs into focus with cyan accent beam"
-        },
-        {
-          "id": "e04-source-doubt",
-          "anchor_id": "p17",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Doubt query pill pops up asking 'Where is the proof?'"
-        },
-        {
-          "id": "e04-sources-reveal",
-          "anchor_id": "p18",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Three source pills [arXiv], [GitHub], [MIT Review] reveal with link icons"
-        },
-        {
-          "id": "e04-verified-check",
-          "anchor_id": "p19",
-          "anchor_edge": "start",
-          "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Verified fact checkmark pulses beside the synthesized summary answer"
-        }
-      ],
-      "acceptance_criteria": [
-        "Citation links are visually obvious and look like genuine academic/web sources.",
-        "The comparison between unverified AI answers and cited Perplexity answers is crystal clear.",
-        "Layout remains balanced with ample negative space supporting legibility."
-      ],
-      "entrance": "Search interface glides up from bottom with snappy velocity settle.",
-      "main_action": "Citation badges emit pulse rings, highlighting direct links to source documents.",
-      "exit": "Source documents stack into a dense PDF icon, ready for NotebookLM.",
-      "next_shot_connection": "The verified document citation collapses into a heavy PDF document icon.",
-      "transition": {
-        "type": "collapse-stack",
-        "duration_frames": 10
-      },
-      "sound_cues": [
-        {
-          "event_id": "e04-perp-enter",
-          "purpose": "Search interface entrance",
-          "file": "public/current/sfx/swoosh.wav",
-          "gain": 0.2,
-          "duration_frames": 13,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e04-sources-reveal",
-          "purpose": "Citation link pop",
-          "file": "public/current/sfx/pop.wav",
-          "gain": 0.22,
-          "duration_frames": 8,
-          "fade_out_frames": 2
-        },
-        {
-          "event_id": "e04-verified-check",
-          "purpose": "Verification ping",
-          "file": "public/current/sfx/ping.wav",
-          "gain": 0.21,
-          "duration_frames": 15,
-          "fade_out_frames": 5
-        }
-      ]
-    },
-    {
-      "id": "shot-05",
-      "start_frame": 1745,
-      "end_frame": 2105,
-      "narration": "৪ নম্বর, জেমিনি নোটবুক, আগের নোটবুকএলএম। লম্বা পিডিএফ আপলোড করে বলো, সহজ করে বুঝিয়ে দাও। চাইলে অডিও ওভারভিউ বানিয়ে পডকাস্টের মতো শুনতেও পারবা।",
-      "narration_ids": [
-        "p20",
-        "p21",
-        "p22"
-      ],
-      "viewer_takeaway": "NotebookLM digests 50+ page PDFs into easy summaries and creates 2-host audio podcasts.",
-      "subject": "Realistic Google NotebookLM workspace synthesizing multi-page PDFs into conversational audio",
-      "visual_mode": "mockup-notebook",
-      "body_labels": [
-        "জেমিনি নোটবুক",
-        "পিডিএফ সামারি",
-        "অডিও পডকাস্ট"
-      ],
-      "assets": [
-        "public/current/tools/notebook.png"
-      ],
-      "states": {
-        "before": "A heavy 80-page PDF document card sitting on the desk looking intimidating.",
-        "action": "The PDF is dragged into NotebookLM's notebook source panel, instantly generating key takeaways.",
-        "after": "An 'Audio Overview' media player card activates with dual-host avatars and lively audio waves."
-      },
-      "keyframes": [
-        {
-          "frame": 0,
-          "focal_point": "NotebookLM source panel with bulky uploaded PDF document",
-          "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         },
         {
           "frame": 180,
-          "focal_point": "Audio Overview player with animated dual-host conversation waves",
+          "focal_point": "Plates and chopsticks placing",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 365,
+          "focal_point": "Total: 5 Chopsticks counter pill",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         }
       ],
       "events": [
         {
-          "id": "e05-notebook-enter",
-          "anchor_id": "p20",
+          "id": "ev-03-pnodes",
+          "anchor_id": "p06",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "NotebookLM notebook workspace slides in with warm amber accent glow"
+          "duration_frames": 40,
+          "action": "Nodes P1, P2, P3, P4, P5 stagger into view around table"
         },
         {
-          "id": "e05-heavy-pdf",
-          "anchor_id": "p21",
+          "id": "ev-03-circle",
+          "anchor_id": "p07",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Bulky PDF file icon with '80 Pages' warning lands into upload slot"
+          "duration_frames": 30,
+          "action": "Circular connecting bus lights up tying the five nodes"
         },
         {
-          "id": "e05-audio-podcast",
-          "anchor_id": "p22",
+          "id": "ev-03-plates",
+          "anchor_id": "p08",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 55,
-          "action": "Audio podcast player emerges with dynamic soundwave equalizer bars"
+          "duration_frames": 30,
+          "action": "Five food plates slot into position in front of nodes"
+        },
+        {
+          "id": "ev-03-sticks",
+          "anchor_id": "p09",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Golden chopsticks land exactly in gaps between neighbors"
+        },
+        {
+          "id": "ev-03-count",
+          "anchor_id": "p10",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 25,
+          "action": "Total: 5 Chopsticks badge pulses into focus"
         }
       ],
       "acceptance_criteria": [
-        "The PDF-to-Podcast concept is instantly understandable through visual metaphors.",
-        "Equalizer audio bars bounce rhythmically to indicate natural AI voice conversation.",
-        "Color grading highlights Google NotebookLM's distinctive clean style."
+        "P1 through P5 badges are clearly positioned at 72 degree increments",
+        "Chopsticks are clearly between neighboring nodes, not on plates",
+        "Total 5 chopsticks count is prominent and unambiguous"
       ],
-      "entrance": "Notebook workspace slides in from right with subtle perspective rotation.",
-      "main_action": "Soundwaves pulse symmetrically between Host 1 and Host 2 avatars.",
-      "exit": "The audio player's waveform expands into a full-screen frequency spectrum for Adobe Podcast.",
-      "next_shot_connection": "The audio equalizer waveform matches seamlessly with Adobe Podcast's audio visualizer.",
+      "entrance": "Clockwise sequence reveal",
+      "main_action": "Subtle radar scan sweeps around the ring confirming resource allocation",
+      "exit": "Smooth camera zoom into P1 and adjacent chopsticks",
+      "next_shot_connection": "Focuses down onto P1 to demonstrate the 2-chopstick rule",
       "transition": {
-        "type": "audio-wave-continuity",
-        "duration_frames": 10
+        "type": "cut",
+        "duration_frames": 0
       },
-      "sound_cues": [
+      "sound_cues": []
+    },
+    {
+      "id": "shot-04",
+      "start_frame": 750,
+      "end_frame": 935,
+      "narration": "খেতে হলে লাগবে দুইটা কাঠি। একটা ডানহাতে, একটা বামহাতে। একটা কাঠি দিয়ে তো খাওয়া যাবেনা।",
+      "narration_ids": [
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "viewer_takeaway": "Rule constraint: Eating strictly requires two chopsticks (Left + Right). One chopstick is insufficient.",
+      "subject": "Two-Resource Acquisition Invariant",
+      "visual_mode": "focal-zoom-invariant",
+      "visual_intent": {
+        "added_information": "Directly demonstrates the physical impossibility of eating with 1 chopstick and necessity of 2.",
+        "framing": "Close crop on node P1, left chopstick, right chopstick, and noodle bowl.",
+        "motion_mechanism": "Hands grab left stick (OK), then attempts eating -> red X. Needs right stick too."
+      },
+      "entities": [
         {
-          "event_id": "e05-notebook-enter",
-          "purpose": "Notebook entrance whoosh",
-          "file": "public/current/sfx/whoosh.wav",
-          "gain": 0.2,
-          "duration_frames": 12,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e05-heavy-pdf",
-          "purpose": "Document drop impact",
-          "file": "public/current/sfx/thud.wav",
-          "gain": 0.22,
-          "duration_frames": 14,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e05-audio-podcast",
-          "purpose": "Podcast player activation ping",
-          "file": "public/current/sfx/ping.wav",
-          "gain": 0.22,
-          "duration_frames": 15,
-          "fade_out_frames": 5
+          "name": "Philosopher P1",
+          "narration_ids": [
+            "p11"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/philosopher-node.svg"
+          ],
+          "reason": "Hero focus node demonstrating process resource constraints"
         }
-      ]
+      ],
+      "body_labels": [
+        "Requires 2 Sticks",
+        "Single Stick Fails"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
+      "assets": [
+        "public/current/philosopher-node.svg",
+        "public/current/chopstick-resource.svg"
+      ],
+      "states": {
+        "before": "P1 sits with plate; chopsticks lie on left and right.",
+        "action": "Left stick lifts to hand; attempt to eat with single stick shows red cross.",
+        "after": "Dual-requirement indicator reveals Left Stick + Right Stick needed."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "P1 close-up framing",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 90,
+          "focal_point": "Left and right hand slot indicators",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 184,
+          "focal_point": "Single stick failure cross",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "ev-04-two",
+          "anchor_id": "p11",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 30,
+          "action": "Dual slots light up: [Left Hand] + [Right Hand]"
+        },
+        {
+          "id": "ev-04-hands",
+          "anchor_id": "p12",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 30,
+          "action": "Left hand and right hand indicators illuminate on P1"
+        },
+        {
+          "id": "ev-04-fail",
+          "anchor_id": "p13",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 30,
+          "action": "P1 holding only one stick triggers red prohibition badge"
+        }
+      ],
+      "acceptance_criteria": [
+        "P1 holds one stick and clearly fails to eat",
+        "Two-stick requirement formula (Left + Right = Eat) is visually apparent",
+        "High contrast between permitted and prohibited states"
+      ],
+      "entrance": "Direct zoom-in from circular table",
+      "main_action": "Hands animate toward chopstick positions",
+      "exit": "Camera zooms back out to reveal all five philosophers ready to act",
+      "next_shot_connection": "Prepares for the synchronized action of all 5 nodes",
+      "transition": {
+        "type": "cut",
+        "duration_frames": 0
+      },
+      "sound_cues": []
+    },
+    {
+      "id": "shot-05",
+      "start_frame": 935,
+      "end_frame": 1175,
+      "narration": "এবার দেখুন কি হলো। পাঁচজন একসাথে বামহাতের কাঠিটা তুলে নিলেন। এখন সবাই ডানহাতের কাঠির জন্য অপেক্ষা করছেন।",
+      "narration_ids": [
+        "p14",
+        "p15",
+        "p16"
+      ],
+      "viewer_takeaway": "The race condition: All five simultaneously pick up their left chopstick, leaving zero free sticks and everyone waiting for their right.",
+      "subject": "Simultaneous Acquisition & Right Hand Wait",
+      "visual_mode": "synchronized-pickup",
+      "visual_intent": {
+        "added_information": "Shows the tragic symmetry where every node acts identically and exhausts the resource pool.",
+        "framing": "Full 5-node circular view with synchronized radial motion.",
+        "motion_mechanism": "All 5 chopsticks slide into respective left hands in exact sync; curved arrows point to right hands."
+      },
+      "entities": [
+        {
+          "name": "Chopsticks C1-C5 Acquired",
+          "narration_ids": [
+            "p15"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/chopstick-resource.svg"
+          ],
+          "reason": "All 5 shared resources transition to LOCKED / HELD status"
+        }
+      ],
+      "body_labels": [
+        "Left Stick: Taken",
+        "Waiting Right Stick"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
+      "assets": [
+        "public/current/table-setup.svg",
+        "public/current/philosopher-node.svg",
+        "public/current/chopstick-resource.svg"
+      ],
+      "states": {
+        "before": "All 5 chopsticks rest on table between nodes.",
+        "action": "All five nodes grab left chopstick in unison; table becomes devoid of free sticks.",
+        "after": "Each philosopher looks rightward with clock/wait bubble."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "All five philosophers poised",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 120,
+          "focal_point": "Synchronized lift of 5 chopsticks",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 239,
+          "focal_point": "Waiting clockwise arrows to neighbors",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "ev-05-prep",
+          "anchor_id": "p14",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 20,
+          "action": "Tension build up as nodes activate together"
+        },
+        {
+          "id": "ev-05-lift",
+          "anchor_id": "p15",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 40,
+          "action": "All 5 chopsticks lift simultaneously into left hands"
+        },
+        {
+          "id": "ev-05-wait",
+          "anchor_id": "p16",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 40,
+          "action": "Curved yellow waiting arrows point to right neighbor chopsticks"
+        }
+      ],
+      "acceptance_criteria": [
+        "Synchronized movement of all 5 sticks is unmistakable",
+        "Table center is now completely empty of chopsticks",
+        "Waiting arrows point clockwise to right neighbors"
+      ],
+      "entrance": "Smooth pull back to table view",
+      "main_action": "Simultaneous stick translation into node hands",
+      "exit": "Waiting arrows turn from amber to aggressive crimson",
+      "next_shot_connection": "Transitions into the complete deadlock circular loop",
+      "transition": {
+        "type": "cut",
+        "duration_frames": 0
+      },
+      "sound_cues": []
     },
     {
       "id": "shot-06",
-      "start_frame": 2105,
-      "end_frame": 2411,
-      "narration": "৫ নম্বর, অ্যাডোবি পডকাস্ট। ভয়েস রেকর্ড করেছ, কিন্তু পেছনের ফ্যানের আওয়াজ বেশি? এনহ্যান্স স্পিচ দিয়ে নয়েজ আর একো কমাতে পারো।",
+      "start_frame": 1175,
+      "end_frame": 1520,
+      "narration": "কিন্তু ডানহাতের কাঠি তো পাশের জনের হাতে! কেউ কাঠি ছাড়বেন না, কেউ খেতে পারবেন না! পুরো সিস্টেম আটকে গেলো! এটাই ডেডলক! সবাই অপেক্ষা করছে, কাজ এগোচ্ছে না!",
       "narration_ids": [
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "viewer_takeaway": "Circular Dependency = Deadlock: Nobody releases their stick, nobody can eat, and the entire system permanently halts.",
+      "subject": "Circular Wait and System Deadlock",
+      "visual_mode": "deadlock-climax",
+      "visual_intent": {
+        "added_information": "Visualizes the famous 'Circular Wait' condition with a glowing red locked cycle and freeze effect.",
+        "framing": "Full stage with pulsing red emergency alert rings and lock glyphs.",
+        "motion_mechanism": "Red dashed loop spins and freezes; giant lock slams onto screen center."
+      },
+      "entities": [
+        {
+          "name": "Deadlock Lock Loop",
+          "narration_ids": [
+            "p20"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/deadlock-cycle.svg"
+          ],
+          "reason": "Universal emblem of Operating System Deadlock"
+        }
+      ],
+      "body_labels": [
+        "Circular Wait",
+        "SYSTEM DEADLOCK",
+        "0 Progress"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
+      "assets": [
+        "public/current/deadlock-cycle.svg",
+        "public/current/table-setup.svg"
+      ],
+      "states": {
+        "before": "Yellow waiting arrows link neighbors.",
+        "action": "Arrows turn fiery red and form continuous closed loop; giant lock slams shut.",
+        "after": "Screen flashes red warning; 'DEADLOCK' title card dominates with 0 progress alert."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Neighbor stick held by neighbor",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 180,
+          "focal_point": "Circular red dependency loop",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 344,
+          "focal_point": "SYSTEM DEADLOCK central lock badge",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        }
+      ],
+      "events": [
+        {
+          "id": "ev-06-held",
+          "anchor_id": "p17",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Red spotlight highlights that neighbor holds the needed right stick"
+        },
+        {
+          "id": "ev-06-refuse",
+          "anchor_id": "p18",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 40,
+          "action": "Lock icons clamp onto every held chopstick (no release)"
+        },
+        {
+          "id": "ev-06-freeze",
+          "anchor_id": "p19",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 30,
+          "action": "Frost / freeze shockwave ripples across the whole system"
+        },
+        {
+          "id": "ev-06-deadlock",
+          "anchor_id": "p20",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Massive crimson DEADLOCK shield locks into center stage"
+        },
+        {
+          "id": "ev-06-stall",
+          "anchor_id": "p21",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Progress bar flatlines at 0% with 'Stalled' ticker"
+        }
+      ],
+      "acceptance_criteria": [
+        "Circular loop between all 5 nodes is clearly closed and red",
+        "DEADLOCK badge is high-impact, bold, and dramatic",
+        "Freeze visual communicates complete lack of progress"
+      ],
+      "entrance": "Flash alert entrance",
+      "main_action": "Pulsing red glow with locked circular arrows",
+      "exit": "Red alarm fades into cold desaturated tone for Starvation",
+      "next_shot_connection": "Fades into cold solitary lighting on P1",
+      "transition": {
+        "type": "cut",
+        "duration_frames": 0
+      },
+      "sound_cues": []
+    },
+    {
+      "id": "shot-07",
+      "start_frame": 1520,
+      "end_frame": 1895,
+      "narration": "আরেকটা সমস্যা আছে — ধরুন, P2 আর P3 বারবার খাচ্ছেন, কিন্তু P1 কাঠি পাচ্ছেন না, তিনি ক্ষুধার্থ বসে আছেন, এটাকে বলে Starvation।",
+      "narration_ids": [
+        "p22",
         "p23",
         "p24",
         "p25"
       ],
-      "viewer_takeaway": "Adobe Podcast Enhance removes room echo and fan noise to deliver studio-quality voice recordings.",
-      "subject": "Realistic Adobe Podcast Enhance UI showing live before/after waveform noise removal",
-      "visual_mode": "mockup-audio-enhancement",
-      "body_labels": [
-        "অ্যাডোবি পডকাস্ট",
-        "নয়েজ রিমুভাল",
-        "স্টুডিও সাউন্ড"
+      "viewer_takeaway": "Starvation: Even without total deadlock, unfair resource scheduling can leave a process perpetually starved.",
+      "subject": "Resource Starvation of Node P1",
+      "visual_mode": "unfair-scheduling",
+      "visual_intent": {
+        "added_information": "Contrasts hyperactive eating nodes (P2, P3) against a frozen, starving node (P1).",
+        "framing": "Split dynamic framing: Top glowing active eaters, bottom neglected P1.",
+        "motion_mechanism": "P2 and P3 alternate eating fast; P1 fades to gray with empty battery gauge."
+      },
+      "entities": [
+        {
+          "name": "Starved Node P1",
+          "narration_ids": [
+            "p24"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/starvation-alert.svg",
+            "public/current/philosopher-node.svg"
+          ],
+          "reason": "Illustration of thread starvation in unmanaged concurrency"
+        }
       ],
+      "body_labels": [
+        "Starvation",
+        "P1 Starved",
+        "P2 & P3 Feast"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
       "assets": [
-        "public/current/tools/adobe_podcast.png"
+        "public/current/starvation-alert.svg",
+        "public/current/philosopher-node.svg"
       ],
       "states": {
-        "before": "A spiky, jagged red audio waveform depicting heavy fan noise and echo in a bedroom recording.",
-        "action": "The 'Enhance Speech' toggle switch slides to ON with an emerald neon illumination.",
-        "after": "The waveform instantly smooths into a crisp, rich studio-quality voice spectrum."
+        "before": "Table split into active zone and quiet zone.",
+        "action": "P2 and P3 rapidly juggle chopsticks and eat, while P1 never gets a turn.",
+        "after": "P1 is stamped with amber 'STARVATION' badge and depleted gauge."
       },
       "keyframes": [
         {
           "frame": 0,
-          "focal_point": "Adobe Podcast interface with noisy spiky waveform",
+          "focal_point": "Contrast setup between P2/P3 and P1",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         },
         {
-          "frame": 150,
-          "focal_point": "Clean studio waveform with Enhance Speech switch illuminated",
+          "frame": 180,
+          "focal_point": "P2 & P3 rapid eating cycles",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 374,
+          "focal_point": "P1 starved with empty battery badge",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         }
       ],
       "events": [
         {
-          "id": "e06-adobe-enter",
+          "id": "ev-07-issue",
+          "anchor_id": "p22",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 25,
+          "action": "Warning transition: 'Problem 2: Starvation'"
+        },
+        {
+          "id": "ev-07-feast",
           "anchor_id": "p23",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Adobe Podcast studio card enters with emerald green glow"
+          "duration_frames": 40,
+          "action": "P2 and P3 animate eating back-and-forth with green glow"
         },
         {
-          "id": "e06-fan-noise",
+          "id": "ev-07-hunger",
           "anchor_id": "p24",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Red spiky noise waveform jitters violently with fan disturbance icon"
+          "duration_frames": 50,
+          "action": "P1 turns gray, plate stays empty, hunger clock ticks"
         },
         {
-          "id": "e06-enhanced-toggle",
+          "id": "ev-07-badge",
           "anchor_id": "p25",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Enhance Speech switch toggles to ON, flattening noise and purifying vocal waveform"
+          "duration_frames": 30,
+          "action": "Amber STARVATION emblem stamps across P1"
         }
       ],
       "acceptance_criteria": [
-        "Before and after difference between noisy and enhanced audio is visually striking.",
-        "Waveform transformation is smooth and synchronized with the speech explanation.",
-        "Adobe Podcast branding and website address are prominently featured."
+        "P2 and P3 eating repeatedly while P1 gets nothing is clearly animated",
+        "P1 visibly desaturates with an empty gauge/timer",
+        "Starvation term is highlighted prominently"
       ],
-      "entrance": "Studio card rises with clean 3D perspective rotation along X axis.",
-      "main_action": "Toggle switch slides right, triggering a green wipe beam that cleans the waveform.",
-      "exit": "All 5 tools stack into a single unified grid as the scene transitions to the Outro.",
-      "next_shot_connection": "Adobe Podcast card scales down to join the other 4 tools in the final stack grid.",
+      "entrance": "Focus shift to P1, P2, P3",
+      "main_action": "Alternating resource handoffs between P2 and P3 bypassing P1",
+      "exit": "Blue digital grid clears the table for rules",
+      "next_shot_connection": "Transition to solution: operating system concurrency control",
       "transition": {
-        "type": "grid-reunite",
-        "duration_frames": 10
+        "type": "cut",
+        "duration_frames": 0
       },
-      "sound_cues": [
-        {
-          "event_id": "e06-adobe-enter",
-          "purpose": "Studio interface entrance",
-          "file": "public/current/sfx/swoosh.wav",
-          "gain": 0.2,
-          "duration_frames": 13,
-          "fade_out_frames": 4
-        },
-        {
-          "event_id": "e06-fan-noise",
-          "purpose": "Noise meter buzzing effect",
-          "file": "public/current/sfx/meter.wav",
-          "gain": 0.22,
-          "duration_frames": 16,
-          "fade_out_frames": 5
-        },
-        {
-          "event_id": "e06-enhanced-toggle",
-          "purpose": "Toggle switch click and chime",
-          "file": "public/current/sfx/click.wav",
-          "gain": 0.24,
-          "duration_frames": 8,
-          "fade_out_frames": 2
-        }
-      ]
+      "sound_cues": []
     },
     {
-      "id": "shot-07",
-      "start_frame": 2411,
-      "end_frame": 2549,
-      "narration": "নিচে কমেন্টে লেখো \"tools\", আমি এই ৫টা টুলের লিংক দিয়ে দিচ্ছি।",
+      "id": "shot-08",
+      "start_frame": 1895,
+      "end_frame": 2225,
+      "narration": "তাই কম্পিউটারে একটা নিয়ম লাগে — Concurrency Control, মানে পাশাপাশি দুজন একই কাঠি একসাথে ব্যবহার করতে পারবেন না। একজন খেলে, আরেকজন অপেক্ষা করবে।",
       "narration_ids": [
         "p26",
-        "p27"
+        "p27",
+        "p28"
       ],
-      "viewer_takeaway": "Comment 'tools' to get the direct links to all 5 AI platforms instantly in direct message.",
-      "subject": "All 5 AI tool badges gathered together with an animated comment prompt box",
-      "visual_mode": "call-to-action",
+      "viewer_takeaway": "The solution principle: Concurrency Control enforces Mutual Exclusion. Adjacent nodes cannot grab the same stick at once.",
+      "subject": "Concurrency Control and Mutual Exclusion",
+      "visual_mode": "concurrency-rule-demo",
+      "visual_intent": {
+        "added_information": "Demonstrates the orderly protocol: one eats while the neighbor enters polite queue.",
+        "framing": "Two adjacent nodes with shared chopstick and digital mutex barrier.",
+        "motion_mechanism": "Node 1 enters critical section with stick; barrier protects stick from Node 2 until release."
+      },
+      "entities": [
+        {
+          "name": "Concurrency Control Engine",
+          "narration_ids": [
+            "p26"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/table-setup.svg"
+          ],
+          "reason": "Protocol logic governing critical sections"
+        }
+      ],
       "body_labels": [
-        "কমেন্টে লিখুন TOOLS",
-        "লিংক ইনবক্সে",
-        "সেভ করুন"
+        "Concurrency Control",
+        "Mutual Exclusion",
+        "Wait & Signal"
       ],
+      "text_exception": null,
+      "negative_space_reason": null,
       "assets": [
-        "public/current/tools/napkin.png",
-        "public/current/tools/gamma.png",
-        "public/current/tools/perplexity.png",
-        "public/current/tools/notebook.png",
-        "public/current/tools/adobe_podcast.png"
+        "public/current/table-setup.svg",
+        "public/current/chopstick-resource.svg"
       ],
       "states": {
-        "before": "All 5 AI tool logos assembled in an impressive high-tech Bento grid.",
-        "action": "A pulsing neon comment bubble expands with the keyword 'TOOLS' and paper-plane send icon.",
-        "after": "A 'Save & Share' bookmark badge glides into the footer with active follower counter."
+        "before": "Uncontrolled contention between two adjacent nodes.",
+        "action": "Concurrency Control shield activates; node A eats while node B politely queues.",
+        "after": "When node A finishes, stick is safely passed to node B."
       },
       "keyframes": [
         {
           "frame": 0,
-          "focal_point": "All 5 AI tool logos assembled in sleek Bento grid",
+          "focal_point": "Concurrency control title card",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         },
         {
-          "frame": 70,
-          "focal_point": "Pulsing 'TOOLS' comment prompt and direct message send badge",
+          "frame": 165,
+          "focal_point": "Mutual exclusion barrier between nodes",
           "bounds": {
-            "x": 90,
-            "y": 420,
-            "width": 830,
-            "height": 1150
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 329,
+          "focal_point": "Sequential clean handoff between nodes",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
           }
         }
       ],
       "events": [
         {
-          "id": "e07-comment-prompt",
+          "id": "ev-08-rule",
           "anchor_id": "p26",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 45,
-          "action": "Bento grid of all 5 tools locks in with coordinated light sweeps"
+          "duration_frames": 35,
+          "action": "Emerald CONCURRENCY CONTROL header and shield appear"
         },
         {
-          "id": "e07-tools-links",
+          "id": "ev-08-mutex",
           "anchor_id": "p27",
           "anchor_edge": "start",
           "offset_frames": 0,
-          "duration_frames": 50,
-          "action": "Callout comment box pulses with typing indicator 'TOOLS' and glow ring"
+          "duration_frames": 40,
+          "action": "Digital lock barrier shows mutual exclusion on shared chopstick"
+        },
+        {
+          "id": "ev-08-queue",
+          "anchor_id": "p28",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "One node eats with green check; neighbor queues peacefully"
         }
       ],
       "acceptance_criteria": [
-        "Call to action is unmistakable and prominently positioned in the mobile safe zone.",
-        "All 5 tool names remain visible simultaneously for quick reference and screenshotting.",
-        "Final frame holds cleanly without abrupt cutoffs or stutter."
+        "Mutual exclusion barrier is cleanly depicted",
+        "Clear demonstration that one eats while the other waits",
+        "No chaos; orderly synchronized resource sharing"
       ],
-      "entrance": "Bento grid zooms into center with high-energy spring lock.",
-      "main_action": "Comment pill expands in lower third with pulsing gradient ring and send icon.",
-      "exit": "Subtle camera drift holds the complete visual brand until the final frame.",
-      "next_shot_connection": "Final shot of composition; holds for viewer interaction and loop playback.",
+      "entrance": "Emerald glow wipe",
+      "main_action": "Chopstick handoff animation across critical section barrier",
+      "exit": "Glow focuses into the Semaphore gate symbol",
+      "next_shot_connection": "Leads directly to Semaphore teaser in Shot 9",
       "transition": {
-        "type": "hold-loop",
+        "type": "cut",
         "duration_frames": 0
       },
-      "sound_cues": [
+      "sound_cues": []
+    },
+    {
+      "id": "shot-09",
+      "start_frame": 2225,
+      "end_frame": 2435,
+      "narration": "তাহলে সমাধানটা কি? সেটা পরের পর্বে — Semaphore। Part 2 চাইলে কমেন্টে লিখুন, Part 2।",
+      "narration_ids": [
+        "p29",
+        "p30"
+      ],
+      "viewer_takeaway": "Teaser & Call to Action: The real CS algorithm is Semaphore. Comment 'Part 2' for the implementation.",
+      "subject": "Semaphore Teaser and Part 2 CTA",
+      "visual_mode": "semaphore-cta",
+      "visual_intent": {
+        "added_information": "Introduces Dijkstra's Semaphore primitive (wait/signal) and invites viewer engagement.",
+        "framing": "Hero tech emblem in center stage with prominent comment callout.",
+        "motion_mechanism": "Semaphore icon rotates into place with neon green rings; comment prompt bounces."
+      },
+      "entities": [
         {
-          "event_id": "e07-comment-prompt",
-          "purpose": "Final assembly whoosh",
-          "file": "public/current/sfx/whoosh.wav",
-          "gain": 0.22,
-          "duration_frames": 12,
-          "fade_out_frames": 4
+          "name": "Semaphore Primitive",
+          "narration_ids": [
+            "p29"
+          ],
+          "representation": "illustration",
+          "asset_files": [
+            "public/current/semaphore-system.svg"
+          ],
+          "reason": "Official algorithmic solution for concurrency dilemmas"
+        }
+      ],
+      "body_labels": [
+        "SEMAPHORE",
+        "Comment 'Part 2'"
+      ],
+      "text_exception": null,
+      "negative_space_reason": null,
+      "assets": [
+        "public/current/semaphore-system.svg"
+      ],
+      "states": {
+        "before": "Dark stage with emerald light gathering in center.",
+        "action": "Hexagonal SEMAPHORE badge lands with wait() & signal() code glyphs.",
+        "after": "Vibrant 'Comment Part 2' button pulses with engagement icons."
+      },
+      "keyframes": [
+        {
+          "frame": 0,
+          "focal_point": "Emerald energy vortex gathering",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
         },
         {
-          "event_id": "e07-tools-links",
-          "purpose": "Comment callout camera shutter",
-          "file": "public/current/sfx/camera_shutter.wav",
-          "gain": 0.25,
-          "duration_frames": 10,
-          "fade_out_frames": 3
+          "frame": 100,
+          "focal_point": "SEMAPHORE hexagonal badge reveal",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
+        },
+        {
+          "frame": 204,
+          "focal_point": "Comment Part 2 callout button",
+          "bounds": {
+            "x": 64,
+            "y": 320,
+            "width": 896,
+            "height": 1380
+          }
         }
-      ]
+      ],
+      "events": [
+        {
+          "id": "ev-09-sem",
+          "anchor_id": "p29",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Hexagonal SEMAPHORE symbol lights up with binary semaphore signals"
+        },
+        {
+          "id": "ev-09-cta",
+          "anchor_id": "p30",
+          "anchor_edge": "start",
+          "offset_frames": 0,
+          "duration_frames": 35,
+          "action": "Interactive 'Comment Part 2' card bounces in with chat icon"
+        }
+      ],
+      "acceptance_criteria": [
+        "SEMAPHORE emblem is stunning, sharp, and technical",
+        "Call to action 'Comment Part 2' is unmistakable and high-conversion",
+        "Clean ending holds without abrupt cut"
+      ],
+      "entrance": "Scale up and neon flash",
+      "main_action": "Beacon pulse emanating from semaphore badge",
+      "exit": "Gentle final hold to last audio frame",
+      "next_shot_connection": "Final shot of composition",
+      "transition": {
+        "type": "cut",
+        "duration_frames": 0
+      },
+      "sound_cues": []
     }
   ],
   "captions": [
     {
       "id": "p01",
-      "text": "এই ৫টি এআই টুলের এতো কাজ করা যায়",
+      "text": "পাঁচজন দার্শনিক এক টেবিলে বসে আছেন,",
       "startFrame": 0,
-      "endFrame": 97
+      "endFrame": 68
     },
     {
       "id": "p02",
-      "text": "যেমন পিডিএফ বুঝবে, প্রেজেন্টেশন বানাবে",
-      "startFrame": 97,
-      "endFrame": 202
+      "text": "সামনে গরম গরম খাবার,",
+      "startFrame": 80,
+      "endFrame": 124
     },
     {
       "id": "p03",
-      "text": "এমনকি তোমার ভয়েসও পরিষ্কার করবে",
-      "startFrame": 202,
-      "endFrame": 270
+      "text": "কিন্তু কেউ খেতে পারছেন না, কেন?",
+      "startFrame": 137,
+      "endFrame": 200
     },
     {
       "id": "p04",
-      "text": "শেষেরটার বিফোর-আফটার শুনলে পার্থক্যটা নিজেই বুঝবে।",
-      "startFrame": 270,
-      "endFrame": 386
+      "text": "এটা শুধু গল্প না, এটা কম্পিউটারের সবচেয়ে বড় সমস্যা,",
+      "startFrame": 220,
+      "endFrame": 334
     },
     {
       "id": "p05",
-      "text": "১ নম্বর, ন্যাপকিন এআই।",
-      "startFrame": 386,
-      "endFrame": 459
+      "text": "গল্পটা এরকম:",
+      "startFrame": 348,
+      "endFrame": 384
     },
     {
       "id": "p06",
-      "text": "কোনো আইডিয়া বোঝাতে বিশাল প্যারাগ্রাফ লিখে ফেলেছ?",
-      "startFrame": 459,
-      "endFrame": 560
+      "text": "পাঁচজন, নাম দিলাম P1 থেকে P5,",
+      "startFrame": 384,
+      "endFrame": 476
     },
     {
       "id": "p07",
-      "text": "লেখাটা এখানে পেস্ট করে ভিজ্যুয়াল জেনারেট করো।",
-      "startFrame": 560,
-      "endFrame": 650
+      "text": "গোল টেবিলের চারপাশে বসে আছেন।",
+      "startFrame": 490,
+      "endFrame": 548
     },
     {
       "id": "p08",
-      "text": "সেটাই হয়ে যাবে ডায়াগ্রাম বা ফ্লোচার্ট।",
-      "startFrame": 650,
-      "endFrame": 720
+      "text": "প্রত্যেকের সামনে এক প্লেট খাবার,",
+      "startFrame": 559,
+      "endFrame": 617
     },
     {
       "id": "p09",
-      "text": "যেমন ইন্টারনেট কীভাবে কাজ করে,",
-      "startFrame": 720,
-      "endFrame": 801
+      "text": "আর দুজনের মাঝখানে একটা করে কাঠি।",
+      "startFrame": 629,
+      "endFrame": 694
     },
     {
       "id": "p10",
-      "text": "পুরো ব্যাপারটা এক ছবিতে!",
-      "startFrame": 801,
-      "endFrame": 859
+      "text": "মোট কাঠি পাঁচটা।",
+      "startFrame": 706,
+      "endFrame": 746
     },
     {
       "id": "p11",
-      "text": "২ নম্বর, গামা।",
-      "startFrame": 859,
-      "endFrame": 918
+      "text": "খেতে হলে লাগবে দুইটা কাঠি।",
+      "startFrame": 761,
+      "endFrame": 813
     },
     {
       "id": "p12",
-      "text": "কাল প্রেজেন্টেশন, অথচ একটা স্লাইডও বানাও নি?",
-      "startFrame": 918,
-      "endFrame": 1025
+      "text": "একটা ডানহাতে, একটা বামহাতে।",
+      "startFrame": 824,
+      "endFrame": 874
     },
     {
       "id": "p13",
-      "text": "টপিক, কার জন্য, আর কয়টা স্লাইড লাগবে বলে দাও।",
-      "startFrame": 1025,
-      "endFrame": 1153
+      "text": "একটা কাঠি দিয়ে তো খাওয়া যাবেনা।",
+      "startFrame": 887,
+      "endFrame": 928
     },
     {
       "id": "p14",
-      "text": "গামা একটা ড্রাফট সাজিয়ে দিবে।",
-      "startFrame": 1153,
-      "endFrame": 1202
+      "text": "এবার দেখুন কি হলো।",
+      "startFrame": 944,
+      "endFrame": 974
     },
     {
       "id": "p15",
-      "text": "তবে খেয়াল করো, শুরুর ৪০০ ফ্রি ক্রেডিট শেষ হলে রিফিল হয় না।",
-      "startFrame": 1202,
-      "endFrame": 1339
+      "text": "পাঁচজন একসাথে বামহাতের কাঠিটা তুলে নিলেন।",
+      "startFrame": 986,
+      "endFrame": 1073
     },
     {
       "id": "p16",
-      "text": "৩ নম্বর, পারপ্লেক্সিটি এআই। এআই উত্তর দিলো,",
-      "startFrame": 1339,
-      "endFrame": 1457
+      "text": "এখন সবাই ডানহাতের কাঠির জন্য অপেক্ষা করছেন।",
+      "startFrame": 1086,
+      "endFrame": 1172
     },
     {
       "id": "p17",
-      "text": "কিন্তু তথ্যটা কোথা থেকে আসলো?",
-      "startFrame": 1457,
-      "endFrame": 1519
+      "text": "কিন্তু ডানহাতের কাঠি তো পাশের জনের হাতে!",
+      "startFrame": 1184,
+      "endFrame": 1253
     },
     {
       "id": "p18",
-      "text": "এখানে প্রশ্ন করলে উত্তরের সঙ্গে সোর্স লিংকও পাবা।",
-      "startFrame": 1519,
-      "endFrame": 1621
+      "text": "কেউ কাঠি ছাড়বেন না, কেউ খেতে পারবেন না!",
+      "startFrame": 1253,
+      "endFrame": 1336
     },
     {
       "id": "p19",
-      "text": "রিসার্চ করার সময় লিংকগুলো থেকে তথ্য মিলিয়ে নিতে পারবা।",
-      "startFrame": 1621,
-      "endFrame": 1745
+      "text": "পুরো সিস্টেম আটকে গেলো!",
+      "startFrame": 1339,
+      "endFrame": 1394
     },
     {
       "id": "p20",
-      "text": "৪ নম্বর, জেমিনি নোটবুক, আগের নোটবুকএলএম।",
-      "startFrame": 1745,
-      "endFrame": 1908
+      "text": "এটাই ডেডলক!",
+      "startFrame": 1394,
+      "endFrame": 1439
     },
     {
       "id": "p21",
-      "text": "লম্বা পিডিএফ আপলোড করে বলো, সহজ করে বুঝিয়ে দাও।",
-      "startFrame": 1908,
-      "endFrame": 2004
+      "text": "সবাই অপেক্ষা করছে, কাজ এগোচ্ছে না!",
+      "startFrame": 1448,
+      "endFrame": 1518
     },
     {
       "id": "p22",
-      "text": "চাইলে অডিও ওভারভিউ বানিয়ে পডকাস্টের মতো শুনতেও পারবা।",
-      "startFrame": 2004,
-      "endFrame": 2105
+      "text": "আরেকটা সমস্যা আছে —",
+      "startFrame": 1529,
+      "endFrame": 1561
     },
     {
       "id": "p23",
-      "text": "৫ নম্বর, অ্যাডোবি পডকাস্ট।",
-      "startFrame": 2105,
-      "endFrame": 2213
+      "text": "ধরুন, P2 আর P3 বারবার খাচ্ছেন,",
+      "startFrame": 1561,
+      "endFrame": 1654
     },
     {
       "id": "p24",
-      "text": "ভয়েস রেকর্ড করেছ, কিন্তু পেছনের ফ্যানের আওয়াজ বেশি?",
-      "startFrame": 2213,
-      "endFrame": 2348
+      "text": "কিন্তু P1 কাঠি পাচ্ছেন না, তিনি ক্ষুধার্থ বসে আছেন,",
+      "startFrame": 1664,
+      "endFrame": 1840
     },
     {
       "id": "p25",
-      "text": "এনহ্যান্স স্পিচ দিয়ে নয়েজ আর একো কমাতে পারো।",
-      "startFrame": 2348,
-      "endFrame": 2411
+      "text": "এটাকে বলে Starvation।",
+      "startFrame": 1853,
+      "endFrame": 1891
     },
     {
       "id": "p26",
-      "text": "নিচে কমেন্টে লেখো \"tools\",",
-      "startFrame": 2411,
-      "endFrame": 2483
+      "text": "তাই কম্পিউটারে একটা নিয়ম লাগে — Concurrency Control,",
+      "startFrame": 1907,
+      "endFrame": 2005
     },
     {
       "id": "p27",
-      "text": "আমি এই ৫টা টুলের লিংক দিয়ে দিচ্ছি।",
-      "startFrame": 2483,
-      "endFrame": 2549
+      "text": "মানে পাশাপাশি দুজন একই কাঠি একসাথে ব্যবহার করতে পারবেন না।",
+      "startFrame": 2015,
+      "endFrame": 2144
+    },
+    {
+      "id": "p28",
+      "text": "একজন খেলে, আরেকজন অপেক্ষা করবে।",
+      "startFrame": 2156,
+      "endFrame": 2219
+    },
+    {
+      "id": "p29",
+      "text": "তাহলে সমাধানটা কি? সেটা পরের পর্বে — Semaphore।",
+      "startFrame": 2232,
+      "endFrame": 2333
+    },
+    {
+      "id": "p30",
+      "text": "Part 2 চাইলে কমেন্টে লিখুন, Part 2।",
+      "startFrame": 2346,
+      "endFrame": 2426
     }
   ],
   "events": [
     {
-      "id": "e01-intro",
+      "id": "ev-01-enter",
       "anchor_id": "p01",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Bold headline entrance with spring physics and cyan glow pulse",
+      "duration_frames": 30,
+      "action": "Table and philosopher nodes spring into circular arrangement",
       "shot_id": "shot-01",
       "startFrame": 0,
-      "endFrame": 45
+      "endFrame": 30
     },
     {
-      "id": "e01-tools-peek",
+      "id": "ev-01-food",
       "anchor_id": "p02",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Five floating 3D tool cards cascade into view with free badges",
+      "duration_frames": 25,
+      "action": "Steaming hot ramen plates reveal in front of all five seats",
       "shot_id": "shot-01",
-      "startFrame": 97,
-      "endFrame": 142
+      "startFrame": 80,
+      "endFrame": 105
     },
     {
-      "id": "e01-audio-hint",
+      "id": "ev-01-puzzle",
       "anchor_id": "p03",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Audio waveform icon and voice cleaning preview badge light up",
+      "duration_frames": 30,
+      "action": "Glowing question mark and lock badge appear",
       "shot_id": "shot-01",
-      "startFrame": 202,
-      "endFrame": 247
+      "startFrame": 137,
+      "endFrame": 167
     },
     {
-      "id": "e01-before-after",
+      "id": "ev-02-os",
       "anchor_id": "p04",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Before and After comparison preview cards expand in 3D perspective",
-      "shot_id": "shot-01",
-      "startFrame": 270,
-      "endFrame": 320
+      "duration_frames": 35,
+      "action": "Motherboard circuits energize and DEADLOCK emblem lands",
+      "shot_id": "shot-02",
+      "startFrame": 220,
+      "endFrame": 255
     },
     {
-      "id": "e02-napkin-enter",
+      "id": "ev-02-rule",
       "anchor_id": "p05",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Napkin AI browser mockup slides in with slight 3D perspective tilt",
+      "duration_frames": 25,
+      "action": "Banner slides to unveil the exact simulation rules",
       "shot_id": "shot-02",
-      "startFrame": 386,
-      "endFrame": 431
+      "startFrame": 348,
+      "endFrame": 373
     },
     {
-      "id": "e02-text-input",
+      "id": "ev-03-pnodes",
       "anchor_id": "p06",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Raw text lines appear inside the input card with typing cursor effect",
-      "shot_id": "shot-02",
-      "startFrame": 459,
-      "endFrame": 504
+      "duration_frames": 40,
+      "action": "Nodes P1, P2, P3, P4, P5 stagger into view around table",
+      "shot_id": "shot-03",
+      "startFrame": 384,
+      "endFrame": 424
     },
     {
-      "id": "e02-ai-process",
+      "id": "ev-03-circle",
       "anchor_id": "p07",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Dashed connection lines extend downward with glowing pulse",
-      "shot_id": "shot-02",
-      "startFrame": 560,
-      "endFrame": 605
+      "duration_frames": 30,
+      "action": "Circular connecting bus lights up tying the five nodes",
+      "shot_id": "shot-03",
+      "startFrame": 490,
+      "endFrame": 520
     },
     {
-      "id": "e02-diagram-pop",
+      "id": "ev-03-plates",
       "anchor_id": "p08",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Three infographic diagram cards pop in with spring scale physics",
-      "shot_id": "shot-02",
-      "startFrame": 650,
-      "endFrame": 700
+      "duration_frames": 30,
+      "action": "Five food plates slot into position in front of nodes",
+      "shot_id": "shot-03",
+      "startFrame": 559,
+      "endFrame": 589
     },
     {
-      "id": "e02-internet-flow",
+      "id": "ev-03-sticks",
       "anchor_id": "p09",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Internet architecture diagram unfolds with interactive packet pulses",
-      "shot_id": "shot-02",
-      "startFrame": 720,
-      "endFrame": 765
+      "duration_frames": 35,
+      "action": "Golden chopsticks land exactly in gaps between neighbors",
+      "shot_id": "shot-03",
+      "startFrame": 629,
+      "endFrame": 664
     },
     {
-      "id": "e02-highlight",
+      "id": "ev-03-count",
       "anchor_id": "p10",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Final diagram card highlights with bright blue border and checkmark",
-      "shot_id": "shot-02",
-      "startFrame": 801,
-      "endFrame": 846
+      "duration_frames": 25,
+      "action": "Total: 5 Chopsticks badge pulses into focus",
+      "shot_id": "shot-03",
+      "startFrame": 706,
+      "endFrame": 731
     },
     {
-      "id": "e03-gamma-enter",
+      "id": "ev-04-two",
       "anchor_id": "p11",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Gamma interface drops in with purple gradient accent glow",
-      "shot_id": "shot-03",
-      "startFrame": 859,
-      "endFrame": 904
+      "duration_frames": 30,
+      "action": "Dual slots light up: [Left Hand] + [Right Hand]",
+      "shot_id": "shot-04",
+      "startFrame": 761,
+      "endFrame": 791
     },
     {
-      "id": "e03-urgency-clock",
+      "id": "ev-04-hands",
       "anchor_id": "p12",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Urgency callout card pops with clock icon and zero slides alert",
-      "shot_id": "shot-03",
-      "startFrame": 918,
-      "endFrame": 968
+      "duration_frames": 30,
+      "action": "Left hand and right hand indicators illuminate on P1",
+      "shot_id": "shot-04",
+      "startFrame": 824,
+      "endFrame": 854
     },
     {
-      "id": "e03-topic-prompt",
+      "id": "ev-04-fail",
       "anchor_id": "p13",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Topic input badge fills with prompt text and card count indicator",
-      "shot_id": "shot-03",
-      "startFrame": 1025,
-      "endFrame": 1075
+      "duration_frames": 30,
+      "action": "P1 holding only one stick triggers red prohibition badge",
+      "shot_id": "shot-04",
+      "startFrame": 887,
+      "endFrame": 917
     },
     {
-      "id": "e03-slide-deck",
+      "id": "ev-05-prep",
       "anchor_id": "p14",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Three presentation slides fan out horizontally in smooth 3D carousel",
-      "shot_id": "shot-03",
-      "startFrame": 1153,
-      "endFrame": 1198
+      "duration_frames": 20,
+      "action": "Tension build up as nodes activate together",
+      "shot_id": "shot-05",
+      "startFrame": 944,
+      "endFrame": 964
     },
     {
-      "id": "e03-credit-tip",
+      "id": "ev-05-lift",
       "anchor_id": "p15",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Free credit meter badge highlights at bottom with amber warning pill",
-      "shot_id": "shot-03",
-      "startFrame": 1202,
-      "endFrame": 1252
+      "duration_frames": 40,
+      "action": "All 5 chopsticks lift simultaneously into left hands",
+      "shot_id": "shot-05",
+      "startFrame": 986,
+      "endFrame": 1026
     },
     {
-      "id": "e04-perp-enter",
+      "id": "ev-05-wait",
       "anchor_id": "p16",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Perplexity search interface springs into focus with cyan accent beam",
-      "shot_id": "shot-04",
-      "startFrame": 1339,
-      "endFrame": 1384
+      "duration_frames": 40,
+      "action": "Curved yellow waiting arrows point to right neighbor chopsticks",
+      "shot_id": "shot-05",
+      "startFrame": 1086,
+      "endFrame": 1126
     },
     {
-      "id": "e04-source-doubt",
+      "id": "ev-06-held",
       "anchor_id": "p17",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Doubt query pill pops up asking 'Where is the proof?'",
-      "shot_id": "shot-04",
-      "startFrame": 1457,
-      "endFrame": 1502
+      "duration_frames": 35,
+      "action": "Red spotlight highlights that neighbor holds the needed right stick",
+      "shot_id": "shot-06",
+      "startFrame": 1184,
+      "endFrame": 1219
     },
     {
-      "id": "e04-sources-reveal",
+      "id": "ev-06-refuse",
       "anchor_id": "p18",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Three source pills [arXiv], [GitHub], [MIT Review] reveal with link icons",
-      "shot_id": "shot-04",
-      "startFrame": 1519,
-      "endFrame": 1569
+      "duration_frames": 40,
+      "action": "Lock icons clamp onto every held chopstick (no release)",
+      "shot_id": "shot-06",
+      "startFrame": 1253,
+      "endFrame": 1293
     },
     {
-      "id": "e04-verified-check",
+      "id": "ev-06-freeze",
       "anchor_id": "p19",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Verified fact checkmark pulses beside the synthesized summary answer",
-      "shot_id": "shot-04",
-      "startFrame": 1621,
-      "endFrame": 1671
+      "duration_frames": 30,
+      "action": "Frost / freeze shockwave ripples across the whole system",
+      "shot_id": "shot-06",
+      "startFrame": 1339,
+      "endFrame": 1369
     },
     {
-      "id": "e05-notebook-enter",
+      "id": "ev-06-deadlock",
       "anchor_id": "p20",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "NotebookLM notebook workspace slides in with warm amber accent glow",
-      "shot_id": "shot-05",
-      "startFrame": 1745,
-      "endFrame": 1790
+      "duration_frames": 35,
+      "action": "Massive crimson DEADLOCK shield locks into center stage",
+      "shot_id": "shot-06",
+      "startFrame": 1394,
+      "endFrame": 1429
     },
     {
-      "id": "e05-heavy-pdf",
+      "id": "ev-06-stall",
       "anchor_id": "p21",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Bulky PDF file icon with '80 Pages' warning lands into upload slot",
-      "shot_id": "shot-05",
-      "startFrame": 1908,
-      "endFrame": 1953
+      "duration_frames": 35,
+      "action": "Progress bar flatlines at 0% with 'Stalled' ticker",
+      "shot_id": "shot-06",
+      "startFrame": 1448,
+      "endFrame": 1483
     },
     {
-      "id": "e05-audio-podcast",
+      "id": "ev-07-issue",
       "anchor_id": "p22",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 55,
-      "action": "Audio podcast player emerges with dynamic soundwave equalizer bars",
-      "shot_id": "shot-05",
-      "startFrame": 2004,
-      "endFrame": 2059
+      "duration_frames": 25,
+      "action": "Warning transition: 'Problem 2: Starvation'",
+      "shot_id": "shot-07",
+      "startFrame": 1529,
+      "endFrame": 1554
     },
     {
-      "id": "e06-adobe-enter",
+      "id": "ev-07-feast",
       "anchor_id": "p23",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Adobe Podcast studio card enters with emerald green glow",
-      "shot_id": "shot-06",
-      "startFrame": 2105,
-      "endFrame": 2150
+      "duration_frames": 40,
+      "action": "P2 and P3 animate eating back-and-forth with green glow",
+      "shot_id": "shot-07",
+      "startFrame": 1561,
+      "endFrame": 1601
     },
     {
-      "id": "e06-fan-noise",
+      "id": "ev-07-hunger",
       "anchor_id": "p24",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Red spiky noise waveform jitters violently with fan disturbance icon",
-      "shot_id": "shot-06",
-      "startFrame": 2213,
-      "endFrame": 2258
+      "duration_frames": 50,
+      "action": "P1 turns gray, plate stays empty, hunger clock ticks",
+      "shot_id": "shot-07",
+      "startFrame": 1664,
+      "endFrame": 1714
     },
     {
-      "id": "e06-enhanced-toggle",
+      "id": "ev-07-badge",
       "anchor_id": "p25",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Enhance Speech switch toggles to ON, flattening noise and purifying vocal waveform",
-      "shot_id": "shot-06",
-      "startFrame": 2348,
-      "endFrame": 2398
+      "duration_frames": 30,
+      "action": "Amber STARVATION emblem stamps across P1",
+      "shot_id": "shot-07",
+      "startFrame": 1853,
+      "endFrame": 1883
     },
     {
-      "id": "e07-comment-prompt",
+      "id": "ev-08-rule",
       "anchor_id": "p26",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 45,
-      "action": "Bento grid of all 5 tools locks in with coordinated light sweeps",
-      "shot_id": "shot-07",
-      "startFrame": 2411,
-      "endFrame": 2456
+      "duration_frames": 35,
+      "action": "Emerald CONCURRENCY CONTROL header and shield appear",
+      "shot_id": "shot-08",
+      "startFrame": 1907,
+      "endFrame": 1942
     },
     {
-      "id": "e07-tools-links",
+      "id": "ev-08-mutex",
       "anchor_id": "p27",
       "anchor_edge": "start",
       "offset_frames": 0,
-      "duration_frames": 50,
-      "action": "Callout comment box pulses with typing indicator 'TOOLS' and glow ring",
-      "shot_id": "shot-07",
-      "startFrame": 2483,
-      "endFrame": 2533
+      "duration_frames": 40,
+      "action": "Digital lock barrier shows mutual exclusion on shared chopstick",
+      "shot_id": "shot-08",
+      "startFrame": 2015,
+      "endFrame": 2055
+    },
+    {
+      "id": "ev-08-queue",
+      "anchor_id": "p28",
+      "anchor_edge": "start",
+      "offset_frames": 0,
+      "duration_frames": 35,
+      "action": "One node eats with green check; neighbor queues peacefully",
+      "shot_id": "shot-08",
+      "startFrame": 2156,
+      "endFrame": 2191
+    },
+    {
+      "id": "ev-09-sem",
+      "anchor_id": "p29",
+      "anchor_edge": "start",
+      "offset_frames": 0,
+      "duration_frames": 35,
+      "action": "Hexagonal SEMAPHORE symbol lights up with binary semaphore signals",
+      "shot_id": "shot-09",
+      "startFrame": 2232,
+      "endFrame": 2267
+    },
+    {
+      "id": "ev-09-cta",
+      "anchor_id": "p30",
+      "anchor_edge": "start",
+      "offset_frames": 0,
+      "duration_frames": 35,
+      "action": "Interactive 'Comment Part 2' card bounces in with chat icon",
+      "shot_id": "shot-09",
+      "startFrame": 2346,
+      "endFrame": 2381
     }
   ],
-  "soundCues": [
-    {
-      "event_id": "e01-intro",
-      "purpose": "Punchy hook whoosh",
-      "file": "public/current/sfx/whoosh.wav",
-      "gain": 0.22,
-      "duration_frames": 12,
-      "fade_out_frames": 4,
-      "startFrame": 0
-    },
-    {
-      "event_id": "e01-tools-peek",
-      "purpose": "Cards cascading pop",
-      "file": "public/current/sfx/pop.wav",
-      "gain": 0.18,
-      "duration_frames": 8,
-      "fade_out_frames": 3,
-      "startFrame": 97
-    },
-    {
-      "event_id": "e01-audio-hint",
-      "purpose": "Audio scan effect",
-      "file": "public/current/sfx/scan.wav",
-      "gain": 0.2,
-      "duration_frames": 16,
-      "fade_out_frames": 5,
-      "startFrame": 202
-    },
-    {
-      "event_id": "e01-before-after",
-      "purpose": "Comparison impact riser",
-      "file": "public/current/sfx/riser.wav",
-      "gain": 0.22,
-      "duration_frames": 22,
-      "fade_out_frames": 6,
-      "startFrame": 270
-    },
-    {
-      "event_id": "e02-napkin-enter",
-      "purpose": "Browser mockup entrance whoosh",
-      "file": "public/current/sfx/swoosh.wav",
-      "gain": 0.2,
-      "duration_frames": 14,
-      "fade_out_frames": 4,
-      "startFrame": 386
-    },
-    {
-      "event_id": "e02-ai-process",
-      "purpose": "Generator scan sound",
-      "file": "public/current/sfx/scan.wav",
-      "gain": 0.18,
-      "duration_frames": 16,
-      "fade_out_frames": 5,
-      "startFrame": 560
-    },
-    {
-      "event_id": "e02-diagram-pop",
-      "purpose": "Nodes pop in",
-      "file": "public/current/sfx/pop.wav",
-      "gain": 0.22,
-      "duration_frames": 8,
-      "fade_out_frames": 3,
-      "startFrame": 650
-    },
-    {
-      "event_id": "e02-highlight",
-      "purpose": "Completion ping",
-      "file": "public/current/sfx/ping.wav",
-      "gain": 0.19,
-      "duration_frames": 15,
-      "fade_out_frames": 5,
-      "startFrame": 801
-    },
-    {
-      "event_id": "e03-gamma-enter",
-      "purpose": "Heavy card landing thud",
-      "file": "public/current/sfx/thud.wav",
-      "gain": 0.22,
-      "duration_frames": 14,
-      "fade_out_frames": 4,
-      "startFrame": 859
-    },
-    {
-      "event_id": "e03-urgency-clock",
-      "purpose": "Urgency alert click",
-      "file": "public/current/sfx/click.wav",
-      "gain": 0.18,
-      "duration_frames": 6,
-      "fade_out_frames": 2,
-      "startFrame": 918
-    },
-    {
-      "event_id": "e03-slide-deck",
-      "purpose": "Slide fan-out swoosh",
-      "file": "public/current/sfx/whoosh.wav",
-      "gain": 0.2,
-      "duration_frames": 12,
-      "fade_out_frames": 4,
-      "startFrame": 1153
-    },
-    {
-      "event_id": "e03-credit-tip",
-      "purpose": "Credit meter sound",
-      "file": "public/current/sfx/meter.wav",
-      "gain": 0.24,
-      "duration_frames": 18,
-      "fade_out_frames": 5,
-      "startFrame": 1202
-    },
-    {
-      "event_id": "e04-perp-enter",
-      "purpose": "Search interface entrance",
-      "file": "public/current/sfx/swoosh.wav",
-      "gain": 0.2,
-      "duration_frames": 13,
-      "fade_out_frames": 4,
-      "startFrame": 1339
-    },
-    {
-      "event_id": "e04-sources-reveal",
-      "purpose": "Citation link pop",
-      "file": "public/current/sfx/pop.wav",
-      "gain": 0.22,
-      "duration_frames": 8,
-      "fade_out_frames": 2,
-      "startFrame": 1519
-    },
-    {
-      "event_id": "e04-verified-check",
-      "purpose": "Verification ping",
-      "file": "public/current/sfx/ping.wav",
-      "gain": 0.21,
-      "duration_frames": 15,
-      "fade_out_frames": 5,
-      "startFrame": 1621
-    },
-    {
-      "event_id": "e05-notebook-enter",
-      "purpose": "Notebook entrance whoosh",
-      "file": "public/current/sfx/whoosh.wav",
-      "gain": 0.2,
-      "duration_frames": 12,
-      "fade_out_frames": 4,
-      "startFrame": 1745
-    },
-    {
-      "event_id": "e05-heavy-pdf",
-      "purpose": "Document drop impact",
-      "file": "public/current/sfx/thud.wav",
-      "gain": 0.22,
-      "duration_frames": 14,
-      "fade_out_frames": 4,
-      "startFrame": 1908
-    },
-    {
-      "event_id": "e05-audio-podcast",
-      "purpose": "Podcast player activation ping",
-      "file": "public/current/sfx/ping.wav",
-      "gain": 0.22,
-      "duration_frames": 15,
-      "fade_out_frames": 5,
-      "startFrame": 2004
-    },
-    {
-      "event_id": "e06-adobe-enter",
-      "purpose": "Studio interface entrance",
-      "file": "public/current/sfx/swoosh.wav",
-      "gain": 0.2,
-      "duration_frames": 13,
-      "fade_out_frames": 4,
-      "startFrame": 2105
-    },
-    {
-      "event_id": "e06-fan-noise",
-      "purpose": "Noise meter buzzing effect",
-      "file": "public/current/sfx/meter.wav",
-      "gain": 0.22,
-      "duration_frames": 16,
-      "fade_out_frames": 5,
-      "startFrame": 2213
-    },
-    {
-      "event_id": "e06-enhanced-toggle",
-      "purpose": "Toggle switch click and chime",
-      "file": "public/current/sfx/click.wav",
-      "gain": 0.24,
-      "duration_frames": 8,
-      "fade_out_frames": 2,
-      "startFrame": 2348
-    },
-    {
-      "event_id": "e07-comment-prompt",
-      "purpose": "Final assembly whoosh",
-      "file": "public/current/sfx/whoosh.wav",
-      "gain": 0.22,
-      "duration_frames": 12,
-      "fade_out_frames": 4,
-      "startFrame": 2411
-    },
-    {
-      "event_id": "e07-tools-links",
-      "purpose": "Comment callout camera shutter",
-      "file": "public/current/sfx/camera_shutter.wav",
-      "gain": 0.25,
-      "duration_frames": 10,
-      "fade_out_frames": 3,
-      "startFrame": 2483
-    }
-  ],
-  "productionFingerprint": "1467c539cd7c6253a6a4b7d659a62d9c282cd5fce1d1512fb9d2d6642a60e93f"
+  "soundCues": [],
+  "productionFingerprint": "7d037f35c0ab307b08826c862545fa55854355a2dbb9e77ee993484c1af6ddb5"
 }

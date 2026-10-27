@@ -7,9 +7,13 @@
 Use [setup.md](setup.md) to check the environment before installation.
 Use [start.md](start.md) to start a video with any coding agent.
 Supply audio, audience, and outcome. The agent fills in [brief.json](brief.json); scripts and visual ideas are optional.
+The [design-lead layer](design-lead.md) chooses the communication strategy and visual concept for each video, then briefs and reviews the worker. It supports different purposes such as advertising, education, demonstration, documentary, and storytelling without assigning them one fixed visual template. Use [templates/direction.md](templates/direction.md) for the current direction and worker handoff. Design-only scope keeps scene implementation with the user's worker.
 Creative direction follows [audio-to-visual-director.md](audio-to-visual-director.md). Captions stay at the top. Shared stage, caption, audio, and timing helpers survive reset.
 Run `npm run video:compile` to derive the timeline from reviewed speech IDs.
 Run `npm run video:check-production` before rendering; the render command runs this gate too.
+The coding agent chooses specific subjects and assets from the recording, directs their actions, and reviews the actual render. After rendering, run `npm run video:review-evidence`, inspect its phone-size frames and action sequences, and complete `work/current/creative-review.json`. Run `npm run video:check-creative` before export. Export requires current review evidence; this is an autonomous critique stage, not a user approval checkpoint.
+`npm run video:autopilot -- --audio PATH --outcome TEXT` prints the task for the coding agent. It does not fabricate reviewed ASR, choose scenes from keyword presets, or claim to implement scene code.
+Use `--role design` for a head-of-design handoff, `--role worker` to implement the current direction, or the default `--role production` for both passes. Optional `--video-type` and repeatable `--reference` arguments provide context without selecting a fixed template. The helper prints instructions; the coding agent executes them.
 Older storyboards need a reviewed migration to schema version 2 before another render. Existing exports are kept.
 The agent follows [workflow.md](workflow.md) after the review steps.
 Use [reset.md](reset.md) for the next video in the same project.

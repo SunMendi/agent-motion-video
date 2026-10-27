@@ -1,9 +1,9 @@
-export * from './types';
-export * from './scene-utils';
-export { SceneIntro } from './SceneIntro';
-export { SceneNapkin } from './SceneNapkin';
-export { SceneGamma } from './SceneGamma';
-export { ScenePerplexity } from './ScenePerplexity';
-export { SceneNotebook } from './SceneNotebook';
-export { SceneAdobePodcast } from './SceneAdobePodcast';
-export { SceneOutro } from './SceneOutro';
+export {Scene01BanquetRiddle} from './Scene01BanquetRiddle';
+export {Scene02OsDeadlockReveal} from './Scene02OsDeadlockReveal';
+export {Scene03TopologySetup} from './Scene03TopologySetup';
+export {Scene04TwoSticksConstraint} from './Scene04TwoSticksConstraint';
+export {Scene05SimultaneousPickup} from './Scene05SimultaneousPickup';
+export {Scene06DeadlockClimax} from './Scene06DeadlockClimax';
+export {Scene07Starvation} from './Scene07Starvation';
+export {Scene08ConcurrencyControl} from './Scene08ConcurrencyControl';
+export {Scene09SemaphoreCta} from './Scene09SemaphoreCta';

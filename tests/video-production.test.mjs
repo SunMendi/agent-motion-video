@@ -16,12 +16,13 @@ const sample = () => ({
     {id: 'w1', w: 'The request travels to the gateway', s: 1, e: 2},
     {id: 'w2', w: 'Read', s: 8, e: 10},
   ]},
-  board: {schema_version: 2, video_id: 'test-video', shots: [{
+  board: {schema_version: 2, creative_contract_version: 1, video_id: 'test-video', shots: [{
     id: 's1', start_frame: 0, end_frame: 300, narration_ids: ['w1', 'w2'],
     viewer_takeaway: 'Requests move to a receiver.', subject: 'Request envelope', visual_mode: 'metaphor',
+    visual_intent: {added_information: 'Receiver location and delivery path', framing: 'Envelope moves across the central stage', motion_mechanism: 'Envelope opens at contact'}, entities: [],
     states: {before: 'Envelope at client', action: 'Travel to receiver', after: 'Envelope opened'},
     body_labels: ['Request'], assets: [], next_shot_connection: 'Hold for the ending',
-    keyframes: [{frame: 30, focal_point: 'Envelope', bounds: {x: 64, y: 320, width: 800, height: 1200}}],
+    keyframes: [0, 30, 299].map((frame) => ({frame, focal_point: 'Envelope', bounds: {x: 64, y: 320, width: 800, height: 1200}})),
     events: [{id: 'transfer', anchor_id: 'w1', offset_frames: 3, duration_frames: 30, action: 'Envelope travels'}],
     sound_cues: [{event_id: 'transfer', purpose: 'Contact', file: 'public/current/contact.wav', duration_frames: 15, gain: 0.2, fade_out_frames: 5}],
     acceptance_criteria: ['Same envelope reaches the receiver.'],
@@ -91,11 +92,15 @@ test('production gate requires evidence, honors audio settings, and detects rend
   assert.equal(checkProduction(root, {requireEvidence: false}).ok, true);
   assert.equal(checkProduction(root).ok, false);
   fs.writeFileSync(path.join(root, 'work/current/direction.md'), 'Direction');
+  writeJson(path.join(root, 'work/current/asset-manifest.json'), {assets: []});
   fs.writeFileSync(path.join(root, 'work/current/frame.png'), 'fixture evidence');
   fs.writeFileSync(path.join(root, 'work/current/animatic.mp4'), 'fixture evidence');
   Object.assign(input.board, {style_frames: ['work/current/frame.png'], animatic_file: 'work/current/animatic.mp4'});
   writeJson(path.join(root, 'work/current/storyboard.json'), input.board);
   assert.equal(checkProduction(root).ok, true);
+  const beforeSourceChange = checkProduction(root).timeline.productionFingerprint;
+  fs.writeFileSync(path.join(root, 'src/shared/tokens.ts'), 'export const color = "blue";');
+  assert.notEqual(checkProduction(root).timeline.productionFingerprint, beforeSourceChange, 'Source changes must invalidate creative evidence');
   fs.writeFileSync(path.join(root, 'src/video/BadScene.tsx'), 'const style = {transition: "all 1s"};');
   assert.match(checkProduction(root).errors.join('\n'), /frame-derived/);
   fs.writeFileSync(path.join(root, 'src/video/BadScene.tsx'), 'const SceneStage = () => <p>Explain transition: all 1s and Math.random() here.</p>; // transition: "all 1s"');

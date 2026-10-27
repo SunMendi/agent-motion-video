@@ -2,10 +2,10 @@
 
 ## Operating rules
 
-The agent owns creative direction and implementation.
+The design-lead role owns strategy, concept, art direction, and design critique. The worker role owns asset preparation, scene implementation, rendering, and technical verification. One agent can perform both roles sequentially for full production. For design-only requests, deliver the worker handoff within that scope.
 The user supplies the intended outcome and source material.
 Use the current brief for every creative decision.
-Read `audio-to-visual-director.md` for the creative contract. Use `src/shared/video-layout.json` for default stage coordinates. Do not create a second competing set of design rules.
+Read `design-lead.md` for creative strategy and the worker handoff, and `audio-to-visual-director.md` for scene craft. Use `src/shared/video-layout.json` for default stage coordinates. Do not create a second competing set of design rules.
 
 Use the existing application project.
 Write current-video scene code only under `src/video/`.
@@ -35,23 +35,17 @@ Do not silently replace either source.
 Write the input findings in `work/current/review.md`.
 Keep an implementation checklist in `work/current/progress.md`.
 
-## Stage 2. Propose the design
+## Stage 2. Develop the creative concept and worker brief
+
+Follow `design-lead.md`. Define the audience's starting point, primary outcome, central message, useful proof, and intended emotional progression. Infer the appropriate communication mode and select a visual concept. Record why the treatment fits this request. Use `templates/direction.md` to structure the actual decisions in `work/current/direction.md`; it is a writing guide, not another gate or timing format.
 
 Select a visual treatment that serves the story.
 Make the selection yourself.
 
-| Story need | Useful starting treatment |
-|---|---|
-| Explain a mechanism | Connected vector objects and focused camera movement. |
-| Demonstrate software | Actual screenshots, recordings, and readable focus regions. |
-| Explain records or transactions | Paper, labels, records, and physical objects. |
-| Compare options | Simple diagrams, large labels, and supported metrics. |
-| Present a product | Authentic product images and controlled camera movement. |
-
-These are starting points, not fixed templates.
-Use a different treatment when the story requires it.
+Use the purpose-specific decision prompts in `design-lead.md`. Choose subjects, representation, and pacing from the communication problem. Do not assign a default diagram, product showcase, or ad formula from keywords alone.
 
 If references exist, inspect frames and motion from those files.
+Write a short reference breakdown in `work/current/direction.md`: hierarchy, subject assets, selective display text, reveal order, motion devices, transitions, and holds. Name the behaviors to adopt and adapt. Compare the representative animated sample with that breakdown before propagating the treatment. Do not substitute the reference's colors for its visual storytelling.
 If references are absent, create original style frames.
 Do not require the user to find a reference video.
 
@@ -62,6 +56,7 @@ Use narration for the full explanation.
 Use display text for short labels and important conclusions.
 
 Write `work/current/direction.md`.
+Include a meaning-beat map from reviewed narration IDs to specific subjects, sourced asset choices, what the image adds beyond captions, and visible actions. Follow the subject-resolution and representation rules in `audio-to-visual-director.md`. Do not use keyword categories, a fixed cut length, or the previous video's palette as the director.
 Write `work/current/storyboard.json` using `templates/storyboard.json` as a format guide.
 Create representative style frames under `work/current/review/`, including the hardest action.
 Build a rough animatic of the full recording against the proposed boards and simple primary movement. Use it to review pacing before detailed production. Store its path and the style-frame paths in the storyboard.
@@ -71,7 +66,7 @@ Separate factual corrections from optional creative changes.
 ### Visual Direction Complete
 
 Save the direction, frames, storyboard, and rough animatic in `work/current/`.
-Proceed directly to timing finalization and production without stopping for manual approval.
+For full production, proceed directly to timing finalization and implementation without stopping for manual approval. For an explicitly design-only assignment, finish the handoff with available evidence and the worker's next production tasks. Do not invent a completed animatic or motion sample when implementation is outside that assignment.
 
 ## Stage 3. Review and finalize speech timing
 
@@ -124,11 +119,15 @@ Check language coverage and actual font weights.
 Keep font-loading completion synchronized with rendering.
 
 Record file paths, sources, usage terms, and modifications in `work/current/asset-manifest.json`.
+Use `{ "assets": [{ "path": "public/current/…", "kind": "…", "source": "primary URL, supplied path, or authored description", "usage_terms": "actual terms or uncertainty", "modifications": "…" }] }`. An authored inline vector needs a description in direction; it need not be an external asset. Fonts and sound sources also belong in the manifest. For each important named subject, record its representation and rationale in the storyboard's `entities` list.
 Do not label an approximate logo as an official vector.
 
 ## Stage 5. Complete the timed storyboard
 
-Use schema version 2 from `templates/storyboard.json`. For each shot, record:
+Use schema version 2 from `templates/storyboard.json`.
+Set `creative_contract_version` to 1. Older boards need actual creative review before adopting it. Add `visual_intent` (`added_information`, `framing`, `motion_mechanism`) and `entities` (`name`, `narration_ids`, `representation`, `asset_files`, and `reason` for illustrative/type treatments). Representation is `authentic-asset`, `illustration`, or `typographic-identity`. Use at least three distinct state keyframes with subject bounds. Record `text_exception` for body text beyond the workspace starting budget and `negative_space_reason` for deliberately shallow framing.
+
+For each shot, record:
 
 - The reviewed narration IDs and main viewer takeaway.
 - The before/action/after visual states, representative keyframes with bounds, and a visual acceptance criterion.
@@ -147,9 +146,10 @@ Run `npm run video:compile` to write `work/current/timeline.compiled.json`. This
 
 ## Stage 6. Render a representative sample
 
-Implement the approved treatment in `src/video/MainVideo.tsx` and related current-video files.
+Implement the chosen treatment in `src/video/MainVideo.tsx` and related current-video files.
 Put `SceneStage` inside each timed `Sequence`, rather than relying on a centering wrapper outside the sequence. Import shared `TimedCaptions` and `TimelineAudio` once at composition level, using the compiled timeline. Convert project-relative audio paths to `public/`-relative paths for `staticFile`. Pass the brief’s music and SFX settings explicitly.
 Use `eventProgress(event, absoluteFrame)` for compiled event progress; scene-local frames need the sequence start added. Pass `timeline.captionMode` to `TimedCaptions`; phrase timing uses one phrase per page. All these components live under `src/shared/` and survive reset.
+Trace at least one important event all the way from its narration ID through the router to the changing object. Verify that the router forwards events and the sequence start. Animate explanatory object layers independently; avoid flattening the whole mechanism into an image and animating only its container.
 Use `useCurrentFrame()`, `useVideoConfig()`, `interpolate()`, and `spring()` for rendered motion.
 Use Tailwind for appearance and layout.
 Use complete literal class names for Tailwind scanning.
@@ -168,10 +168,11 @@ Inspect text at phone size.
 Review the sound when available tools permit it.
 Record any review that could not be performed.
 
-### Automated Quality Gate
+### Structural gate and agent critique
 
 Run `npm run video:check-production` to verify all timing, captions, and layout bounds.
-Proceed directly to the complete video render.
+Inspect the actual sample for subject recognition, visual information beyond captions, composition, and speech-driven actions. Revise weak assets or choreography and inspect again. Continue to the complete render autonomously; a passing structural check does not replace this review.
+Review the sample with captions covered as well as visible. Describe the real before/after object changes and inspect the longest unchanged body interval. A scrolling scanner, hazard stripe, tiny pulse, or five-percent zoom does not resolve a missing explanatory action. Confirm the composition before propagating it across the complete video.
 
 ## Stage 7. Complete production
 
@@ -190,7 +191,7 @@ Do not mix the music twice.
 
 Run `npm run video:check-production` before sample and complete renders. It checks declared geometry, not actual browser layout. Fix its errors and review warnings.
 Run the project type checks and relevant tests.
-Set `ready` to `true` in `src/video/project.json` after the approved composition is implemented.
+Set `ready` to `true` in `src/video/project.json` after the chosen composition is implemented.
 This flag is a production state. It is not evidence of user approval or visual quality.
 Render the complete video with `npm run video:render`.
 The complete render is `work/current/final.mp4`.
@@ -214,6 +215,9 @@ Add meaningful tests for timeline coverage and caption timing.
 Do not use legacy passing tests as evidence for an untested new video.
 
 Save the review evidence under `work/current/review/`.
+Run `npm run video:review-evidence` to extract actual phone-size frames and ordered action samples from the full MP4. Read `work/current/creative-review.draft.json`, inspect its referenced images, and complete `work/current/creative-review.json`. Record `review_method`; per-shot `text`, `framing`, `entities`, and `motion` findings; issues and resolutions; and the direct listening result. Use motion method `playback` or `frame-sequence`. The draft starts pending and does not certify anything. The frame sampler supports inspection but is not a substitute for full playback or inspection between sampled events.
+
+Repair failed shots and rerender. Regenerate evidence and review it again. Run `npm run video:check-creative`. It verifies every shot's review and evidence against the final media and production fingerprints. It rejects missing, pending, failed, or stale visual reviews. If direct listening tools are unavailable, record audio status `unavailable`, its method/limitation, and disclose it in the final report. Do not invent a passing listening result. No manual design approval checkpoint is required.
 Record actual commands and outcomes.
 Keep automated measurements separate from visual and listening reviews.
 
@@ -224,7 +228,7 @@ Include actual changes, asset sources, check results, and limitations.
 Identify every incomplete or unverified check.
 
 Run `npm run video:export`.
-The command verifies the media and copies the final MP4 and report into `exports/`.
+The command requires current creative review evidence, verifies the media, and copies the final MP4 and report into `exports/`.
 It refuses to replace an existing export with the same video identifier.
 
 Do not reset the project automatically after delivery.

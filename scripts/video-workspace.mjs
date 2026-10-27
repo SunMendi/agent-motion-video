@@ -9,6 +9,7 @@ import {
   requireCurrentProject, inspectOutput, exportPair, resolveMediaBinary, runBinary, probeMedia,
 } from './lib/video-workspace.mjs';
 import {checkProduction} from './lib/video-production.mjs';
+import {createReviewEvidence, checkCreativeReview, fileHash} from './lib/video-creative.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(path.join(root, 'package.json'));
@@ -84,7 +85,7 @@ const doctor = () => {
 
 const render = () => {
   const {project} = requireCurrentProject(root);
-  if (!project.ready) throw new Error('The current composition is not marked ready. Complete the approved scene implementation first.');
+  if (!project.ready) throw new Error('The current composition is not marked ready. Complete the scene implementation first.');
   const frameArg = args.find((arg) => arg.startsWith('--frames='));
   if (args.some((arg) => !arg.startsWith('--frames='))) throw new Error('Only --frames=START-END is accepted by video:render.');
   if (frameArg) {
@@ -92,15 +93,24 @@ const render = () => {
     if (!match || Number(match[1]) > Number(match[2]) || Number(match[2]) >= project.durationInFrames) throw new Error('Frame range must lie inside the current composition.');
   }
   const production = checkProduction(root);
-  if (!production.ok) throw new Error(`Production checks failed:\n${production.errors.join('\n')}\nRun video:check-production. Existing approvals do not automatically approve a revised storyboard.`);
+  if (!production.ok) throw new Error(`Production checks failed:\n${production.errors.join('\n')}\nRun video:check-production and review the listed artifacts.`);
   for (const warning of production.warnings) console.warn(warning);
   writeJson(safePath(root, 'work/current/timeline.compiled.json'), production.timeline);
   buildCss();
   const output = frameArg ? 'work/current/sample.mp4' : 'work/current/final.mp4';
   const file = safePath(root, output);
   fs.mkdirSync(path.dirname(file), {recursive: true});
-  const concurrency = process.env.VIDEO_CONCURRENCY || '1';
+  // Use 2 cores by default; use max 3 cores if system load is light (< 1.5), leaving cores free for user work
+  const totalCores = os.cpus().length;
+  const load1m = os.loadavg()[0];
+  const autoCores = (totalCores >= 4 && load1m < 1.5) ? 3 : 2;
+  const concurrency = process.env.VIDEO_CONCURRENCY || String(Math.min(3, Math.max(2, autoCores)));
+  console.log(`Rendering with ${concurrency} CPU cores (reserving remaining cores for other tasks)...`);
   localCommand('@remotion/cli', ['render', entry, 'current-video', file, '--codec=h264', '--crf=18', '--audio-codec=aac', '--audio-bitrate=192k', `--concurrency=${concurrency}`, ...(frameArg ? [frameArg] : [])]);
+  if (!frameArg) writeJson(safePath(root, 'work/current/render-manifest.json'), {
+    video_id: project.video_id, production_fingerprint: production.timeline.productionFingerprint,
+    media_sha256: fileHash(file),
+  });
   console.log(`Rendered ${output}. Inspect the actual result before approval or delivery.`);
 
   try {
@@ -118,7 +128,7 @@ const render = () => {
 
 const verify = () => {
   const {project} = requireCurrentProject(root);
-  if (!project.ready) throw new Error('The current composition is not marked ready. Complete the approved implementation before delivery.');
+  if (!project.ready) throw new Error('The current composition is not marked ready. Complete the implementation before delivery.');
   const result = inspectOutput(root, project);
   const isNineSixteen = result.stats.width > 0 && result.stats.height > 0 && Math.abs((result.stats.width / result.stats.height) - (9 / 16)) < 0.01;
   result.stats.isNineSixteen = isNineSixteen;
@@ -208,8 +218,17 @@ try {
   else if (command === 'render') render();
   else if (command === 'verify') verify();
   else if (command === 'export') {
+    const creative = checkCreativeReview(root, checkProduction(root));
+    console.log(JSON.stringify(creative, null, 2));
+    if (!creative.ok) throw new Error('Creative review is incomplete or stale. Inspect rendered evidence, resolve findings, and run video:check-creative.');
     const project = verify();
     console.log('Saved:', exportPair(root, project.video_id).map((file) => path.relative(root, file)).join(', '));
+  } else if (command === 'review-evidence') {
+    console.log(JSON.stringify(createReviewEvidence(root, checkProduction(root)), null, 2));
+  } else if (command === 'check-creative') {
+    const result = checkCreativeReview(root, checkProduction(root));
+    console.log(JSON.stringify(result, null, 2));
+    if (!result.ok) throw new Error('Creative evidence checks failed. Complete the actual review; do not manufacture passing findings.');
   } else if (command === 'smoke') smoke();
   else if (command === 'check-9x16' || command === 'check-aspect') check9x16();
   else if (command === 'reset') {
@@ -218,7 +237,7 @@ try {
     console.log(JSON.stringify(result, null, 2));
     console.log(flag('--apply') ? 'Current-video files were reset. Exports and setup were kept.' : 'Preview only. No files were changed.');
   } else {
-    console.log('Commands: doctor [--static] [--save], check, prepare, compile, check-production, css, studio, render [--frames=START-END], verify, export, check-9x16 [file], smoke, reset [--apply] [--discard-unfinished]');
+    console.log('Commands: doctor [--static] [--save], check, prepare, compile, check-production, review-evidence, check-creative, css, studio, render [--frames=START-END], verify, export, check-9x16 [file], smoke, reset [--apply] [--discard-unfinished]');
   }
 } catch (error) {
   console.error(error.message);

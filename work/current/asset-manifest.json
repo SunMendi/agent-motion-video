@@ -1,76 +1,60 @@
 {
   "assets": [
     {
-      "path": "public/current/bangla.wav",
-      "source": "user supplied",
-      "license": "user supplied",
-      "usage": "unmodified narration"
+      "path": "public/current/table-setup.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for circular shared memory dining table",
+      "usage_terms": "original authored project asset",
+      "modifications": "layered circular table with central OS kernel badge"
     },
     {
-      "path": "public/audio/music-bed.mp3",
-      "source": "existing shared workspace bed",
-      "license": "workspace asset; provenance not separately recorded",
-      "usage": "ducked background music"
+      "path": "public/current/philosopher-node.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for philosopher and process nodes",
+      "usage_terms": "original authored project asset",
+      "modifications": "tech avatar with glowing aura and circular frame"
     },
     {
-      "path": "public/current/sfx/scan.wav",
-      "source": "locally synthesized sine sweep",
-      "license": "original",
-      "usage": "token scan contact"
+      "path": "public/current/chopstick-resource.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for chopstick and shared mutex resource",
+      "usage_terms": "original authored project asset",
+      "modifications": "metallic chopstick with neon core highlight"
     },
     {
-      "path": "public/current/sfx/split.wav",
-      "source": "locally synthesized sine sweep",
-      "license": "original",
-      "usage": "token separation"
+      "path": "public/current/deadlock-cycle.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for circular wait deadlock state",
+      "usage_terms": "original authored project asset",
+      "modifications": "red warning loop with central closed lock badge"
     },
     {
-      "path": "public/current/sfx/meter.wav",
-      "source": "locally synthesized sine sweep",
-      "license": "original",
-      "usage": "meter response"
+      "path": "public/current/starvation-alert.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for starvation condition alert",
+      "usage_terms": "original authored project asset",
+      "modifications": "amber hazard badge with empty resource indicator"
     },
     {
-      "path": "public/fonts/HindSiliguri-Bold.ttf",
-      "source": "existing shared workspace font",
-      "license": "see shared workspace setup record",
-      "usage": "captions and Bengali SVG text"
+      "path": "public/current/semaphore-system.svg",
+      "kind": "vector-graphic",
+      "source": "authored vector for semaphore synchronization mechanism",
+      "usage_terms": "original authored project asset",
+      "modifications": "emerald hexagon badge showing wait() and signal() signals"
     },
     {
-      "path": "src/video/MainVideo.tsx",
-      "source": "original authored vector shapes",
-      "license": "original",
-      "usage": "frame-derived SVG animation"
+      "path": "public/fonts/NotoSansBengali-Regular.ttf",
+      "kind": "font",
+      "source": "Google Noto Sans Bengali",
+      "usage_terms": "SIL Open Font License 1.1",
+      "modifications": "none"
     },
     {
-      "path": "public/audio/sfx/whooshes/fast-whoosh-01.mp3",
-      "source": "pre-existing shared workspace SFX",
-      "license": "source/licence not independently verified",
-      "usage": "Card slide whoosh"
-    },
-    {
-      "path": "public/audio/sfx/impacts/heavy-thud-01.mp3",
-      "source": "pre-existing shared workspace SFX",
-      "license": "source/licence not independently verified",
-      "usage": "3x cost impact"
-    },
-    {
-      "path": "public/audio/sfx/ui/dial-tick-soft-01.mp3",
-      "source": "pre-existing shared workspace SFX",
-      "license": "source/licence not independently verified",
-      "usage": "Coin drop tick"
-    },
-    {
-      "path": "public/audio/sfx/pops/bubble-pop-01.mp3",
-      "source": "pre-existing shared workspace SFX",
-      "license": "source/licence not independently verified",
-      "usage": "Token machine reveal"
-    },
-    {
-      "path": "src/video/VisualScenes.tsx",
-      "source": "original code-native vector artwork",
-      "license": "original",
-      "usage": "scene visuals and frame-derived animation"
+      "path": "public/fonts/NotoSansBengali-Bold.ttf",
+      "kind": "font",
+      "source": "Google Noto Sans Bengali Bold",
+      "usage_terms": "SIL Open Font License 1.1",
+      "modifications": "none"
     }
   ]
 }

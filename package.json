@@ -69,6 +69,8 @@
     "new-ad": "tsx scripts/new-ad.ts",
     "video:doctor": "node scripts/video-workspace.mjs doctor",
     "video:check": "node scripts/video-workspace.mjs check",
+    "video:analyze": "python3 scripts/analyze-audio-intent.py",
+    "video:autopilot": "python3 scripts/autopilot.py",
     "video:prepare": "node scripts/video-workspace.mjs prepare",
     "video:compile": "node scripts/video-workspace.mjs compile",
     "video:check-production": "node scripts/video-workspace.mjs check-production",
@@ -81,7 +83,9 @@
     "video:export": "node scripts/video-workspace.mjs export",
     "video:reset": "node scripts/video-workspace.mjs reset",
     "video:smoke": "node scripts/video-workspace.mjs smoke",
-    "video:test": "node --test tests/workspace.test.mjs tests/video-production.test.mjs && vitest run tests/video-timeline.test.ts --maxWorkers=1"
+    "video:test": "node --test tests/workspace.test.mjs tests/video-production.test.mjs tests/video-creative.test.mjs && vitest run tests/video-timeline.test.ts --maxWorkers=1",
+    "video:review-evidence": "node scripts/video-workspace.mjs review-evidence",
+    "video:check-creative": "node scripts/video-workspace.mjs check-creative"
   },
   "allowScripts": {
     "esbuild": false

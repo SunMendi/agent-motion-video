@@ -1,13 +1,37 @@
-# Current video progress
+# Production Progress Checklist
 
-Status: in progress. `free-ai-tools-showcase` initialized.
-
-- [x] Input review and brief configuration (`video_id: free-ai-tools-showcase`)
-- [x] Prepared 5 tool images under `public/current/tools/`
-- [x] Measured audio and project metadata (`npm run video:prepare`)
-- [ ] Direction and script analysis
-- [ ] Motion curves & sound cues
-- [ ] Storyboard and transcription
-- [ ] Scene implementation and compilation
-- [ ] Production checks and render
-- [ ] Verification and export
+- [x] Stage 1: Inspect the inputs and doctor check
+  - [x] Doctor check ran
+  - [x] Brief created and validated (`brief.json`)
+  - [x] Audio prepared (`video:prepare`)
+  - [x] Script extracted (`script.generated.md`)
+  - [x] Input findings written (`review.md`)
+- [x] Stage 2: Develop creative concept and worker brief
+  - [x] Write direction document (`work/current/direction.md`)
+  - [x] Storyboard plan draft (`work/current/storyboard.json`)
+  - [x] Style frames and animatic (`work/current/animatic.mp4`)
+- [x] Stage 3: Review and finalize speech timing
+  - [x] Write reviewed transcript (`work/current/transcript.reviewed.json`)
+- [x] Stage 4: Prepare assets
+  - [x] Sourced and custom SVG assets created under `public/current/`
+  - [x] Asset manifest created (`work/current/asset-manifest.json`)
+- [x] Stage 5: Complete timed storyboard
+  - [x] Full schema v2 storyboard with exact event anchors
+  - [x] Timeline compiled (`npm run video:compile`)
+- [x] Stage 6: Render representative sample
+  - [x] Test scene implementation and sample render (`work/current/sample.mp4`)
+- [x] Stage 7: Complete production
+  - [x] 9 Scene components created under `src/video/scenes/`
+  - [x] `MainVideo.tsx` wired with `SceneStage`, `TimedCaptions`, `TimelineAudio`
+  - [x] Production check passed (`npm run video:check-production`)
+  - [x] Full render executed with 3 CPU cores (`npm run video:render`)
+- [x] Stage 8: Verify the export
+  - [x] Media verification (`npm run video:verify`)
+  - [x] 9:16 aspect ratio verification (`npm run video:check-9x16`)
+  - [x] Pixel motion verification (`npm run video:check-motion`)
+  - [x] Review evidence extracted (`npm run video:review-evidence`)
+  - [x] Creative review completed (`work/current/creative-review.json`)
+  - [x] Creative review check passed (`npm run video:check-creative`)
+- [x] Stage 9: Deliver
+  - [x] Final report written (`work/current/report.md`)
+  - [x] Export finalized to `exports/` (`npm run video:export`)

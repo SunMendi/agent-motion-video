@@ -1,0 +1,74 @@
+{
+  "source_media": "exports/ai-security-motion-rebuild.mp4",
+  "media_sha256": "26dd24cba1cab460df69a3799d21de266d90859758b53ed7345b886dcf05b6e6",
+  "failed_required_lookups": 5,
+  "findings": [
+    {
+      "shot_id": "shot-06",
+      "source": "src/video/scenes/Scene06Persistence.tsx",
+      "line": 17,
+      "requested": [
+        "e06-stamp-metric"
+      ],
+      "available": [
+        "e06-metric-stamp"
+      ],
+      "result": "lookup returns undefined; local fallback is used"
+    },
+    {
+      "shot_id": "shot-07",
+      "source": "src/video/scenes/Scene07OpenAISandbox.tsx",
+      "line": 17,
+      "requested": [
+        "e07-dns-escape"
+      ],
+      "available": [
+        "e07-dns-slip",
+        "e07-freeze-lockdown",
+        "e07-time-counter"
+      ],
+      "result": "lookup returns undefined; local fallback is used"
+    },
+    {
+      "shot_id": "shot-07",
+      "source": "src/video/scenes/Scene07OpenAISandbox.tsx",
+      "line": 18,
+      "requested": [
+        "e07-wan-timer"
+      ],
+      "available": [
+        "e07-dns-slip",
+        "e07-freeze-lockdown",
+        "e07-time-counter"
+      ],
+      "result": "lookup returns undefined; local fallback is used"
+    },
+    {
+      "shot_id": "shot-07",
+      "source": "src/video/scenes/Scene07OpenAISandbox.tsx",
+      "line": 19,
+      "requested": [
+        "e07-training-halt"
+      ],
+      "available": [
+        "e07-dns-slip",
+        "e07-freeze-lockdown",
+        "e07-time-counter"
+      ],
+      "result": "lookup returns undefined; local fallback is used"
+    },
+    {
+      "shot_id": "shot-08",
+      "source": "src/video/scenes/Scene08CpuCache.tsx",
+      "line": 18,
+      "requested": [
+        "e08-bit-decode"
+      ],
+      "available": [
+        "e08-bits-decoded",
+        "e08-cache-pulse"
+      ],
+      "result": "lookup returns undefined; local fallback is used"
+    }
+  ]
+}

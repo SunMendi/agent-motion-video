@@ -62,7 +62,7 @@ It does not use a wildcard deletion outside these roots.
 ## Files that reset must keep
 
 - `exports/` and all completed final reports.
-- `setup.md`, `start.md`, `workflow.md`, `reset.md`, and `AGENTS.md`.
+- `setup.md`, `start.md`, `design-lead.md`, `workflow.md`, `reset.md`, and `AGENTS.md`.
 - Package files, installed packages, and environment records.
 - `skills/`, `templates/`, and reusable scripts.
 - `src/shared/`, including layout, stage, caption, and audio helpers, and `public/fonts/`.

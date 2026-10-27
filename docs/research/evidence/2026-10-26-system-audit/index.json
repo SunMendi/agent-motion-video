@@ -1,0 +1,39 @@
+{
+  "source": "exports/ai-security-threat.mp4",
+  "metadata": {
+    "duration_seconds": 100.651,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "contact_sheet": {
+    "file": "contact-sheet.png",
+    "sampling": "FFmpeg fps=1/8; approximate centers 4,12,20,...,100 seconds. Unused cells are gray."
+  },
+  "model_action_sequence": {
+    "file": "model-action-sequence.png",
+    "frames": [
+      420,
+      480,
+      540,
+      600,
+      660,
+      720
+    ],
+    "seconds": [
+      14,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "order": "Left to right, then next row. Actual encoded-media frames, resized to 360x640."
+  },
+  "review_method": "Inspected extracted contact sheet and ordered action frames with image tools; compared reviewed transcript and scene source.",
+  "limitations": [
+    "No direct auditory listening tool was available. Transcript review is not listening.",
+    "No full continuous playback was performed.",
+    "No source verification of the video claims was performed."
+  ]
+}

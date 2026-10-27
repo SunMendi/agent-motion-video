@@ -30,44 +30,52 @@ export const TimedCaptions: React.FC<{
   const emphasized = (word: string) => highlightTerms.some((term) =>
     word.normalize('NFC').replace(/[^\p{L}\p{M}\p{N}]/gu, '').includes(term.normalize('NFC')),
   );
-  const phrase = first.text.split(/(\s+)/u);
+  const words = first.text.trim().split(/\s+/u);
   let highlighted = false;
   return (
     <CaptionRegion layout={layout}>
       <div
         style={{
-          maxWidth: 930,
-          padding: '12px 28px',
-          borderRadius: 22,
-          backgroundColor: 'rgba(11, 15, 23, 0.88)',
+          display: 'inline-flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          columnGap: '16px',
+          rowGap: '6px',
+          maxWidth: 980,
+          padding: '10px 28px',
+          borderRadius: 20,
+          backgroundColor: 'rgba(5, 7, 12, 0.72)',
           backdropFilter: 'blur(12px)',
-          border: '1px solid rgba(56, 189, 248, 0.28)',
-          boxShadow: '0 10px 32px rgba(0, 0, 0, 0.45)',
-          color: '#F8FAFC',
-          fontSize: 40,
-          lineHeight: 1.38,
-          letterSpacing: 'normal',
-          textRendering: 'optimizeLegibility',
+          border: '1.5px solid rgba(255, 255, 255, 0.15)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.7)',
+          color: '#FFFFFF',
+          fontSize: 50,
+          lineHeight: 1.3,
           textAlign: 'center',
           opacity: fade,
           fontFamily: captionFamily,
-          fontWeight: 700,
+          fontWeight: 800,
+          textShadow: '0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.9)',
         }}
       >
-        {mode === 'phrase' ? phrase.map((part, index) => {
-          if (/^\s+$/u.test(part)) return <React.Fragment key={`${first.id}-${index}`}>{part}</React.Fragment>;
-          const highlight = !highlighted && emphasized(part);
+        {mode === 'phrase' ? words.map((word, index) => {
+          const highlight = !highlighted && emphasized(word);
           if (highlight) highlighted = true;
           return (
             <span
               key={`${first.id}-${index}`}
               style={{
-                color: highlight ? accent : '#F8FAFC',
-                textShadow: highlight ? `0 0 14px ${accent}80` : undefined,
-                fontWeight: 700,
+                color: highlight ? '#FACC15' : '#FFFFFF',
+                textShadow: highlight
+                  ? '0 0 24px rgba(250, 204, 21, 0.9), 0 2px 8px #000'
+                  : '0 2px 10px rgba(0, 0, 0, 0.95)',
+                fontWeight: 900,
+                display: 'inline-block',
+                transform: highlight ? 'scale(1.06)' : undefined,
               }}
             >
-              {part}
+              {word}
             </span>
           );
         }) : page.cues.map((cue, index) => {

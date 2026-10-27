@@ -1,10 +1,10 @@
 {
   "brief": {
-    "video_id": "free-ai-tools-showcase",
-    "outcome": "Viewers discover 5 game-changing free AI tools they should use",
-    "audience": "Bangladeshi students, professionals, and creators",
+    "video_id": "os-deadlock-dining-philosophers",
+    "outcome": "Understand operating system deadlocks and resource allocation through the dining philosophers problem.",
+    "audience": "Computer science students, software developers, and tech enthusiasts.",
     "language": "bn-BD",
-    "audio_file": "public/current/freeaai.wav",
+    "audio_file": "public/current/os_audio.mp3",
     "script_file": null,
     "visual_script_file": null,
     "references": [],
@@ -15,25 +15,9 @@
     },
     "design": {
       "direction": "agent-select",
-      "brand_assets": [
-        "public/current/tools/napkin.png",
-        "public/current/tools/gamma.png",
-        "public/current/tools/perplexity.png",
-        "public/current/tools/notebook.png",
-        "public/current/tools/adobe_podcast.png"
-      ],
-      "required_colors": [
-        "#0B0F17",
-        "#1E293B",
-        "#38BDF8",
-        "#EF4444",
-        "#10B981",
-        "#F59E0B"
-      ],
-      "required_fonts": [
-        "Hind Siliguri",
-        "Noto Sans Bengali"
-      ]
+      "brand_assets": [],
+      "required_colors": [],
+      "required_fonts": []
     },
     "audio": {
       "preserve_voice": true,
@@ -41,22 +25,19 @@
       "sound_effects": true
     },
     "budget": "free-assets-and-local-rendering",
-    "constraints": [
-      "9:16 vertical canvas (1080x1920)",
-      "Mobile safe zones"
-    ],
+    "constraints": [],
     "approval_required_for_input_changes": true
   },
   "project": {
-    "video_id": "free-ai-tools-showcase",
+    "video_id": "os-deadlock-dining-philosophers",
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "audioDuration": 84.96,
-    "audioSha256": "acc7cc341cc9bcdb0ff7bfc3cf2479170144d09947b504fcfed2ab783bab4d37",
-    "durationInFrames": 2549,
-    "inputFingerprint": "6c2f260cbb1c4b45536a4bbea54a861cf5e932a3844119bd7f52e5c179b945d4",
+    "audioDuration": 81.162438,
+    "audioSha256": "359395fbbe7acfc108c2fd8998bcd47247f955c56903eea6097eca5138d59194",
+    "durationInFrames": 2435,
+    "inputFingerprint": "7a0e1913ce7805f60653aaf68f32efc166fc4ed6ecc9b1bc1bd25e986c9abd35",
     "ready": false
   },
-  "prepared_at": "2026-10-25T09:15:11.439Z"
+  "prepared_at": "2026-10-27T15:28:09.002Z"
 }

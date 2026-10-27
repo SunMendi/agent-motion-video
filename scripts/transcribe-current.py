@@ -35,7 +35,7 @@ def main():
     except ImportError:
         parser.error('faster-whisper is unavailable in this Python environment. Follow setup.md.')
     language = args.language or brief.get('language', '').split('-')[0] or None
-    model = WhisperModel(args.model, device='cpu', compute_type='int8')
+    model = WhisperModel(args.model, device='cpu', compute_type='int8', cpu_threads=3)
     segments, info = model.transcribe(
         str(audio),
         language=language,

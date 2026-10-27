@@ -8,11 +8,12 @@ export const TimelineAudio: React.FC<{
   voice: string;
   music?: string;
   soundEffects?: boolean;
-}> = ({timeline, voice, music, soundEffects = true}) => {
+  voiceVolume?: number;
+}> = ({timeline, voice, music, soundEffects = true, voiceVolume = 1.15}) => {
   const {fps} = useVideoConfig();
   return (
     <>
-      <Audio src={staticFile(voice.replace(/^public\//, ''))} volume={1} />
+      <Audio src={staticFile(voice.replace(/^public\//, ''))} volume={voiceVolume} />
       {music ? <Audio src={staticFile(music.replace(/^public\//, ''))} loop loopVolumeCurveBehavior="extend" volume={(frame) => musicGainAtFrame(timeline.captions, frame, fps)} /> : null}
       {soundEffects ? timeline.soundCues.map((cue, index) => (
         <Sequence key={`${cue.file}-${index}`} from={cue.startFrame} durationInFrames={cue.duration_frames} layout="none">

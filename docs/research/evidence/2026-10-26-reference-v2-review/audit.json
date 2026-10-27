@@ -1,0 +1,15 @@
+{
+  "source": "exports/ai-security-reference-v2.mp4",
+  "sha256": "068093fb9139428cf6a1e863bbede1be641a31a2ee3ac4227da4f424d07b9f52",
+  "independently_decoded_frames": 60,
+  "shots": 10,
+  "missing_required_event_lookups": [],
+  "compiled_sound_cues": 12,
+  "existing_evidence_hashes_checked": 162,
+  "existing_evidence_hash_mismatches": [],
+  "limitations": [
+    "No complete real-time audiovisual playback",
+    "No direct listening",
+    "No independent factual verification of narrated claims"
+  ]
+}

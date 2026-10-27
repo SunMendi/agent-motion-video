@@ -2,19 +2,19 @@
   "ok": true,
   "errors": [],
   "stats": {
-    "duration": 84.971,
+    "duration": 81.2,
     "width": 1080,
     "height": 1920,
     "fps": 30,
-    "frames": 2549,
+    "frames": 2435,
     "videoCodec": "h264",
     "audioCodec": "aac",
-    "sampleRate": 48000,
+    "sampleRate": 96000,
     "channels": 2,
-    "sizeBytes": 6764550,
-    "integratedLufs": -15.77,
-    "truePeakDbtp": -4.01,
-    "loudnessRangeLu": 3.1,
+    "sizeBytes": 7822906,
+    "integratedLufs": -15.26,
+    "truePeakDbtp": -1.16,
+    "loudnessRangeLu": 2.5,
     "isNineSixteen": true
   }
 }

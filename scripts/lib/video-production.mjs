@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import ts from 'typescript';
 import {readJson, safePath, requireCurrentProject} from './video-workspace.mjs';
+import {validateCreativePlan} from './video-creative.mjs';
 
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const list = (value) => Array.isArray(value) ? value : [];
@@ -125,7 +126,7 @@ export const compileStoryboard = ({board, transcript, layout, project}) => {
 const sourceFiles = (directory) => fs.existsSync(directory) ? fs.readdirSync(directory, {withFileTypes: true}).flatMap((entry) => {
   const file = path.join(directory, entry.name);
   if (entry.isSymbolicLink()) throw new Error(`Symbolic link in scene source: ${file}`);
-  return entry.isDirectory() ? sourceFiles(file) : /\.(tsx|jsx|css)$/.test(entry.name) && !entry.name.endsWith('.compiled.css') ? [file] : [];
+  return entry.isDirectory() ? sourceFiles(file) : /\.(tsx?|jsx?|css|json)$/.test(entry.name) && !entry.name.endsWith('.compiled.css') ? [file] : [];
 }) : [];
 
 const renderHazards = (code, file) => {
@@ -158,6 +159,9 @@ export const checkProduction = (root, {requireEvidence = true} = {}) => {
     const layout = readJson(safePath(root, board.layout_file));
     const result = compileStoryboard({board, transcript, layout, project});
     const dependencies = new Set(['work/current/storyboard.json', board.transcript_file, board.layout_file]);
+    for (const relative of ['src/fonts.ts', 'src/index.css', 'remotion.config.ts', 'package.json']) {
+      if (fs.existsSync(safePath(root, relative))) dependencies.add(relative);
+    }
     const requireFile = (relative) => {
       try {
         const file = safePath(root, relative);
@@ -166,7 +170,18 @@ export const checkProduction = (root, {requireEvidence = true} = {}) => {
       } catch (error) { result.errors.push(`Missing or invalid production file ${relative}: ${error.message}`); }
     };
     if (requireEvidence) {
+      result.errors.push(...validateCreativePlan(board));
       requireFile('work/current/direction.md');
+      requireFile('work/current/asset-manifest.json');
+      try {
+        const manifest = readJson(safePath(root, 'work/current/asset-manifest.json'));
+        if (!Array.isArray(manifest.assets)) throw new Error('assets must be an array');
+        for (const asset of manifest.assets) requireFile(asset.path);
+        for (const file of new Set(list(board.shots).flatMap((shot) => list(shot.assets)))) {
+          const asset = manifest.assets.find((item) => item.path === file);
+          if (!asset || !['kind', 'source', 'usage_terms'].every((field) => text(asset[field]))) result.errors.push(`Asset ${file} needs kind, source, and usage_terms in asset-manifest.json.`);
+        }
+      } catch (error) { result.errors.push(`Asset provenance review required: ${error.message}`); }
       if (!list(board.style_frames).length) result.errors.push('Create representative style frames before production.');
       for (const file of list(board.style_frames)) requireFile(file);
       requireFile(board.animatic_file);
@@ -183,6 +198,7 @@ export const checkProduction = (root, {requireEvidence = true} = {}) => {
     }
     const sources = [...sourceFiles(safePath(root, 'src/video')), ...sourceFiles(safePath(root, 'src/shared'))];
     for (const file of sources) {
+      dependencies.add(path.relative(root, file));
       const code = fs.readFileSync(file, 'utf8');
       for (const line of renderHazards(code, file)) result.errors.push(`${path.relative(root, file)}:${line}: possible nondeterministic animation; use frame-derived motion or review this finding before production.`);
     }
@@ -194,7 +210,7 @@ export const checkProduction = (root, {requireEvidence = true} = {}) => {
     }
     result.timeline.productionFingerprint = hash.digest('hex');
     result.ok = result.errors.length === 0;
-    result.coverage = 'Structural timing, declared bounds, referenced files, and source hazards only. Actual approvals, visual playback, and listening remain human/agent review responsibilities.';
+    result.coverage = 'Structural timing, creative-plan fields, declared bounds, referenced files, and source hazards only. Actual visual playback, subject recognition, composition, and listening remain agent review responsibilities.';
     return result;
   } catch (error) {
     return {ok: false, errors: [error.message], warnings: [], timeline: null};

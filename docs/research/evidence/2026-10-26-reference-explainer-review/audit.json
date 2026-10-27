@@ -1,0 +1,12 @@
+{
+  "source": "exports/ai-security-reference-explainer.mp4",
+  "sha256": "3b6c06e9f72a51cc33ce4e5ab43627258ac9cc5a70c796b58c7da3e202f9b0c0",
+  "failed_required_event_lookups": [],
+  "compiled_sound_cues": 12,
+  "review": "60 independently decoded frames across 10 shots, active source/timing cross-check, 162 existing evidence images hash-checked",
+  "limitations": [
+    "No complete continuous playback",
+    "No direct listening",
+    "No independent factual verification of narrated claims"
+  ]
+}

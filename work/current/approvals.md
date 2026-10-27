@@ -1,9 +1,6 @@
-# User authorization
+# User approvals
 
-2026-10-25: The user requested a new video for "free-ai-tools-showcase".
-Audio file: `public/current/freeaai.wav`.
-Outcome: "Viewers discover 5 game-changing free AI tools they should use".
-Audience: "Bangladeshi students, professionals, and creators".
-Brand assets: 5 real tool screenshots stored under `public/current/tools/`.
-The user instructed autonomous end-to-end production with 9:16 vertical canvas (1080x1920) at 30 fps.
-No change to the supplied audio or narration is authorized or planned.
+No approval has been recorded.
+
+Record the actual user message, date, approved files, and scope only when supplied narration, audio, or visual instructions need changing. Routine direction, samples, critique, rendering, and export proceed autonomously.
+Do not infer approval from silence or successful tests.

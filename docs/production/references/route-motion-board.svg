@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1578" height="792" viewBox="0 0 1578 792">
+<rect width="1578" height="792" fill="#E5E0D5"/>
+<text x="26" y="40.06" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="27" text-anchor="start">DIRECT THE OBJECTS THROUGH THE VERTICAL FRAME</text>
+<text x="26" y="68.04" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="18" text-anchor="start">Conceptual composition reference. Four evolving states; use real narration anchors for the animation.</text>
+<text x="26" y="100.82" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="19" text-anchor="start">01  Reveal the source</text>
+<rect x="26" y="111" width="360" height="640" rx="15" fill="#F3F0E8" stroke="none" stroke-width="2"/>
+<rect x="110" y="142" width="192" height="39" rx="10" fill="#151515" stroke="none" stroke-width="2"/>
+<text x="206" y="165.26" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="17" text-anchor="middle">TOP CAPTIONS</text>
+<circle cx="206" cy="320" r="91" fill="#151515" stroke="none" stroke-width="3"/>
+<text x="206" y="343.48" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="66" text-anchor="middle">AI</text>
+<text x="206" y="444.72" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="24" text-anchor="middle">Automated origin</text>
+<polyline points="206,462 206,500" fill="none" stroke="#167F97" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="196,489 206,501 216,489" fill="none" stroke="#167F97" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="96" y="522" width="220" height="104" rx="18" fill="#E75B36" stroke="none" stroke-width="2"/>
+<text x="206" y="579.62" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="29" text-anchor="middle">MESSAGE</text>
+<text x="206" y="678.04" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="18" text-anchor="middle">One sender. One object.</text>
+<text x="206" y="729.36" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="12" text-anchor="middle">Illustration only / no production audio</text>
+<text x="414" y="100.82" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="19" text-anchor="start">02  Travel through relays</text>
+<rect x="414" y="111" width="360" height="640" rx="15" fill="#F3F0E8" stroke="none" stroke-width="2"/>
+<rect x="498" y="142" width="192" height="39" rx="10" fill="#151515" stroke="none" stroke-width="2"/>
+<text x="594" y="165.26" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="17" text-anchor="middle">TOP CAPTIONS</text>
+<polyline points="594,278 510,438 658,600" fill="none" stroke="#167F97" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="594" cy="278" r="53" fill="#151515" stroke="none" stroke-width="3"/>
+<text x="594" y="289.42" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="39" text-anchor="middle">AI</text>
+<circle cx="510" cy="438" r="60" fill="#FFFFFF" stroke="#167F97" stroke-width="3"/>
+<text x="510" y="447.74" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="33" text-anchor="middle">Tor</text>
+<circle cx="658" cy="600" r="61" fill="#FFFFFF" stroke="#167F97" stroke-width="3"/>
+<text x="658" y="607.84" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="28" text-anchor="middle">Proxy</text>
+<rect x="559" y="489" width="34" height="28" rx="5" fill="#E75B36" stroke="none" stroke-width="2"/>
+<text x="594" y="689.04" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="18" text-anchor="middle">The packet changes position.</text>
+<text x="594" y="729.36" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="12" text-anchor="middle">Illustration only / no production audio</text>
+<text x="802" y="100.82" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="19" text-anchor="start">03  Change the identity</text>
+<rect x="802" y="111" width="360" height="640" rx="15" fill="#F3F0E8" stroke="none" stroke-width="2"/>
+<rect x="886" y="142" width="192" height="39" rx="10" fill="#151515" stroke="none" stroke-width="2"/>
+<text x="982" y="165.26" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="17" text-anchor="middle">TOP CAPTIONS</text>
+<rect x="841" y="252" width="282" height="278" rx="22" fill="#FFFFFF" stroke="#151515" stroke-width="2"/>
+<circle cx="982" cy="335" r="49" fill="#E75B36" stroke="none" stroke-width="3"/>
+<circle cx="982" cy="324" r="16" fill="#FFFFFF" stroke="none" stroke-width="3"/>
+<rect x="954" y="345" width="56" height="24" rx="10" fill="#FFFFFF" stroke="none" stroke-width="2"/>
+<text x="982" y="442.2" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="40" text-anchor="middle">ALIAS</text>
+<text x="982" y="487.16" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="22" text-anchor="middle">Claimed identity</text>
+<polyline points="906,577 906,557 982,557 982,531" fill="none" stroke="#167F97" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="906" cy="624" r="43" fill="#151515" stroke="none" stroke-width="3"/>
+<text x="906" y="634.18" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="31" text-anchor="middle">AI</text>
+<text x="1031" y="624.94" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="23" text-anchor="middle">Same</text>
+<text x="1031" y="654.94" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="23" text-anchor="middle">origin</text>
+<text x="982" y="729.36" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="12" text-anchor="middle">Illustration only / no production audio</text>
+<text x="1190" y="100.82" fill="#151515" font-family="Space Grotesk, sans-serif" font-size="19" text-anchor="start">04  Deliver the message</text>
+<rect x="1190" y="111" width="360" height="640" rx="15" fill="#F3F0E8" stroke="none" stroke-width="2"/>
+<rect x="1274" y="142" width="192" height="39" rx="10" fill="#151515" stroke="none" stroke-width="2"/>
+<text x="1370" y="165.26" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="17" text-anchor="middle">TOP CAPTIONS</text>
+<circle cx="1370" cy="279" r="58" fill="#151515" stroke="none" stroke-width="3"/>
+<text x="1370" y="287.4" fill="#FFFFFF" font-family="Space Grotesk, sans-serif" font-size="30" text-anchor="middle">Alias</text>
+<polyline points="1370,351 1370,386" fill="none" stroke="#167F97" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1260" y="397" width="220" height="125" rx="14" fill="#E75B36" stroke="none" stroke-width="2"/>
+<polyline points="1269,409 1370,475 1471,409" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1370,536 1370,576" fill="none" stroke="#167F97" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1358,561 1370,577 1382,561" fill="none" stroke="#167F97" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1239" y="593" width="262" height="91" rx="17" fill="#FFFFFF" stroke="#167F97" stroke-width="2"/>
+<text x="1370" y="646.18" fill="#167F97" font-family="Space Grotesk, sans-serif" font-size="31" text-anchor="middle">RECEIVED</text>
+<text x="1370" y="729.36" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="12" text-anchor="middle">Illustration only / no production audio</text>
+<text x="26" y="778.26" fill="#625E55" font-family="Space Grotesk, sans-serif" font-size="17" text-anchor="start">Animate the paths, actors, masks, and receipt state independently. These are boards, not a replacement finished video.</text>
+</svg>
